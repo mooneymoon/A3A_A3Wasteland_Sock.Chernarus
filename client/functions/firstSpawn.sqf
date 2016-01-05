@@ -108,7 +108,6 @@ player addEventHandler ["WeaponAssembled", {
 }];
 
 
-// Manual GetIn/GetOut check because BIS is too lazy to implement GetInMan/GetOutMan, among a LOT of other things
 [] spawn
 {
 	_lastVeh = vehicle player;

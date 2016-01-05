@@ -60,7 +60,7 @@ player addEventHandler ["Killed", { _this spawn onKilled }];
 
 A3W_scriptThreads pushBack execVM "client\functions\evalManagedActions.sqf";
 
-pvar_playerRespawn = player;
+pvar_playerRespawn = [player, objNull];
 publicVariableServer "pvar_playerRespawn";
 
 //Player setup
@@ -145,8 +145,6 @@ A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 [] execVM "addons\cctv\functions.sqf";
 [] execVM "addons\water_edge\functions.sqf";
 [] execVM "addons\boomerang\functions.sqf";
-
-
 
 call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 [] execVM "client\functions\drawPlayerMarkers.sqf";

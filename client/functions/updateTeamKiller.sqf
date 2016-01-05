@@ -6,6 +6,8 @@
 //	@file Author: [404] Deadbeat
 //	@file Created: 20/11/2012 05:19
 
+pvar_teamSwitchUnlock = getPlayerUID player;
+publicVariableServer "pvar_teamSwitchUnlock";
 setPlayerRespawnTime 1e11;
 player setDamage 1;
 sleep 1;

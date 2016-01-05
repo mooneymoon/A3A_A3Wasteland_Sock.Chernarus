@@ -13,9 +13,9 @@
 
 private ["_veh", "_texture", "_selections", "_textures"];
 
-_veh = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_texture = [_this, 1, "", ["",[]]] call BIS_fnc_param;
-_selections = [_this, 2, [], [[]]] call BIS_fnc_param;
+_veh = param [0, objNull, [objNull]];
+_texture = param [1, "", ["",[]]];
+_selections = param [2, [], [[]]];
 
 if (isNull _veh || count _texture == 0) exitWith {};
 
@@ -54,8 +54,7 @@ if (typeName _texture == "STRING") then
 
 			case (_veh isKindOf "Heli_Transport_01_base_F"):      { [0,1] };
 			case (_veh isKindOf "Heli_Transport_02_base_F"):      { [0,1,2] };
-			case (_veh isKindOf "B_Heli_Transport_03_unarmed_F"): { [0,1] };
-			case (_veh isKindOf "B_Heli_Transport_03_F"):         { [0,1] };
+			case (_veh isKindOf "Heli_Transport_03_base_F"):      { [0,1] };
 			case (_veh isKindOf "Heli_Transport_04_base_F"):      { [0,1,2,3] };
 			case (_veh isKindOf "Heli_Attack_02_base_F"):         { [0,1] };
 

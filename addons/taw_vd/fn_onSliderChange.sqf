@@ -6,8 +6,8 @@
 	Called when the slider is changed for any field and updates the view distance for it.
 */
 private["_mode","_value"];
-_mode = [_this,0,-1,[0]] call BIS_fnc_param;
-_value = [_this,1,-1,[0]] call BIS_fnc_param;
+_mode = param [0,-1,[0]];
+_value = param [1,-1,[0]];
 if(_mode == -1 OR _value == -1) exitWith {};
 disableSerialization;
 

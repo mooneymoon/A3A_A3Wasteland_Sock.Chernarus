@@ -35,6 +35,5 @@ _takeable = objNull;
 		case (_x getVariable ["mf_item_id", ""] != _id): {};
 		default {_takeable = _x};
 	};
-
 } forEach (nearestObjects [player, [_type], MF_INVENTORY_TAKE_DISTANCE]);
 _takeable;

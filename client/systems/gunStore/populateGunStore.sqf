@@ -120,7 +120,7 @@ else
 
 		_gunlistIndex = _gunlist lbAdd format ["%1", [_x select 0, getText (_weapon >> "displayName")] select (_x select 0 == "")];
 		_gunlist lbSetData [_gunlistIndex, _weaponClass];
-
+	
 		// Show scope on sniper rifle pictures
 		if ([["_SOS_F", "_LRPS_F"], _weaponClass] call fn_findString != -1) then
 		{

@@ -45,7 +45,7 @@ if (_success) then {
 	pvar_spawn_beacons = pvar_spawn_beacons - [_beacon];
 
 	untrackObject = _beacon;
-  publicVariableServer "untrackObject";
+	publicVariableServer "untrackObject";
 
 	publicVariable "pvar_spawn_beacons";
 	pvar_manualObjectDelete = [netId _beacon, _beacon getVariable "A3W_objectID"];

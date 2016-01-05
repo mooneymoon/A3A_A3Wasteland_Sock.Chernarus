@@ -24,8 +24,7 @@ if (_uid call isAdmin) then
 					"God-mode - Displays Use!",				
 					"Access Gun Store",
 					"Access General Store",
-					"Access ATM Dialog",
-					"Access News"
+					"Access ATM Dialog"
 	];
 
 	{
