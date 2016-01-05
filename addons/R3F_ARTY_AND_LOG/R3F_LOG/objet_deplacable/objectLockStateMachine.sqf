@@ -75,8 +75,9 @@ switch (_lockState) do
 		{
 			_object setVariable ["objectLocked", true, true];
 			_object setVariable ["ownerUID", getPlayerUID player, true];
-
-      //tell the server that this object was locked
+			_object setVariable ["ownerN", name player, true];
+			
+			//tell the server that this object was locked
 			trackObject = _object;
 			publicVariableServer "trackObject";
 			
