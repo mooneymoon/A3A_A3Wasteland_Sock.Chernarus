@@ -84,7 +84,7 @@ class CfgDebriefing
 class CfgFunctions
 {
   #include "addons\taw_vd\CfgFunctions.hpp"
-  class A3W
+	class A3W
 	{
 		#include "client\CfgFunctions.hpp"
 		#include "server\CfgFunctions.hpp"
@@ -148,4 +148,26 @@ class CfgSounds
                                 sound[] = {"addons\beacondetector\sound\beep.wav", db-10, 0.1};
                                 titles[] = {};
 			};
+};
+
+class CfgRemoteExec // applies only to clients
+{
+	class Functions
+	{
+		#ifndef A3W_DEBUG
+		mode = 1; // 0 = block all, 1 = whitelist, 2 = allow all
+		#else
+		mode = 2; // debug mode, don't touch
+		#endif
+
+		#include "client\CfgRemoteExec_fnc.hpp"
+	};
+	class Commands
+	{
+		#ifndef A3W_DEBUG
+		mode = 1; // 0 = block all, 1 = whitelist, 2 = allow all
+		#else
+		mode = 2; // debug mode, don't touch
+		#endif
+	};
 };
