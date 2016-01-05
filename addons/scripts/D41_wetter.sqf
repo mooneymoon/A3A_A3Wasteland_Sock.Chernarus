@@ -22,9 +22,9 @@
 					{
 						D41_Nebel = [0.1, 0.1,50]; D41_Wellen = 1; D41_Vorschau = 0.4; D41_Wind = [1, 1, true]; D41_Regen = 0;
 						D41_WMod = round(random 7);
-						if(D41_WMod == 0)	then {D41_Nebel = [1, 0.1,10];		D41_Wellen = 1;		D41_Vorschau = 0.4; D41_Wind = [1, 1, true];	D41_Regen = 0;};
-						if(D41_WMod == 1)	then {D41_Nebel = [1, 0.2,10];		D41_Wellen = 1;		D41_Vorschau = 0.3; D41_Wind = [2, 2, true];	D41_Regen = 0;};
-						if(D41_WMod == 2)	then {D41_Nebel = [1, 0.3,10];		D41_Wellen = 1;		D41_Vorschau = 0.2; D41_Wind = [2, 2, true];	D41_Regen = 0;};
+						if(D41_WMod == 0)	then {D41_Nebel = [1, 0.1,10];		D41_Wellen = 1;		D41_Vorschau = 0.5; D41_Wind = [1, 1, true];	D41_Regen = 0;};
+						if(D41_WMod == 1)	then {D41_Nebel = [1, 0.2,10];		D41_Wellen = 1;		D41_Vorschau = 0.6; D41_Wind = [2, 2, true];	D41_Regen = 0;};
+						if(D41_WMod == 2)	then {D41_Nebel = [1, 0.3,10];		D41_Wellen = 1;		D41_Vorschau = 0.5; D41_Wind = [2, 2, true];	D41_Regen = 0;};
 						if(D41_WMod == 3)	then {D41_Nebel = [0.9, 0.1,15];	D41_Wellen = 1;		D41_Vorschau = 0.4; D41_Wind = [1, 1, true];	D41_Regen = 0;};
 						if(D41_WMod == 4)	then {D41_Nebel = [0.8, 0.1,15];	D41_Wellen = 1;		D41_Vorschau = 0.3; D41_Wind = [1, 1, true];	D41_Regen = 0;};
 						if(D41_WMod == 5)	then {D41_Nebel = [0.7, 0.1,15];	D41_Wellen = 1;		D41_Vorschau = 0.4; D41_Wind = [1, 1, true];	D41_Regen = 0;};
@@ -85,7 +85,7 @@
 		{
 			[] call _fnc_D41_WetterWerte;
 			60 setFog (D41_Nebel);
-			0 setOvercast (D41_Vorschau);
+			60 setOvercast (D41_Vorschau);
 			setWind (D41_Wind);
 			60 setRain (D41_Regen);
 			60 setWaves (D41_Wellen);
@@ -99,7 +99,7 @@
 		while{true}do
 		{
 			60 setFog (D41_Nebel);
-			0 setOvercast (D41_Vorschau);
+			60 setOvercast (D41_Vorschau);
 			setWind (D41_Wind);
 			60 setRain (D41_Regen);
 			60 setWaves (D41_Wellen);
@@ -111,10 +111,10 @@
 	{
 		while{true}do
 		{
-			0 setFog (D41_Nebel);
-			0 setOvercast (D41_Vorschau);
+			90 setFog (D41_Nebel);
+			90 setOvercast (D41_Vorschau);
 			setWind (D41_Wind);
-			0 setRain (D41_Regen);
-			0 setWaves (D41_Wellen);
+			90 setRain (D41_Regen);
+			90 setWaves (D41_Wellen);
 		};
 	};	
