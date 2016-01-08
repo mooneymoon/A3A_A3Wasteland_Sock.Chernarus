@@ -22,10 +22,10 @@ while {true} do
 		{
 			_startTime = diag_tickTime;
 			_veh = [_x, "Vehicle", objNull] call fn_getFromPairs;
-
-			// Check if vehicle is not being towed or moved
+			
+			// Check if vehicle is not being towed or moved and has not been saved
 			if (isNull (_veh getVariable ["R3F_LOG_est_transporte_par", objNull]) &&
-				isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull])) then
+				isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull]) && isNil (_veh getVariable "A3W_purchasedVehicle")) then
 			{
 				_settings = _x;
 
@@ -209,12 +209,7 @@ while {true} do
 					};
 					
 					sleep 0.1;
-					
-					if (fuel _veh < .5) then {
-					
-						deleteVehicle _veh;
-					
-					};
+					deleteVehicle _veh;
 
 					if (_vehClass isKindOf "Ship_F") then
 					{
