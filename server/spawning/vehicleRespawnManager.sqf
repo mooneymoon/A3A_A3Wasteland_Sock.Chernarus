@@ -25,7 +25,7 @@ while {true} do
 			
 			// Check if vehicle is not being towed or moved and has not been saved
 			if (isNull (_veh getVariable ["R3F_LOG_est_transporte_par", objNull]) &&
-				isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull]) && isNull (_veh getVariable ["A3W_purchasedVehicle", objNull])) then
+				isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull]) || isNull (_veh getVariable ["A3W_purchasedVehicle", objNull])) then
 			{
 				_settings = _x;
 
