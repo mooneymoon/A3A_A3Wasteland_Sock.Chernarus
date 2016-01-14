@@ -23,7 +23,7 @@ storePurchaseHandle = _this spawn
 {
 	disableSerialization;
 
-	private ["_name", "_switch", "_price", "_dialog", "_ammoList", "_playerMoneyText", "_playerMoney", "_itemIndex", "_itemText", "_itemData", "_class", "_name", "_mag", "_type", "_backpack", "_gunsList", "_weapon", "_successHint", "_requestKey"];
+	private ["_name", "_switch", "_price", "_dialog", "_ammoList", "_playerMoneyText", "_playerMoney", "_itemIndex", "_itemText", "_itemData", "_class", "_name", "_mag", "_type", "_backpack", "_gunsList", "_weapon", "_successHint", "_requestKey", "_donatorItems"];
 
 	//Initialize Values
 	_switch = _this select 0;
@@ -38,6 +38,49 @@ storePurchaseHandle = _this spawn
 	_itemIndex = lbCurSel gunshop_gun_list;
 	_itemText = _gunsList lbText _itemIndex;
 	_itemData = _gunsList lbData _itemIndex;
+
+	_donatorItems =
+	[
+		"arifle_Mk20C_F",
+    "arifle_MXC_Black_F", 
+    "arifle_MX_Black_F",
+    "arifle_MX_GL_Black_F",
+    "arifle_MXM_Black_F",
+    "srifle_DMR_03_multicam_F",
+    "srifle_DMR_03_khaki_F",
+    "srifle_DMR_03_tan_F",
+    "srifle_DMR_03_woodland_F",
+    "srifle_DMR_02_camo_F",
+    "srifle_DMR_02_sniper_F",
+    "srifle_DMR_05_hex_F",
+    "srifle_DMR_05_tan_f",
+    "srifle_LRR_camo_LRPS_F",
+    "srifle_DMR_04_tan_F",
+    "srifle_GM6_camo_LRPS_F",
+    "arifle_MX_SW_Black_F",
+    "MMG_01_hex_F",
+    "MMG_02_sand_F",
+    "MMG_02_camo_F",
+    "MMG_02_black_F",
+    "launch_O_Titan_short_F",
+    "launch_I_Titan_short_F",
+    "launch_O_Titan_F",
+    "launch_I_Titan_F",
+    "SmokeShellPurple",
+    "SmokeShellBlue",
+    "SmokeShellGreen",
+    "SmokeShellYellow",
+    "SmokeShellOrange",
+    "SmokeShellRed"
+	];
+	//Error for non donators selecting donor items
+	_showInsufficientDonatorError =
+	{
+		_itemText = _this select 0;
+		hint parseText format ["<t color='#ffff00'>This item is for forum subscribers only.</t><br/>The purchase of ""%1"" has been cancelled.", _itemText];
+		playSound "FD_CP_Not_Clear_F";
+		_price = -1;
+	};
 
 	_showInsufficientFundsError =
 	{
@@ -99,6 +142,12 @@ storePurchaseHandle = _this spawn
 							[_itemText] call _showInsufficientFundsError;
 						};
 
+						//Check donor status
+						if (!((getPlayerUID player) call isdonor) && {{_x == _class} count _donatorItems > 0}) exitWith
+						{
+							[_itemText] call _showInsufficientDonatorError;
+						};
+
 						if ((!([_class, 1] call isWeaponType) || primaryWeapon player == "") &&
 							{!([_class, 2] call isWeaponType) || handgunWeapon player == ""} &&
 							{!([_class, 4] call isWeaponType) || secondaryWeapon player == ""}) then
@@ -130,6 +179,12 @@ storePurchaseHandle = _this spawn
 							[_itemText] call _showInsufficientFundsError;
 						};
 
+						//Check donor status
+						if (!((getPlayerUID player) call isdonor) && {{_x == _class} count _donatorItems > 0}) exitWith
+						{
+							[_itemText] call _showInsufficientDonatorError;
+						};
+
 						if ([player, _class] call fn_fitsInventory) then
 						{
 							[player, _class] call fn_forceAddItem;
@@ -155,6 +210,12 @@ storePurchaseHandle = _this spawn
 						{
 							[_itemText] call _showInsufficientFundsError;
 						};
+
+						//Check donor status
+						if (!((getPlayerUID player) call isdonor) && {{_x == _class} count _donatorItems > 0}) exitWith
+						{
+							[_itemText] call _showInsufficientDonatorError;
+						};	
 
 						switch (_x select 3) do
 						{
@@ -188,6 +249,12 @@ storePurchaseHandle = _this spawn
 							[_itemText] call _showInsufficientFundsError;
 						};
 
+						//Check donor status
+						if (!((getPlayerUID player) call isdonor) && {{_x == _class} count _donatorItems > 0}) exitWith
+						{
+							[_itemText] call _showInsufficientDonatorError;
+						};
+						
 						removeBackpack player;
 						player addBackpack _class;
 					};
@@ -207,6 +274,12 @@ storePurchaseHandle = _this spawn
 						if (_price > _playerMoney) exitWith
 						{
 							[_itemText] call _showInsufficientFundsError;
+						};
+
+						//Check donor status
+						if (!((getPlayerUID player) call isdonor) && {{_x == _class} count _donatorItems > 0}) exitWith
+						{
+							[_itemText] call _showInsufficientDonatorError;
 						};
 
 						_requestKey = call A3W_fnc_generateKey;

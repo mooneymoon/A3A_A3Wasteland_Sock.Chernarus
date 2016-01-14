@@ -54,52 +54,52 @@ rifleArray = compileFinal str
 	["Katiba GL Rifle", "arifle_Katiba_GL_F", 250],
 
 	["MX Carbine", "arifle_MXC_F", 150],
-	["MX Carbine (Black)", "arifle_MXC_Black_F", 175],
+	["MX Carbine (Black)", "arifle_MXC_Black_F", 150],
 	["MX Rifle", "arifle_MX_F", 200],
-	["MX Rifle (Black)", "arifle_MX_Black_F", 225],
-	["MX 3GL Rifle", "arifle_MX_GL_F", 250],
+	["MX Rifle (Black)", "arifle_MX_Black_F", 200],
+	["MX 3GL Rifle", "arifle_MX_GL_F", 275],
 	["MX 3GL Rifle (Black)", "arifle_MX_GL_Black_F", 275],
 
 	// Markman Rifles
 	["MXM Rifle", "arifle_MXM_F", 300],
-	["MXM Rifle (Black)", "arifle_MXM_Black_F", 325],
+	["MXM Rifle (Black)", "arifle_MXM_Black_F", 300],
 	["DMR Rifle", "srifle_DMR_01_F", 375],
 	["Mk18 ABR Rifle", "srifle_EBR_F", 450],
 	
 	// DLC
 	["Mk14 Rifle (Camo) [DLC]", "srifle_DMR_06_camo_F", 450],
 	["Mk14 Rifle (Olive) [DLC]", "srifle_DMR_06_olive_F", 450],
-	["Mk-I EMR Rifle [DLC]", "srifle_DMR_03_F", 500],
+	["Mk-I EMR Rifle [DLC]", "srifle_DMR_03_F", 550],
 	["Mk-I EMR Rifle (Camo) [DLC]", "srifle_DMR_03_multicam_F", 550],
 	["Mk-I EMR Rifle (Khaki) [DLC]", "srifle_DMR_03_khaki_F", 550],
 	["Mk-I EMR Rifle (Sand) [DLC]", "srifle_DMR_03_tan_F", 550],
 	["Mk-I EMR Rifle (Woodland) [DLC]", "srifle_DMR_03_woodland_F", 550],
-	["MAR-10 Rifle [DLC]", "srifle_DMR_02_F", 950],
+	["MAR-10 Rifle [DLC]", "srifle_DMR_02_F", 1000],
 	["MAR-10 Rifle (Camo) [DLC]", "srifle_DMR_02_camo_F", 1000],
 	["MAR-10 Rifle (Sand) [DLC]", "srifle_DMR_02_sniper_F", 1000],
-	["Cyrus Rifle [DLC]", "srifle_DMR_05_blk_F", 1000],
+	["Cyrus Rifle [DLC]", "srifle_DMR_05_blk_F", 1050],
 	["Cyrus Rifle (Hex) [DLC]", "srifle_DMR_05_hex_F", 1050],
 	["Cyrus Rifle (Tan) [DLC]", "srifle_DMR_05_tan_f", 1050],
 
 	// Sniper Rifles
-	["M320 LRR Sniper", "srifle_LRR_LRPS_F", 1600],
+	["M320 LRR Sniper", "srifle_LRR_LRPS_F", 1700],
 	["M320 LRR Sniper (Camo)", "srifle_LRR_camo_LRPS_F", 1700],
-	["ASP-1 Kir Rifle [DLC]", "srifle_DMR_04_F", 1700],
+	["ASP-1 Kir Rifle [DLC]", "srifle_DMR_04_F", 1800],
 	["ASP-1 Kir Rifle (Tan) [DLC]", "srifle_DMR_04_tan_F", 1800],
-	["GM6 Lynx Sniper", "srifle_GM6_LRPS_F", 1900],
+	["GM6 Lynx Sniper", "srifle_GM6_LRPS_F", 2000],
 	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_LRPS_F", 2000]
 ];
 
 lmgArray = compileFinal str
 [
-	["MX SW LMG", "arifle_MX_SW_F", 300],
+	["MX SW LMG", "arifle_MX_SW_F", 325],
 	["MX SW LMG (Black)", "arifle_MX_SW_Black_F", 325],
 	["Mk200 LMG", "LMG_Mk200_F", 400],
 	["Zafir LMG", "LMG_Zafir_F", 500],
 	["Navid MMG (Tan) [DLC]", "MMG_01_tan_F", 750],
 	["Navid MMG (Hex) [DLC]", "MMG_01_hex_F", 750],
-	["SPMG MMG (Sand) [DLC]", "MMG_02_sand_F", 750],
-	["SPMG MMG (MTP) [DLC]", "MMG_02_camo_F", 750],
+	["SPMG MMG (Sand) [DLC]", "MMG_02_sand_F", 800],
+	["SPMG MMG (MTP) [DLC]", "MMG_02_camo_F", 800],
 	["SPMG MMG (Black) [DLC]", "MMG_02_black_F", 800]
 ];
 
@@ -578,9 +578,45 @@ genItemArray = compileFinal str
 	["Rangefinder", "Rangefinder", 150, "binoc"],
 	["Laser Designator", "Laserdesignator", 1000, "binoc"],
 	["Chemlight (Blue)", "Chemlight_blue", 25, "mag"],
+	["Chemlight (Red)", "Chemlight_red", 25, "mag"],
 	["Chemlight (Green)", "Chemlight_green", 25, "mag"],
 	["Chemlight (Yellow)", "Chemlight_yellow", 25, "mag"],
-	["Chemlight (Red)", "Chemlight_red", 25, "mag"]
+	["Aviator Glasses", "G_Aviator", 25, "gogg"],
+	["Balaclava (Black)", "G_Balaclava_blk", 100, "gogg"],
+	["Balaclava (Olive)", "G_Balaclava_oli", 100, "gogg"],
+	["Balaclava (Combat Goggles)", "G_Balaclava_combat", 100, "gogg"],
+	["Balaclava (Low Profile Goggles)", "G_Balaclava_lowprofile", 100, "gogg"],
+	["Bandanna (Aviator)", "G_Bandanna_aviator", 100, "gogg"],
+	["Bandanna (Beast)", "G_Bandanna_beast", 100, "gogg"],
+	["Bandanna (Black)", "G_Bandanna_blk", 100, "gogg"],
+	["Bandanna (Khaki)", "G_Bandanna_khk", 100, "gogg"],
+	["Bandanna (Olive)", "G_Bandanna_oli", 100, "gogg"],
+	["Bandanna (Shades)", "G_Bandanna_shades", 100, "gogg"],
+	["Bandanna (Sport)", "G_Bandanna_sport", 100, "gogg"],
+	["Bandanna (Tan)", "G_Bandanna_tan", 100, "gogg"],
+	["Combat Goggles", "G_Combat", 100, "gogg"],
+	["VR Goggles", "G_Goggles_VR", 100, "gogg"],
+	["Ladies Shades (ICE)", "G_Lady_Blue", 100, "gogg"],
+	["Ladies Shades (Sea)", "G_Lady_Dark", 100, "gogg"],
+	["Ladies Shades (Iridium)", "G_Lady_Mirror", 100, "gogg"],
+	["Ladies Shades (Fire)", "G_Lady_Red", 100, "gogg"],
+	["Low Profile Goggles", "G_Lowprofile", 100, "gogg"],
+	["Shades (Black)", "G_Shades_Black", 100, "gogg"],
+	["Shades (Blue)", "G_Shades_Blue", 100, "gogg"],
+	["Shades (Green)", "G_Shades_Green", 100, "gogg"],
+	["Shades (Red)", "G_Shades_Red", 100, "gogg"],
+	["Spectacle Glasses", "G_Spectacles", 100, "gogg"],
+	["Tinted Spectacles", "G_Spectacles_Tinted", 100, "gogg"],
+	["Sport Shades (Vulcan)", "G_Sport_Blackred", 100, "gogg"],
+	["Sport Shades (Shadow)", "G_Sport_BlackWhite", 100, "gogg"],
+	["Sport Shades (Poison)", "G_Sport_Blackyellow", 100, "gogg"],
+	["Sport Shades (Style)", "G_Sport_Checkered", 100, "gogg"],
+	["Sport Shades (Yetti)", "G_Sport_Greenblack", 100, "gogg"],
+	["Sport Shades (Fire)", "G_Sport_Red", 100, "gogg"],
+	["Square Spectacles", "G_Squares", 100, "gogg"],
+	["Square Shades", "G_Squares_Tinted", 100, "gogg"],
+	["Tactical Shades", "G_Tactical_Black", 100, "gogg"],
+	["Tactical Glasses", "G_Tactical_Clear", 100, "gogg"]
 ];
 
 allStoreMagazines = compileFinal str (call ammoArray + call throwputArray + call genItemArray);
