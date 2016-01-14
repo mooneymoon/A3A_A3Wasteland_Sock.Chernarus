@@ -33,6 +33,12 @@
 
 	["<t color='#FF0000'>Emergency eject</t>",  { [[], fn_emergencyEject] execFSM "call.fsm" }, [], -9, false, true, "", "(vehicle player) isKindOf 'Air' && !((vehicle player) isKindOf 'ParachuteBase')"],
 	["<t color='#FF00FF'>Open magic parachute</t>", { [[], fn_openParachute] execFSM "call.fsm" }, [], 20, true, true, "", "vehicle player == player && (getPos player) select 2 > 2.5"]
+
+	["<t color='#FF66CC'>Give up!</t>",  "addons\Surrender\fn_surrender_request.sqf", [], 1,false,false,"","(isPlayer cursorTarget) && {[cursorTarget] call canSuggestToSurrender}"],	
+	["<t color='#47B247'>Surrender</t>",  "addons\Surrender\fn_surrender_confirm.sqf", [], 1,false,false,"","(isPlayer cursorTarget) && {[] call wasSuggestedToSurrender}"],	
+	["<t color='#FF0000'>Extort</t>",  "addons\Surrender\fn_surrender_actions.sqf", [cursorTarget,"extort"], 1,false,false,"","(isPlayer cursorTarget) && {(cursorTarget getVariable ['sur_isSurrendering',false]) && {(player distance cursorTarget) < 5}}"],	
+	["<t color='#FF0000'>Look in pockets</t>",  "addons\Surrender\fn_surrender_actions.sqf", [cursorTarget,"money"], 1,false,false,"","(isPlayer cursorTarget) && {(cursorTarget getVariable ['sur_isSurrendering',false]) && {(player distance cursorTarget) < 5}}"],	
+	["<t color='#FF0000'>Release</t>",  "addons\Surrender\fn_surrender_actions.sqf", [cursorTarget,"release"], 1,false,false,"","(isPlayer cursorTarget) && {(cursorTarget getVariable ['sur_isSurrendering',false]) && {(player distance cursorTarget) < 5}}"],	
 ];
 
 
