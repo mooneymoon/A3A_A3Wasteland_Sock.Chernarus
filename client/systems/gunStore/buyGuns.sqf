@@ -77,7 +77,7 @@ storePurchaseHandle = _this spawn
 	_showInsufficientDonatorError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["<t color='#ffff00'>This item is for forum subscribers only.</t><br/>The purchase of ""%1"" has been cancelled.", _itemText];
+		hint parseText format ["<t color='#ffff00'>This item is for community supporters only.</t><br/>The purchase of ""%1"" has been cancelled.", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};
