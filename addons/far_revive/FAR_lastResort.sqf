@@ -16,7 +16,7 @@ if !(player getVariable ["performingDuty", false]) then
 		if (["Perform your duty?", "", "Yes", "No"] call BIS_fnc_guiMessage) then
 		{
 			player setVariable ["performingDuty", true];
-			playSound3D [call currMissionDir + "client\sounds\lastresort.wss", vehicle player, false, getPosASL player, 0.7, 1, 1000];
+			playSound3D [call currMissionDir + "client\sounds\johncena.ogg", vehicle player, false, getPosASL player, 0.7, 1, 1000];
 
 			if (_hasSatchel) then
 			{
