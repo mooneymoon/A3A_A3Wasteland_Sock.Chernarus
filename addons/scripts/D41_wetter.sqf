@@ -20,7 +20,7 @@
 		if (isDedicated) then
 			{
 				D41_ChanceN = round(random 100);
-				if(D41_ChanceN <= 2) then
+				if(D41_ChanceN <= 4) then
 					{
 						D41_Nebel = [0,0,0]; D41_Wellen = 0; D41_Vorschau = 0.2; D41_Wind = [0, 2, true]; D41_Regen = 0; D41_RegenCounter = 0;
 						D41_WMod = round(random 9);
@@ -36,7 +36,7 @@
 						if(D41_WMod == 9) then {D41_Nebel = [0.1, 0.1,50]; D41_Regen = 0.1; D41_Vorschau = 0.5; D41_Wellen = 1; D41_RegenCounter = 1;};
 					};
 
-				if(D41_ChanceN >=3 && D41_ChanceN <= 8 && D41_RegenCounter == 0) then
+				if(D41_ChanceN >=5 && D41_ChanceN <= 13 && D41_RegenCounter == 0) then
 					{
 						D41_Nebel = [0,0,0]; D41_Wellen = 1; D41_Vorschau = 0.5; D41_RegenCounter = 1;
 						D41_WMod = round(random 9);
@@ -52,9 +52,9 @@
 						if(D41_WMod == 9) then {D41_Nebel = 0;    D41_Vorschau = 0.5; D41_Wind = [2, 1, true]; D41_Regen = 0.1;};
 					};
 
-				if(D41_ChanceN >=3 && D41_ChanceN <= 8 && D41_RegenCounter == 1) then {D41_ChanceN = 24};
+				if(D41_ChanceN >=5 && D41_ChanceN <= 13 && D41_RegenCounter == 1) then {D41_ChanceN = 24};
 
-				if(D41_ChanceN >=9 && D41_ChanceN <= 64) then
+				if(D41_ChanceN >=14 && D41_ChanceN <= 70) then
 				{
 					D41_Nebel = [0,0,0]; D41_Wellen = 1; D41_Vorschau = 0.2; D41_Regen = 0; D41_RegenCounter = 0;
 					D41_WMod = round(random 9);
@@ -70,7 +70,7 @@
 					if(D41_WMod == 9) then {D41_Vorschau = 0.2; D41_Wind = [1, 1, true];};
 				};
 
-				if(D41_ChanceN >=65 && D41_ChanceN <= 100) then
+				if(D41_ChanceN >=71 && D41_ChanceN <= 100) then
 				{
 					D41_Nebel = [0,0,0]; D41_Wellen = 0; D41_Vorschau = 0.1; D41_Regen = 0; D41_RegenCounter = 0;
 					D41_WMod = round(random 2);
@@ -93,10 +93,19 @@
 		{
 			[] call _fnc_D41_WetterWerte;
 			60 setfog (D41_Nebel);
-			60 setRain (D41_Regen);
 			0 setOvercast (D41_Vorschau);
 			setWind (D41_Wind);
 			60 setWaves (D41_Wellen);
+
+			if (D41_Vorschau <= 0.4) then
+			{
+				60 setRain 0;
+			}
+			else
+			{
+				60 setRain (D41_Regen);
+			};			
+
 			sleep 1800;
 		};
 	};
