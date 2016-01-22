@@ -59,7 +59,6 @@ storePurchaseHandle = _this spawn
     "srifle_GM6_camo_LRPS_F",
     "arifle_MX_SW_Black_F",
     "MMG_01_hex_F",
-    "MMG_02_sand_F",
     "MMG_02_camo_F",
     "MMG_02_black_F",
     "launch_O_Titan_short_F",
