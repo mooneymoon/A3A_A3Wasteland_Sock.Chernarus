@@ -44,7 +44,6 @@ storePurchaseHandle = _this spawn
     "B_Carryall_oli",
     "B_Carryall_oucamo",
     "Chemlight_yellow",
-    "G_Aviator",
     "G_Balaclava_blk",
     "G_Balaclava_oli",
     "G_Balaclava_combat",
@@ -85,7 +84,7 @@ storePurchaseHandle = _this spawn
 	_showInsufficientDonatorError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["<t color='#ffff00'>This item is for community supporters only.</t><br/>The purchase of ""%1"" has been cancelled.", _itemText];
+		hint parseText format ["<t color='#ffff00'>This item is only sold to community supporters. Use the items base color\camo.</t><br/>The purchase of ""%1"" has been cancelled.", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};
