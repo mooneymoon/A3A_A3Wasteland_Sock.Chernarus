@@ -210,7 +210,7 @@ ammoArray = compileFinal str
 	["RPG-42 High-Explosive Rocket", "RPG32_HE_F", 350],      // Direct damage: medium    | Splash damage: medium | Guidance: none
 	["PCML Anti-Tank Missile", "NLAW_F", 500],                // Direct damage: very high | Splash damage: low    | Guidance: laser, ground vehicles
 	//["Titan Anti-Tank Missile", "Titan_AT", 500],           // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
-	["Titan AP Missile", "Titan_AP", 400],        			  // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
+	["Titan AP Missile", "Titan_AP", 500],        			  // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
 	["Titan Anti-Air Missile", "Titan_AA", 550],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 125],
 	["40mm 3Rnd HE Grenades", "3Rnd_HE_Grenade_shell", 250],
@@ -559,14 +559,14 @@ backpackArray = compileFinal str
 
 genItemArray = compileFinal str
 [
-	["UAV Terminal (NATO)", "B_UavTerminal", 150, "gps"],
-	["UAV Terminal (CSAT)", "O_UavTerminal", 150, "gps"],
-	["UAV Terminal (AAF)", "I_UavTerminal", 150, "gps"],
-	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 500, "backpack"],
-	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 500, "backpack"],
-	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 500, "backpack"],
-	["Remote Designator Bag (NATO) [DLC]", "B_Static_Designator_01_weapon_F", 1000, "backpack"],
-	["Remote Designator Bag (CSAT) [DLC]", "O_Static_Designator_02_weapon_F", 1000, "backpack"],
+	["UAV Terminal (NATO)", "B_UavTerminal", 500, "gps"],
+	["UAV Terminal (CSAT)", "O_UavTerminal", 500, "gps"],
+	["UAV Terminal (AAF)", "I_UavTerminal", 500, "gps"],
+	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 2000, "backpack"],
+	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 2000, "backpack"],
+	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 2000, "backpack"],
+	["Remote Designator Bag (NATO) [DLC]", "B_Static_Designator_01_weapon_F", 1500, "backpack"],
+	["Remote Designator Bag (CSAT) [DLC]", "O_Static_Designator_02_weapon_F", 1500, "backpack"],
 	["GPS", "ItemGPS", 100, "gps"],
 	["First Aid Kit", "FirstAidKit", 25, "item"],
 	["Medikit", "Medikit", 150, "item"],
@@ -748,12 +748,12 @@ tanksArray = compileFinal str
 	["IFV-6c Panther", "B_APC_Tracked_01_rcws_F", 35000, "vehicle"],
 	["FV-720 Mora", "I_APC_tracked_03_cannon_F", 37500, "vehicle"],
 	["BTR-K Kamysh", "O_APC_Tracked_02_cannon_F", 40000, "vehicle"],
-	["IFV-6a Cheetah AA", "B_APC_Tracked_01_AA_F", 40000, "vehicle"],
-	["ZSU-39 Tigris AA", "O_APC_Tracked_02_AA_F", 40000, "vehicle"],
-	["M2A1 Slammer", "B_MBT_01_cannon_F", 50000, "vehicle"],
-	["M2A4 Slammer HMG", "B_MBT_01_TUSK_F", 50000, "vehicle"], // Commander gun variant
-	["T-100 Varsuk", "O_MBT_02_cannon_F", 50000, "vehicle"],
-	["MBT-52 Kuma", "I_MBT_03_cannon_F", 50000, "vehicle"]
+	["IFV-6a Cheetah AA", "B_APC_Tracked_01_AA_F", 47500, "vehicle"],
+	["ZSU-39 Tigris AA", "O_APC_Tracked_02_AA_F", 47500, "vehicle"],
+	["M2A1 Slammer", "B_MBT_01_cannon_F", 65000, "vehicle"],
+	["M2A4 Slammer HMG", "B_MBT_01_TUSK_F", 65000, "vehicle"], // Commander gun variant
+	["T-100 Varsuk", "O_MBT_02_cannon_F", 65000, "vehicle"],
+	["MBT-52 Kuma", "I_MBT_03_cannon_F", 65000, "vehicle"]
 ];
 
 
@@ -783,17 +783,17 @@ helicoptersArray = compileFinal str
 	["PO-30 Orca (Armed, Black)", "O_Heli_Light_02_v2_F", 35000, "vehicle"], // Armed Ka-60 with orca paintjob
 	["PO-30 Orca (Armed, Hex)", "O_Heli_Light_02_F", 35000, "vehicle"], // Armed Ka-60
 	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 40000, "vehicle"], // Armed AW159
-	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 50000, "vehicle"], // RAH-66 with gunner
-	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 60000, "vehicle"], // Mi-28 with gunner
-	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 60000, "vehicle"] // Mi-28 with gunner (black camo)
+	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 62500, "vehicle"], // RAH-66 with gunner
+	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 65000, "vehicle"], // Mi-28 with gunner
+	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 65000, "vehicle"] // Mi-28 with gunner (black camo)
 ];
 
 planesArray = compileFinal str
 [
 	["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 40000, "vehicle"],
-	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 45000, "vehicle"],
-	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 55000, "vehicle"],
-	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 55000, "vehicle"],
+	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 55000, "vehicle"],
+	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 65000, "vehicle"],
+	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 65000, "vehicle"],
 	["MQ4A Greyhawk ATGM UAV", "B_UAV_02_F", 25000, "vehicle"],
 	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 20000, "vehicle"], // Bomber UAVs are a lot harder to use, hence why they are cheaper than ATGMs
 	["K40 Ababil-3 ATGM UAV (CSAT)", "O_UAV_02_F", 25000, "vehicle"],

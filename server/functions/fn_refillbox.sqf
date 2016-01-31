@@ -115,7 +115,7 @@ switch (_boxType) do
 			["itm", ["V_PlateCarrier3_rgr", "V_TacVest_camo", "V_PlateCarrierGL_rgr"], RANDOM_BETWEEN(1,8)],
 			["bac", ["B_Carryall_mcamo", "B_Kitbag_mcamo"], RANDOM_BETWEEN(2,5)],
 			["itm", ["bipod_01_F_blk", "bipod_02_F_hex"], 2],
-			["itm", ["optic_DMS","optic_AMS","optic_tws_mg","optic_KHS_blk"], RANDOM_BETWEEN(3,5)],
+			["itm", ["optic_DMS","optic_AMS","optic_tws_mg","optic_KHS_blk"], RANDOM_BETWEEN(1,5)],
 			["itm", ["muzzle_snds_338_black", "muzzle_snds_338_sand", "muzzle_snds_93mmg"], RANDOM_BETWEEN(3,5)]
 		];
 	};
@@ -126,7 +126,7 @@ switch (_boxType) do
 			// Item type, Item class(es), # of items, # of magazines per weapon
 			["wep", ["launch_RPG32_F", "launch_NLAW_F", "launch_Titan_short_F"], RANDOM_BETWEEN(3,5), RANDOM_BETWEEN(1,2)],
 			["wep", "launch_Titan_F", RANDOM_BETWEEN(1,2), RANDOM_BETWEEN(1,2)],
-			["mag", ["Titan_AT", "SLAMDirectionalMine_Wire_Mag", "ATMine_Range_Mag", "DemoCharge_Remote_Mag", "SatchelCharge_Remote_Mag"], RANDOM_BETWEEN(3,8)]
+			["mag", ["Titan_AT", "SLAMDirectionalMine_Wire_Mag", "ATMine_Range_Mag", "DemoCharge_Remote_Mag", "SatchelCharge_Remote_Mag"], RANDOM_BETWEEN(3,5)]
 		];
 	};
 };
