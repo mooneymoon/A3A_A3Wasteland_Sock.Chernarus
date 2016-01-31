@@ -24,7 +24,7 @@ while {true} do
 			_veh = [_x, "Vehicle", objNull] call fn_getFromPairs;
 
 			// Check if vehicle is not being towed, moved, or has owner 
-			if (isNull (_veh getVariable ["R3F_LOG_est_transporte_par", objNull]) && isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull]) && isNull (_veh getVariable ["ownerUID", objNull])) then
+			if (isNull (_veh getVariable ["R3F_LOG_est_transporte_par", objNull]) && isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull]) || isNil {_veh getVariable "ownerUID"}) then
 			{
 				_settings = _x;
 
