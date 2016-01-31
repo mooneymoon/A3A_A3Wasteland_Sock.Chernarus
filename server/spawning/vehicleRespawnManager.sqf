@@ -22,10 +22,9 @@ while {true} do
 		{
 			_startTime = diag_tickTime;
 			_veh = [_x, "Vehicle", objNull] call fn_getFromPairs;
-			
-			// Check if vehicle is not being towed or moved and has not been saved
-			if (isNull (_veh getVariable ["R3F_LOG_est_transporte_par", objNull]) &&
-				isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull]) || isNull (_veh getVariable ["A3W_purchasedVehicle", objNull])) then
+
+			// Check if vehicle is not being towed, moved, or has owner 
+			if (isNull (_veh getVariable ["R3F_LOG_est_transporte_par", objNull]) && isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull]) && isNull (_veh getVariable ["ownerUID", objNull])) then
 			{
 				_settings = _x;
 
@@ -207,7 +206,7 @@ while {true} do
 					{
 						_respawnPos = getPosATL _veh;
 					};
-					
+
 					sleep 0.1;
 					deleteVehicle _veh;
 
