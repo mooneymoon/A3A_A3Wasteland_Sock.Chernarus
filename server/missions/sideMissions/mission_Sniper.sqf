@@ -7,7 +7,7 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf";
 
-private ["_positions", "_boxes1", "_currBox1", "_box1"];
+private ["_positions", "_boxes1", "_currBox1", "_box1", "_missionPos"];
 
 _setupVars =
 {
@@ -43,7 +43,7 @@ _successExec =
 	
 	_boxes1 = ["Box_East_WpsSpecial_F","Box_IND_WpsSpecial_F"];
 	_currBox1 = _boxes1 call BIS_fnc_selectRandom;
-	_box1 = createVehicle [_currBox1, _lastPos, [], 2, "None"];
+	_box1 = createVehicle [_currBox1, _missionPos, [], 2, "None"];
 	_box1 allowDamage false;
 	_box1 setVariable ["R3F_LOG_disabled", false, true];
 
