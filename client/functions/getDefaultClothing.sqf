@@ -21,8 +21,8 @@ else
 	_side = _this select 2;
 };
 
-_isSniper = (["_sniper_", _unit] call fn_findString != -1);
-_isDiver = (["_diver_", _unit] call fn_findString != -1);
+_isSniper = (["Sniper", roleDescription _player] call fn_findString != -1);
+_isDiver = (["Diver", roleDescription _player] call fn_findString != -1);
 
 _defaultVest = "V_Rangemaster_Belt";
 

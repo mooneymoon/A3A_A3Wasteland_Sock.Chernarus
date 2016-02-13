@@ -45,19 +45,25 @@ _player selectWeapon "hgun_ACPC2_F";
 
 switch (true) do
 {
-	case (["_medic_", typeOf _player] call fn_findString != -1):
+	case (["Combat Life Saver", roleDescription _player] call fn_findString != -1):
 	{
 		_player removeItem "FirstAidKit";
 		_player addItem "Medikit";
 	};
-	case (["_engineer_", typeOf _player] call fn_findString != -1):
+	case (["Engineer", roleDescription _player] call fn_findString != -1):
 	{
 		_player addItem "MineDetector";
 		_player addItem "Toolkit";
 	};
-	case (["_sniper_", typeOf _player] call fn_findString != -1):
+	case (["Sniper", roleDescription _player] call fn_findString != -1):
 	{
 		_player addWeapon "Rangefinder";
+		_player removeItem "Medikit";
+	};
+	case (["Diver", roleDescription _player] call fn_findString != -1):
+	{
+		_player addGoggles "G_Diving";
+		_player removeItem "Medikit";
 	};
 };
 
