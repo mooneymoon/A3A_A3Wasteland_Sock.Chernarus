@@ -78,7 +78,7 @@ switch (_boxType) do
 			["wep", ["srifle_EBR_F", "srifle_DMR_01_F"], RANDOM_BETWEEN(1,3), RANDOM_BETWEEN(4,6)],			
 			["wep", "Rangefinder", RANDOM_BETWEEN(1,3)],
 			["mag", "5Rnd_127x108_APDS_Mag", RANDOM_BETWEEN(4,8)],
-			["itm", ["optic_DMS","optic_Nightstalker","optic_tws"], RANDOM_BETWEEN(1,3)]
+			["itm", ["optic_DMS","optic_Nightstalker","optic_tws"], RANDOM_BETWEEN(0,2)]
 		];
 	};
 	case "mission_Uniform":
@@ -126,7 +126,7 @@ switch (_boxType) do
 			// Item type, Item class(es), # of items, # of magazines per weapon
 			["wep", ["launch_RPG32_F", "launch_NLAW_F", "launch_Titan_short_F"], RANDOM_BETWEEN(3,5), RANDOM_BETWEEN(1,2)],
 			["wep", "launch_Titan_F", RANDOM_BETWEEN(1,2), RANDOM_BETWEEN(1,2)],
-			["mag", ["Titan_AT", "SLAMDirectionalMine_Wire_Mag", "ATMine_Range_Mag", "DemoCharge_Remote_Mag", "SatchelCharge_Remote_Mag"], RANDOM_BETWEEN(3,5)]
+			["mag", ["Titan_AP", "SLAMDirectionalMine_Wire_Mag", "ATMine_Range_Mag", "DemoCharge_Remote_Mag", "SatchelCharge_Remote_Mag"], RANDOM_BETWEEN(3,5)]
 		];
 	};
 };

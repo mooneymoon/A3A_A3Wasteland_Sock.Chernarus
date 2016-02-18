@@ -17,7 +17,7 @@ _leader addUniform "U_I_Ghilliesuit";
 _leader addVest "V_PlateCarrierIA1_dgtl";
 _leader addMagazine "5Rnd_127x108_APDS_Mag";
 _leader addWeapon "srifle_GM6_LRPS_F";
-_leader addPrimaryWeaponItem "optic_tws";
+_leader addPrimaryWeaponItem "optic_NVS";
 _leader addMagazine "5Rnd_127x108_APDS_Mag";
 _leader addMagazine "5Rnd_127x108_APDS_Mag";
 _leader addMagazine "HandGrenade";

@@ -210,7 +210,7 @@ ammoArray = compileFinal str
 	["RPG-42 High-Explosive Rocket", "RPG32_HE_F", 350],      // Direct damage: medium    | Splash damage: medium | Guidance: none
 	["PCML Anti-Tank Missile", "NLAW_F", 500],                // Direct damage: very high | Splash damage: low    | Guidance: laser, ground vehicles
 	//["Titan Anti-Tank Missile", "Titan_AT", 500],           // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
-	["Titan AP Missile", "Titan_AP", 500],        			  // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
+	//["Titan AP Missile", "Titan_AP", 500],        			  // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
 	["Titan Anti-Air Missile", "Titan_AA", 550],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 125],
 	["40mm 3Rnd HE Grenades", "3Rnd_HE_Grenade_shell", 250],
@@ -565,8 +565,8 @@ genItemArray = compileFinal str
 	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 2000, "backpack"],
 	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 2000, "backpack"],
 	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 2000, "backpack"],
-	["Remote Designator Bag (NATO) [DLC]", "B_Static_Designator_01_weapon_F", 1500, "backpack"],
-	["Remote Designator Bag (CSAT) [DLC]", "O_Static_Designator_02_weapon_F", 1500, "backpack"],
+	["Remote Designator Bag (NATO) [DLC]", "B_Static_Designator_01_weapon_F", 3500, "backpack"],
+	["Remote Designator Bag (CSAT) [DLC]", "O_Static_Designator_02_weapon_F", 3500, "backpack"],
 	["GPS", "ItemGPS", 100, "gps"],
 	["First Aid Kit", "FirstAidKit", 25, "item"],
 	["Medikit", "Medikit", 150, "item"],
