@@ -20,7 +20,7 @@
 		if (isDedicated) then
 			{
 				D41_ChanceN = round(random 100);
-				if(D41_ChanceN <= 4) then
+				if(D41_ChanceN <= 4 && D41_RegenCounter == 0) then
 					{
 						D41_Nebel = [0,0,0]; D41_Wellen = 0; D41_Vorschau = 0.2; D41_Wind = [0, 2, true]; D41_Regen = 0; D41_RegenCounter = 1;
 						D41_WMod = round(random 9);
