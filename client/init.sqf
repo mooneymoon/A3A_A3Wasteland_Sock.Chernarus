@@ -145,6 +145,7 @@ A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 [] execVM "addons\cctv\functions.sqf";
 [] execVM "addons\water_edge\functions.sqf";
 [] execVM "addons\boomerang\functions.sqf";
+[] execVM "addons\disableThermal\disablethermal.sqf";
 
 call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 [] execVM "client\functions\drawPlayerMarkers.sqf";
