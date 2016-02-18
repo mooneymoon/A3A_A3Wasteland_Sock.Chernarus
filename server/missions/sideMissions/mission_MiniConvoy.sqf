@@ -9,7 +9,7 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf";
 
-private ["_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_box1", "_box2"];
+private ["_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_box1", "_box2", "_randomBox", "_randomBox2"];
 
 _setupVars =
 {
@@ -139,6 +139,8 @@ _successExec =
 	_box2 setDir random 360;
 	[_box2, _randomBox2] call fn_refillbox;
 
+	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];	
+	
 	_successHintMessage = "The convoy has been stopped, the weapon crates and vehicles are now yours to take.";
 };
 

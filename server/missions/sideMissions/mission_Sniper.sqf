@@ -7,7 +7,7 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf";
 
-private ["_positions", "_boxes1", "_currBox1", "_box1", "_missionPos"];
+private ["_positions", "_box1", "_box2", "_missionPos", "_randomBox", "_randomBox2"];
 
 _setupVars =
 {
@@ -40,13 +40,18 @@ _failedExec =
 _successExec =
 {
 	// Mission completed
+	_randomBox = ["mission_USLaunchers","mission_HVLaunchers","mission_HVSniper"] call BIS_fnc_selectRandom;
+	_randomBox2 = ["mission_USSpecial","mission_Main_A3snipers","mission_DLCLMGs"] call BIS_fnc_selectRandom;
+	_box1 = createVehicle ["Box_East_WpsSpecial_F", _missionPos, [], 2, "None"];
+	_box1 setDir random 360;
+	[_box1, _randomBox] call fn_refillbox;
 	
-	_boxes1 = ["Box_East_WpsSpecial_F","Box_IND_WpsSpecial_F"];
-	_currBox1 = _boxes1 call BIS_fnc_selectRandom;
-	_box1 = createVehicle [_currBox1, _missionPos, [], 2, "None"];
-	_box1 allowDamage false;
-	_box1 setVariable ["R3F_LOG_disabled", false, true];
+	_box2 = createVehicle ["Box_IND_WpsSpecial_F", _missionPos, [], 2, "None"];
+	_box2 setDir random 360;
+	[_box2, _randomBox2] call fn_refillbox;
 
+	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
+	
 	_successHintMessage = format ["The snipers are dead! Well Done!"];
 };
 

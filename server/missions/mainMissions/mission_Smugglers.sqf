@@ -7,7 +7,7 @@
 if (!isServer) exitwith {};
 #include "mainMissionDefines.sqf";
 
-private ["_nbUnits", "_positions", "_smugglerVeh", "_vehicle1", "_vehicle2", "_boxes1", "_currBox1", "_randomBox", "_box1", "_boxes2", "_currBox2", "_box2", "_cashrandomizera", "_cashamountrandomizera", "_cashpilerandomizera", "_casha", "_cashamounta", "_cashpilea", "_cashrandomizerb", "_cashamountrandomizerb", "_cashpilerandomizerb", "_cashb", "_cashamountb", "_cashpileb", "_cash1", "_cash2", "_drop_item", "_drugpilerandomizer", "_drugpile"];
+private ["_nbUnits", "_positions", "_smugglerVeh", "_vehicle1", "_vehicle2", "_boxes1", "_currBox1", "_randomBox", "_randomBox2", "_box1", "_boxes2", "_currBox2", "_box2", "_cashrandomizera", "_cashamountrandomizera", "_cashpilerandomizera", "_casha", "_cashamounta", "_cashpilea", "_cashrandomizerb", "_cashamountrandomizerb", "_cashpilerandomizerb", "_cashb", "_cashamountb", "_cashpileb", "_cash1", "_cash2", "_drop_item", "_drugpilerandomizer", "_drugpile"];
 
 _setupVars =
 {
@@ -35,14 +35,16 @@ _setupObjects =
 	
 	_boxes1 = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"];
 	_currBox1 = _boxes1 call BIS_fnc_selectRandom;
-	_randomBox = ["mission_USLaunchers","mission_USSpecial","mission_Main_A3snipers"] call BIS_fnc_selectRandom;
+	_randomBox = ["mission_USLaunchers","mission_USSpecial","mission_DLCRifles"] call BIS_fnc_selectRandom;
 	_box1 = createVehicle [_currBox1,[(_missionPos select 0), (_missionPos select 1),0],[], 0, "NONE"];
 	[_box1, _randomBox] call fn_refillbox;
+	_box1 setVariable ["R3F_LOG_disabled", true, true];
 	
 	_boxes2 = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"];
 	_currBox2 = _boxes2 call BIS_fnc_selectRandom;
+	_randomBox2 = ["mission_USSpecial","mission_Main_A3snipers","mission_DLCLMGs"] call BIS_fnc_selectRandom;
 	_box2 = createVehicle [_currBox2,[(_missionPos select 0) - 5, (_missionPos select 1) - 8,0],[], 0, "NONE"];
-	_box2 allowDamage false;
+	[_box2, _randomBox2] call fn_refillbox;
 	_box2 setVariable ["R3F_LOG_disabled", true, true];
 	
 	_aiGroup = createGroup CIVILIAN;
