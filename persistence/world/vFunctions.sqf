@@ -152,7 +152,7 @@ v_restoreVehicle = {
   _obj disableTIEquipment true;
 
   //enables thermal equipment on loaded vehicles for UAVs and UGVs
-  if ({_obj isKindOf _x} count ["UAV_01_base_F", "UAV_02_base_F", "UGV_01_base_F"] > 0) then {
+  if ({_obj isKindOf _x} count ["UAV_02_base_F", "UGV_01_base_F"] > 0) then {
     _obj disableTIEquipment false;
   };
   
