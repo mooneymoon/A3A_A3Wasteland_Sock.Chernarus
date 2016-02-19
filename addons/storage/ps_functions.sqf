@@ -168,14 +168,9 @@ ps_is_object_storage = {
 };
 
 ps_is_player_near = {
-  private["_pos1", "_pos2"];
-  _pos1 = (eyePos player);
-  _pos2 = ([_pos1, call ps_cameraDir] call BIS_fnc_vectorAdd);
-
   private["_objects"];
-  _objects = lineIntersectsWith [_pos1,_pos2,objNull,objNull,true];
-  if (isNil "_objects" || {typeName _objects != typeName []}) exitWith {false};
-
+  _objects = nearestObjects [player, ["Land_PaperBox_open_full_F", "Land_Pallet_MilBoxes_F", "Land_PaperBox_open_empty_F", "Land_PaperBox_closed_F"], 5];
+  if (isNil "_objects") exitWith {false};
 
   private["_found"];
   _found = false;

@@ -322,14 +322,9 @@ pp_is_object_parking = {
 };
 
 pp_is_player_near = {
-  private["_pos1", "_pos2"];
-  _pos1 = (eyePos player);
-  _pos2 = ([_pos1, call pp_cameraDir] call BIS_fnc_vectorAdd);
-
   private["_objects"];
-  _objects = lineIntersectsWith [_pos1,_pos2,objNull,objNull,true];
-  if (isNil "_objects" || {typeName _objects != typeName []}) exitWith {false};
-
+  _objects = nearestObjects [player, ["Land_Laptop_unfolded_F", "Land_CampingTable_small_F"], 5];
+  if (isNil "_objects") exitWith {false};
 
   private["_found"];
   _found = false;
