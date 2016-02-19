@@ -23,12 +23,12 @@ storeOwnerConfig = compileFinal str
 	["GunStore5", 5, 83, []],
 
 	// Buttons you can disable: "Land", "Armored", "Tanks", "Helicopters", "Boats", "Planes"
-	["VehStore1", -1, 75, []], //Molos Airfield
+	["VehStore1", 1e9, 75, []], //Molos Airfield
 	["VehStore2", 6, 45, ["Boats"]],
-	["VehStore3", -1, 329, ["Boats"]],
-	["VehStore4", -1, 225, ["Boats"]],
-	["VehStore5", -1, 69, ["Planes"]],
-	["VehStore6", -1, 282, ["Boats", "Planes"]]  //Dump
+	["VehStore3", 1e9, 329, ["Boats"]],
+	["VehStore4", 1e9, 225, ["Boats"]],
+	["VehStore5", 1e9, 69, ["Planes"]],
+	["VehStore6", 1e9, 282, ["Boats", "Planes"]]  //Dump
 ];
 
 // Outfits for store owners
