@@ -508,7 +508,7 @@ va_outside_target = {
   
 
   def(_target);
-  if (surfaceIsWater (position _player)) then {
+  /*if (surfaceIsWater (position _player)) then {
    //line intersect does not work well when vehicle is in water
     _target = cursorTarget;
   }
@@ -520,7 +520,8 @@ va_outside_target = {
 	_objects = (lineIntersectsWith [_pos1,_pos2,objNull,objNull,true]);
 	if (!isARRAY(_objects) || {count _objects == 0}) exitWith {};
 	_target = _objects select 0;
-  };
+  };*/
+  _target = cursorObject;
 
   if (isNil "_target") exitWith {};
 
