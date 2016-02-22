@@ -94,7 +94,7 @@ switch (true) do
 		_centerOfMass set [2, (_centerOfMass select 2) - 0.1]; // cannot be static number like SUV due to different values for each variant
 		_vehicle setCenterOfMass _centerOfMass;
 	};
-	case ({_class isKindOf _x} count ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F", "O_Heli_Light_02_unarmed_F"] > 0):
+	case ({_class isKindOf _x} count ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F", "O_Heli_Light_02_unarmed_F", "C_Heli_Light_01_civil_F"] > 0):
 	{
 		// Add flares to those poor helis
 		_vehicle addWeaponTurret ["CMFlareLauncher", [-1]];
@@ -134,6 +134,12 @@ switch (true) do
 		// Add quadbike horn to karts
 		_vehicle addWeaponTurret ["MiniCarHorn", [-1]];
 	};
+};
+
+if (isDedicated) then {
+  //used for keeping track of the vehicle used un-used lifetime
+  _vehicle addEventHandler ["GetIn", { _this spawn v_GetIn_handler}];
+  _vehicle addEventHandler ["GetOut", { _this spawn v_GetOut_handler}];
 };
 
 // Double minigun ammo to compensate for Bohemia's incompetence (http://feedback.arma3.com/view.php?id=21613)
