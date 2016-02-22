@@ -46,7 +46,11 @@ _getInOut =
 	_unit = _this select 2;
 
 	_unit setVariable ["lastVehicleRidden", netId _vehicle, true];
-	_unit setVariable ["lastVehicleOwner", owner _vehicle == owner _unit, true];
+
+	if (isPlayer _unit && owner _vehicle == owner _unit) then
+	{
+		_vehicle setVariable ["lastVehicleOwnerUID", getPlayerUID _unit, true];
+	};
 
 	_vehicle setVariable ["vehSaving_hoursUnused", 0];
 	_vehicle setVariable ["vehSaving_lastUse", diag_tickTime];
@@ -68,7 +72,7 @@ _vehicle addEventHandler ["Killed",
 	};
 }];
 
-if ({_class isKindOf _x} count ["LandVehicle", "Ship", "Air"] > 0) then
+if ({_class isKindOf _x} count ["Air","UGV_01_base_F"] > 0) then
 {
 	[netId _vehicle, "A3W_fnc_setupAntiExplode", true] call A3W_fnc_MP;
 };
@@ -83,7 +87,14 @@ switch (true) do
 		_centerOfMass set [2, -0.657]; // original = -0.557481
 		_vehicle setCenterOfMass _centerOfMass;
 	};
-	case ({_class isKindOf _x} count ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F", "O_Heli_Light_02_unarmed_F", "C_Heli_Light_01_civil_F"] > 0):
+	case (_class isKindOf "MRAP_02_base_F"):
+	{
+		// Lower Ifrit center of mass to prevent rollovers
+		_centerOfMass = getCenterOfMass _vehicle;
+		_centerOfMass set [2, (_centerOfMass select 2) - 0.1]; // cannot be static number like SUV due to different values for each variant
+		_vehicle setCenterOfMass _centerOfMass;
+	};
+	case ({_class isKindOf _x} count ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F", "O_Heli_Light_02_unarmed_F"] > 0):
 	{
 		// Add flares to those poor helis
 		_vehicle addWeaponTurret ["CMFlareLauncher", [-1]];
@@ -123,13 +134,6 @@ switch (true) do
 		// Add quadbike horn to karts
 		_vehicle addWeaponTurret ["MiniCarHorn", [-1]];
 	};
-};
-
-
-if (isDedicated) then {
-  //used for keeping track of the vehicle used un-used lifetime
-  _vehicle addEventHandler ["GetIn", { _this spawn v_GetIn_handler}];
-  _vehicle addEventHandler ["GetOut", { _this spawn v_GetOut_handler}];
 };
 
 // Double minigun ammo to compensate for Bohemia's incompetence (http://feedback.arma3.com/view.php?id=21613)
