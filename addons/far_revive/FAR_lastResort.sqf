@@ -4,10 +4,11 @@
 //	@file Name: FAR_lastResort.sqf
 //	@file Author: AgentRev
 
-private ["_hasCharge", "_hasSatchel", "_mineType", "_pos", "_mine"];
+private ["_hasCharge", "_hasSatchel", "_mineType", "_pos", "_mine", "_playlist"];
 
 _hasCharge = "DemoCharge_Remote_Mag" in magazines player;
 _hasSatchel = "SatchelCharge_Remote_Mag" in magazines player;
+_playlist = ["johncena.ogg", "john-stamos.ogg", "price-is-right.ogg", "R2D2.ogg", "scarface.ogg", "sloth.ogg", "trombone.ogg", "wtf-boom.ogg", "predator.ogg"];
 
 if !(player getVariable ["performingDuty", false]) then
 {
@@ -15,29 +16,29 @@ if !(player getVariable ["performingDuty", false]) then
 	{
 		if (["Perform your duty?", "", "Yes", "No"] call BIS_fnc_guiMessage) then
 		{
-			player setVariable ["performingDuty", true];
-			playSound3D [call currMissionDir + "client\sounds\johncena.ogg", vehicle player, false, getPosASL player, 0.7, 1, 1000];
+				player setVariable ["performingDuty", true];
+				playSound3D [call currMissionDir + "client\sounds\" + (_playList select floor random count _playList), vehicle player, false, getPosASL player, 0.7, 1, 1000];
 
-			if (_hasSatchel) then
-			{
-				_mineType = "SatchelCharge_F";
-				player removeMagazine "SatchelCharge_Remote_Mag";
-			}
-			else
-			{
-				_mineType = "DemoCharge_F";
-				player removeMagazine "DemoCharge_Remote_Mag";
-			};
+				if (_hasSatchel) then
+				{
+					_mineType = "SatchelCharge_F";
+					player removeMagazine "SatchelCharge_Remote_Mag";
+				}
+				else
+				{
+					_mineType = "DemoCharge_F";
+					player removeMagazine "DemoCharge_Remote_Mag";
+				};
 
-			sleep 1.75;
+				sleep 1.75;
 
-			_pos = getPosATL player;
-			_pos set [2, (_pos select 2) + 0.5];
+				_pos = getPosATL player;
+				_pos set [2, (_pos select 2) + 0.5];
 
-			_mine = createMine [_mineType, _pos, [], 0];
-			_mine setDamage 1;
-			player setDamage 1;
-			player setVariable ["performingDuty", nil];
+				_mine = createMine [_mineType, _pos, [], 0];
+				_mine setDamage 1;
+				player setDamage 1;
+				player setVariable ["performingDuty", nil];
 		};
 	}
 	else
