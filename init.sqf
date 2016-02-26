@@ -29,7 +29,7 @@ X_Client = false;
 X_JIP = false;
 
 //enable weather script
-[] execVM "addons\scripts\D41_wetter.sqf";
+[] execVM "addons\scripts\SimpleWeatherScript.sqf";
 
 //disable TAW grass Option 'None'
 tawvd_disablenone = true;
