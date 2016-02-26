@@ -36,19 +36,20 @@
 
 				if(SWS_ChanceN >=5 && SWS_ChanceN <= 13) then
 				{
-					if(SWS_RainCounter == 1) then {
-					    SWS_RainCounter = 0;
-					    SWS_WMod = round(random 9);
-					    if(SWS_WMod == 0) then {SWS_Fog = [0.1,0,0]; SWS_Overcast = 1;   SWS_Wind = [4, 4, true]; SWS_Rain = 0.6; SWS_Waves = 1;};
-					    if(SWS_WMod == 1) then {SWS_Fog = [0.3,0,0]; SWS_Overcast = 1;   SWS_Wind = [4, 4, true]; SWS_Rain = 0.6; SWS_Waves = 1;};
-					    if(SWS_WMod == 2) then {SWS_Fog = [0.1,0,0]; SWS_Overcast = 0.9; SWS_Wind = [4, 4, true]; SWS_Rain = 0.5; SWS_Waves = 1;};
-					    if(SWS_WMod == 3) then {SWS_Fog = [0.2,0,0]; SWS_Overcast = 0.8; SWS_Wind = [0, 5, true]; SWS_Rain = 0.5; SWS_Waves = 1;};
-					    if(SWS_WMod == 4) then {SWS_Fog = [0.1,0,0]; SWS_Overcast = 0.7; SWS_Wind = [5, 0, true]; SWS_Rain = 0.3; SWS_Waves = 1;};
-					    if(SWS_WMod == 5) then {SWS_Fog = [0,0,0];   SWS_Overcast = 0.7; SWS_Wind = [0, 6, true]; SWS_Rain = 0.3; SWS_Waves = 1;};
-					    if(SWS_WMod == 6) then {SWS_Fog = [0.1,0,0]; SWS_Overcast = 0.6; SWS_Wind = [5, 0, true]; SWS_Rain = 0.2; SWS_Waves = 1;};
-					    if(SWS_WMod == 7) then {SWS_Fog = [0,0,0];   SWS_Overcast = 0.6; SWS_Wind = [2, 4, true]; SWS_Rain = 0.2; SWS_Waves = 1;};
-					    if(SWS_WMod == 8) then {SWS_Fog = [0,0,0];   SWS_Overcast = 0.5; SWS_Wind = [3, 2, true]; SWS_Rain = 0.2; SWS_Waves = 1;};
-					    if(SWS_WMod == 9) then {SWS_Fog = [0,0,0];   SWS_Overcast = 0.5; SWS_Wind = [2, 1, true]; SWS_Rain = 0.1; SWS_Waves = 1;};					
+					if(SWS_RainCounter == 1) then 
+					{
+						SWS_RainCounter = 0;
+						SWS_WMod = round(random 9);
+						if(SWS_WMod == 0) then {SWS_Fog = [0.1,0,0]; SWS_Overcast = 1;   SWS_Wind = [4, 4, true]; SWS_Rain = 0.6; SWS_Waves = 1;};
+						if(SWS_WMod == 1) then {SWS_Fog = [0.3,0,0]; SWS_Overcast = 1;   SWS_Wind = [4, 4, true]; SWS_Rain = 0.6; SWS_Waves = 1;};
+						if(SWS_WMod == 2) then {SWS_Fog = [0.1,0,0]; SWS_Overcast = 0.9; SWS_Wind = [4, 4, true]; SWS_Rain = 0.5; SWS_Waves = 1;};
+						if(SWS_WMod == 3) then {SWS_Fog = [0.2,0,0]; SWS_Overcast = 0.8; SWS_Wind = [0, 5, true]; SWS_Rain = 0.5; SWS_Waves = 1;};
+						if(SWS_WMod == 4) then {SWS_Fog = [0.1,0,0]; SWS_Overcast = 0.7; SWS_Wind = [5, 0, true]; SWS_Rain = 0.3; SWS_Waves = 1;};
+						if(SWS_WMod == 5) then {SWS_Fog = [0,0,0];   SWS_Overcast = 0.7; SWS_Wind = [0, 6, true]; SWS_Rain = 0.3; SWS_Waves = 1;};
+						if(SWS_WMod == 6) then {SWS_Fog = [0.1,0,0]; SWS_Overcast = 0.6; SWS_Wind = [5, 0, true]; SWS_Rain = 0.2; SWS_Waves = 1;};
+						if(SWS_WMod == 7) then {SWS_Fog = [0,0,0];   SWS_Overcast = 0.6; SWS_Wind = [2, 4, true]; SWS_Rain = 0.2; SWS_Waves = 1;};
+						if(SWS_WMod == 8) then {SWS_Fog = [0,0,0];   SWS_Overcast = 0.5; SWS_Wind = [3, 2, true]; SWS_Rain = 0.2; SWS_Waves = 1;};
+						if(SWS_WMod == 9) then {SWS_Fog = [0,0,0];   SWS_Overcast = 0.5; SWS_Wind = [2, 1, true]; SWS_Rain = 0.1; SWS_Waves = 1;};					
 					}
 					else {SWS_ChanceN = 24};
 				};
