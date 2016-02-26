@@ -92,7 +92,7 @@
 			[] call _fnc_SWS_Weather;
 			60 setfog (SWS_Fog);
 			15 setOvercast (SWS_Overcast);
-			10 setWind (SWS_Wind);
+			setWind (SWS_Wind);
 			60 setWaves (SWS_Waves);
 			60 setRain (SWS_Rain);			
 
@@ -106,7 +106,7 @@
 		{
 			60 setfog (SWS_Fog);
 			15 setOvercast (SWS_Overcast);
-			10 setWind (SWS_Wind);
+			setWind (SWS_Wind);
 			60 setWaves (SWS_Waves);
 			60 setRain (SWS_Rain);		
 			//hint format ["::::::: Simple Weather Script ::::::: SWS_ChanceN = %1 ::: SWS_WMod = %2",SWS_ChanceN, SWS_WMod];
