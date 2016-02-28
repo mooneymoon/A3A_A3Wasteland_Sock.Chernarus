@@ -18,7 +18,7 @@ _ammo = _this select 4;
 // a critical hit is if this type of selection can trigger death upon suffering damage >= 1 (usually all of them except "hands", "arms", and "legs")
 // this is intercepted to prevent engine-triggered death and put the unit in revive mode instead; behavior and selections can change with game updates
 
-_criticalHit = (_selection in ["","body","spine1","spine2","spine3","pelvis","neck","face_hub"]);
+_criticalHit = (_selection in ["","body","head","spine1","spine2","spine3","pelvis","neck","face_hub"]);
 _fatalHit = (_damage >= 1 && alive _unit && _criticalHit);
 
 // Find suspects

@@ -10,7 +10,7 @@ if (!hasInterface) exitWith {};
 
 #define ICON_fadeDistance 1250
 #define ICON_limitDistance 2000
-#define ICON_sizeScale 0.75
+#define ICON_sizeScale 0.40
 
 if (isNil "showPlayerNames") then { showPlayerNames = false };
 
@@ -53,7 +53,7 @@ drawPlayerIcons_thread = [] spawn
 				   (_unit != player || cameraOn != vehicle player) &&
 				   {!(_unit getVariable ["playerSpawning", false]) &&
 				   (vehicle _unit != getConnectedUAV player || cameraOn != vehicle _unit) && // do not show UAV AI icons when controlling UAV
-				   {typeOf _unit != "HeadlessClient_F"}}}) then 
+				   {getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "headlessclient"}}}) then
 				{
 					_dist = _unit distance positionCameraToWorld [0,0,0];
 					_pos = _unit modelToWorldVisual [0, 0, 1.35]; // Torso height
