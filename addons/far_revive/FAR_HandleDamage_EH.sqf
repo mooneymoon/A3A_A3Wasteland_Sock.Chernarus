@@ -62,28 +62,31 @@ if (UNCONSCIOUS(_unit)) then
 		};
 	};
 	
-	_oldDamage = if (_selection == "") then { damage _unit } else { _unit getHit _selection };
+	//if (_selection != "?") then
+	//{
+		_oldDamage = if (_selection == "") then { damage _unit } else { _unit getHit _selection };
 
-	if (!isNil "_oldDamage") then
-	{
-		// Apply part of the damage without multiplier when below the stabilization threshold of 50% damage
-		if (STABILIZED(_unit) && {_criticalHit && FAR_DamageMultiplier < 1}) then
+		if (!isNil "_oldDamage") then
 		{
-			_oldDamage = _damage min 0.5;
+			// Apply part of the damage without multiplier when below the stabilization threshold of 50% damage
+			if (STABILIZED(_unit) && {_criticalHit && FAR_DamageMultiplier < 1}) then
+			{
+				_oldDamage = _damage min 0.5;
+			};
+
+			_damage = ((_damage - _oldDamage) * FAR_DamageMultiplier) + _oldDamage;
+
+			if (_criticalHit) then
+			{
+				_unit setDamage _damage;
+			};
 		};
 
-		_damage = ((_damage - _oldDamage) * FAR_DamageMultiplier) + _oldDamage;
-
-		if (_criticalHit) then
+		if (_damage >= 1 && _criticalHit) then
 		{
-			_unit setDamage _damage;
+			diag_log format ["KILLED by [%1] with [%2]", _source, _ammo];
 		};
-	};
-
-	if (_damage >= 1 && _criticalHit) then
-	{
-		diag_log format ["KILLED by [%1] with [%2]", _source, _ammo];
-	};
+	//};
 }
 else
 {
