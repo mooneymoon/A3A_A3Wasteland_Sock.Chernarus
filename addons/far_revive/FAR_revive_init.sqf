@@ -18,9 +18,7 @@ call compile preprocessFile "addons\far_revive\FAR_revive_funcs.sqf";
 FAR_isDragging = false;
 FAR_isDragging_EH = [];
 FAR_deathMessage = [];
-FAR_headshotMessage = [];
 FAR_Debugging = false;
-FAR_NoHeadshot = false;
 
 FAR_Reset_Unit =
 {
@@ -30,7 +28,6 @@ FAR_Reset_Unit =
 	_this setVariable ["FAR_draggedBy", nil, true];
 	_this setVariable ["FAR_treatedBy", nil, true];
 	_this setCaptive false;
-	FAR_NoHeadshot = false;
 
 	if (isPlayer _this) then
 	{
@@ -109,7 +106,6 @@ FAR_findKiller = "addons\far_revive\FAR_findKiller.sqf" call mf_compile;
 ////////////////////////////////////////////////
 "FAR_isDragging_EH" addPublicVariableEventHandler FAR_public_EH;
 "FAR_deathMessage" addPublicVariableEventHandler FAR_public_EH;
-"FAR_headshotMessage" addPublicVariableEventHandler FAR_public_EH;
 
 ////////////////////////////////////////////////
 // Player Initialization
