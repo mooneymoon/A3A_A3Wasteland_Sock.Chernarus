@@ -29,39 +29,6 @@ if (((_fatalHit && !isNull _source) || (_criticalHit && UNCONSCIOUS(_unit))) && 
 
 if (UNCONSCIOUS(_unit)) then
 {
-	//Headshot - tries to confirm result of injury was from headshot
-	if(!FAR_NoHeadshot && alive _unit)then{
-		if(_selection == "head") then{
-			_killer = _unit call FAR_findKiller;
-			if((_ammo splitString "_" select 0) == "B" && _damage >= 1 && isPlayer _killer)then{
-				//Player was headshot from a player with a bullet projectile
-				FAR_NoHeadshot = false;
-				_unit setFatigue 0;
-				_unit enableFatigue false;
-				[_unit, _killer] spawn
-				{
-					_unit = _this select 0;
-					_killer = _this select 1;
-					_names = [toArray name _unit];
-					if (!isNull _killer && { (_killer != _unit) && (vehicle _killer != vehicle _unit)}) then
-					{
-						_names set [1, toArray name _killer];
-					};
-					FAR_headshotMessage = [_names, netId _unit, netId _killer];
-					publicVariable "FAR_headshotMessage";
-					["FAR_headshotMessage", FAR_headshotMessage] call FAR_public_EH;
-					_unit setDamage 1;
-				};
-			}
-			else
-			{
-				//Player was not headshot
-				_unit allowDamage false;
-				FAR_NoHeadshot = true;
-			};
-		};
-	};
-	
 	//if (_selection != "?") then
 	//{
 		_oldDamage = if (_selection == "") then { damage _unit } else { _unit getHit _selection };
@@ -96,8 +63,7 @@ else
 		_unit setVariable ["FAR_isUnconscious", 1, true];
 		[] spawn fn_deletePlayerData;
 
-		//_unit allowDamage false;
-		FAR_NoHeadshot = false;
+		_unit allowDamage false;
 		//if (vehicle _unit == _unit) then { [_unit, "AinjPpneMstpSnonWrflDnon"] call switchMoveGlobal };
 		_unit enableFatigue true;
 		_unit setFatigue 1;

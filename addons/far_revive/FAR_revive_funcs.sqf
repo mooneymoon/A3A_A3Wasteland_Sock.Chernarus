@@ -233,23 +233,6 @@ FAR_public_EH =
 			};
 		};
 	};
-	
-	// FAR_headshotMessage
-	if (_EH == "FAR_headshotMessage") then
-	{
-		_names = _value select 0;
-		_unitName = _names select 0;
-		_killerName = _names param [1, nil];
-		_unit = objectFromNetId (_value select 1);
-		_killer = objectFromNetId (_value select 2);
-		switch (true) do
-		{
-			case (isNil "_killerName"): { systemChat format ["%1 was headshot", toString _unitName]; };
-			default {
-			systemChat format ["%1 was headshot by %2", toString _unitName, toString _killerName];
-			};
-		};
-	};
 }
 call mf_compile;
 
