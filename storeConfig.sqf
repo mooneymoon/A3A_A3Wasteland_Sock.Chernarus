@@ -577,6 +577,7 @@ genItemArray = compileFinal str
 	["Binoculars", "Binocular", 50, "binoc"],
 	["Rangefinder", "Rangefinder", 150, "binoc"],
 	["Laser Designator", "Laserdesignator", 1000, "binoc"],
+	["Laser Designator Batteries", "Laserbatteries", 25, "mag"],	
 	["Chemlight (Blue)", "Chemlight_blue", 25, "mag"],
 	["Chemlight (Red)", "Chemlight_red", 25, "mag"],
 	["Chemlight (Green)", "Chemlight_green", 25, "mag"],
