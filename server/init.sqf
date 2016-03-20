@@ -72,7 +72,7 @@ waitUntil {scriptDone _serverCompileHandle};
 // Broadcast server rules
 if (loadFile (externalConfigFolder + "\serverRules.sqf") != "") then
 {
-	[[call compile preprocessFileLineNumbers (externalConfigFolder + "\serverRules.sqf")], "client\functions\defineServerRules.sqf"] remoteExec ["BIS_fnc_execVM", 0, true];
+	[[call compile preprocessFileLineNumbers (externalConfigFolder + "\serverRules.sqf")], "client\functions\defineServerRules.sqf"] remoteExecCall ["execVM", [-2,0] select hasInterface, true];
 };
 
 diag_log "WASTELAND SERVER - Server Compile Finished";
@@ -126,7 +126,8 @@ forEach
 	"A3W_uavControl",
 	"A3W_maxSpawnBeacons",
 	"A3W_townSpawnCooldown",
-	"A3W_survivalSystem"
+	"A3W_survivalSystem",
+	"A3W_headshotNoRevive"
 ];
 
 ["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;
@@ -243,9 +244,10 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn) then
 			{
 				waitUntil {scriptDone _this};
 
-				["A3W_flagCheckOnJoin", "onPlayerConnected", { [_uid, _name] spawn fn_kickPlayerIfFlagged }] call BIS_fnc_addStackedEventHandler;
+				["A3W_flagCheckOnJoin", "onPlayerConnected", { [_uid, _name, _owner] spawn fn_kickPlayerIfFlagged }] call BIS_fnc_addStackedEventHandler;
 
-				{ [getPlayerUID _x, name _x] call fn_kickPlayerIfFlagged } forEach allPlayers;
+				// force check for non-JIP players
+				{ waitUntil {!isNull player}; [player] remoteExec ["A3W_fnc_checkPlayerFlag", 2] } remoteExec ["call", -2];
 			};
 		};
 	};
