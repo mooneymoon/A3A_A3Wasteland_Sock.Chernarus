@@ -49,7 +49,7 @@ _objName = getText (configFile >> "CfgVehicles" >> _objClass >> "displayName");
 	{
 		// Add total sell value to confirm message
 		_confirmMsg = format ["Selling the %1 will give you $%2<br/>", _objName, _price];
-		_confirmMsg = _confirmMsg + format ["<br/><t font='EtelkaMonospaceProBold'>1</t> x %1", _objName];
+		_confirmMsg = _confirmMsg + format ["<br/>%1 x %1", _objName];
 
 		// Display confirm message
 		if ([parseText _confirmMsg, "Confirm", "Sell", true] call BIS_fnc_guiMessage) then
