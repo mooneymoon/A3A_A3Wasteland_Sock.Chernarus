@@ -49,13 +49,13 @@ else
 		if (_fixVest) then { _arrFix pushBack "Vest" };
 
 		if (isNil "fn_getPlayerData") then { fn_getPlayerData = "persistence\client\players\getPlayerData.sqf" call mf_compile };
-		if (isNil "fn_applyPlayerData") then { fn_applyPlayerData = "persistence\client\players\applyPlayerData.sqf" call mf_compile };
+		if (isNil "fn_applyPlayerDataTemp") then { fn_applyPlayerDataTemp = "persistence\client\players\applyPlayerData.sqf" call mf_compile };
 
 		_data = [[player] call fn_getPlayerData, { [_arrFix, _x select 0] call fn_startsWith }] call BIS_fnc_conditionalSelect;
 
 		if (_fixUniform) then { removeUniform player };
 		if (_fixVest) then { removeVest player };
 
-		[_data, false] call fn_applyPlayerData;
+		[_data, false] call fn_applyPlayerDataTemp;
 	};
 };
