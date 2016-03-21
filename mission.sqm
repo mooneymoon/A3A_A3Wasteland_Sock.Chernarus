@@ -2233,7 +2233,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			position[]={5892.3325,225.05762,20124.521};
@@ -2538,6 +2538,18 @@ class Mission
 			position[]={21647.465,14.035986,7676.2676};
 			azimut=230.96605;
 			id=188;
+			side="EMPTY";
+			vehicle="Land_Atm_02_F";
+			skill=0.60000002;
+			init="[this] call A3W_fnc_setupMissionATM";
+			description="DO NOT MODIFY IN EDITOR";
+		};
+		class Item28
+		{
+			position[]={4591.957,300.70551,21446.057};
+			azimut=85;
+			offsetY=0.15000001;
+			id=189;
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
