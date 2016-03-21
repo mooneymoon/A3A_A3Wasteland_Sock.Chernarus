@@ -60,8 +60,6 @@ weaponDisassembledEvent = "client\functions\weaponDisassembledEvent.sqf" call mf
 deleteBeacon = "client\items\beacon\deleteBeacon.sqf" call mf_compile;
 canSuggestToSurrender = "addons\Surrender\canSuggestToSurrender.sqf" call mf_compile;
 wasSuggestedToSurrender = "addons\Surrender\wasSuggestedToSurrender.sqf" call mf_compile;
-fn_getPlayerData = "persistence\client\players\getPlayerData.sqf" call mf_compile;
-fn_applyPlayerData = "persistence\client\players\applyPlayerData.sqf" call mf_compile;
 
 // Player details and actions
 loadPlayerMenu = "client\systems\playerMenu\init.sqf" call mf_compile;
