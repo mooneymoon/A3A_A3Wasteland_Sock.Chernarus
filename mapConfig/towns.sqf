@@ -4,36 +4,28 @@
 //	@file Name: towns.sqf
 //	@file Author: AgentRev, JoSchaap
 
+// Towns and cities array
+// Marker Name, Diameter, City Name
+
 [
-	// Marker Name, Diameter, City Name
-	["Town_1", 400, "Kavala"],
-	["Town_2", 300, "Agios Dionysios"],
-	["Town_3", 150, "Abdera"],
-	["Town_4", 250, "Athira"],
-	["Town_5", 200, "Telos"],
-	["Town_6", 200, "Sofia"],
-	["Town_7", 200, "Paros"],
-	["Town_8", 300, "Pyrgos"],
-	["Town_9", 150, "Selakano"],
-	["Town_10", 200, "Vikos"],
-	["Town_11", 250, "Zaros"],
-	["Town_12", 250, "Neochori"],
-	["Town_13", 250, "Aggelochori"],
-	["Town_14", 200, "Panochori"],
-	["Town_15", 200, "Charkia"],
-	["Town_16", 150, "Chalkeia"],
-	["Town_17", 150, "Oreokastro"],
-	["Town_18", 100, "Dump"],
-	["Town_19", 125, "Negades"],
-	["Town_20", 100, "Frini"],
-	["Town_21", 175, "Poliakko"],
-	["Town_22", 125, "Kore"],
-	["Town_23", 125, "Syrta"],
-	["Town_24", 150, "Lakka"],
-	["Town_25", 125, "Dorida"],
-	["Town_26", 125, "Panagia"],
-	["Town_27", 150, "Kalochori"],
-	["Town_28", 175, "Feres"],
-	["Town_29", 175, "Molos"],
-	["Town_30", 175, "Rodopoli"]
+	["Town_1", 500, "Chernogorsk"],
+	["Town_2", 100, "Dubrovka"],
+	["Town_3", 100, "Nadezhdino"],
+	["Town_4", 100, "Solnichniy"],
+	["Town_5", 75, "Krasnostav"],
+	["Town_6", 100, "Pogorevka"],
+	["Town_7", 100, "Polana"],
+	["Town_8", 300, "Zelenogorsk"],
+	["Town_9", 100, "Balota"],
+	["Town_10", 300, "Berezino"],
+	["Town_11", 100, "Gvozdno"],
+	["Town_12", 100, "Khlem"],
+	["Town_13", 100, "Komorovo"],
+	["Town_14", 100, "Grishino"],  
+	["Town_15", 100, "Lopatino"],
+	["Town_16", 100, "Kamyshovo"],
+	["Town_17", 300, "Elektrozavodsk"],
+	["Town_18", 100, "Petrovka"],
+	["Town_19", 100, "Pushtoshka"],
+	["Town_20", 100, "Kamenka"]
 ]

@@ -12,21 +12,22 @@
 // 4 - Territory category, currently unused. See territory/README.md for details.
 
 [
-	["TERRITORY_THRONOS_CASTLE", "Thronos Castle", 500, "CASTLE"],
-	//["TERRITORY_KASTRO_CASTLE", "Kastro Castle", 500, "CASTLE"],
-	["TERRITORY_SW_AIRFIELD", "AAC Airfield", 500, "AIRFIELD"],
-	["TERRITORY_MAIN_AIRBASE_SW", "Altis Airport (SW)", 750, "AIRBASE"],
-	["TERRITORY_MAIN_AIRBASE_CENTER", "Altis Airport (Center)", 750, "AIRBASE"],
-	["TERRITORY_MAIN_AIRBASE_NE", "Altis Airport (NE)", 750, "AIRBASE"],
-	["TERRITORY_NE_AIRFIELD", "Molos Airfield", 500, "AIRFIELD"],
-	["TERRITORY_SE_AIRFIELD", "Selakano Airfield", 500, "AIRFIELD"],
-	["TERRITORY_NW_AIRFIELD", "Northwest Airfield", 500, "AIRFIELD"],
-	["TERRITORY_SALTFLATS_AIRFIELD", "Saltflats", 500, "AIRFIELD"],
-	["TERRITORY_WEST_POWER_PLANT", "West Power Plant", 500, "POWER"],
-	["TERRITORY_CENTER_POWER_PLANT", "Center Power Plant", 500, "POWER"],
-	["TERRITORY_IRAKLIA_RUINS", "Iraklia Ruins", 500, "RUINS"],
-	["TERRITORY_ARTINARKI_RUINS", "Artinarki Ruins", 500, "RUINS"],
-	["TERRITORY_MAGOS_TRANSMITTER", "Magos Transmitter", 500, "TRANSMITTER"],
-	["TERRITORY_PYRSOS_TRANSMITTER", "Pyrsos Transmitter", 500, "TRANSMITTER"],
-	["TERRITORY_MILITARY_RESEARCH", "Telos Military Base", 500, "MILITARY"]
+	["TERRITORY_CHERNO", "Chernogorsk", 1500],
+	["TERRITORY_ELEKTRO", "Elektrozavodsk", 1500],
+	["TERRITORY_NWAF", "North West Airfield", 2000],
+	["TERRITORY_NEAF", "North East Airfield", 1500],
+	["TERRITORY_ROG", "Rog", 500],
+	["TERRITORY_BLACKMOUNTAIN", "Black Mountain", 500],
+	["TERRITORY_DEVILS", "Devil's Castle", 1000],
+	["TERRITORY_GREENMOUNTAIN", "Green Mountain", 500],
+	["TERRITORY_ZELENOGORSK", "Zelenogorsk", 1500],
+	["TERRITORY_VYBOR", "Vybor", 750],
+	["TERRITORY_BALOTA", "Balota Airfield", 1000],
+	["TERRITORY_SKALISTI", "Skalisti Island", 1000],
+	["TERRITORY_POLANA", "Polana Factory", 2500],
+	["TERRITORY_BEREZINO", "Berezino", 1500],
+	["TERRITORY_BEREZINO_INDUSTRIAL", "Berezino Industrial", 1000],
+	["TERRITORY_STARY", "Stary Sobor", 2500],
+	["TERRITORY_MOGILEVKA", "Mogilevka", 1500]
 ]
+

@@ -14,7 +14,7 @@ A3W_timeMultiplierNight = 4.0;     // Sets the speed of time between 8 PM and 5 
 A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 A3W_teamPlayersMap = 1;            // Show all friendly players on the map at all times, regardless of difficulty level (0 = no, 1 = yes)
 A3W_disableGlobalVoice = 1;        // Auto-switch channel to Direct communication whenever broadcasting voice on global (0 = no, 1 = yes, 2 = allow admin)
-A3W_disableSideVoice = 1;          // Auto-switch channel to Direct communication whenever broadcasting voice on side (0 = no, 1 = block Ind team, 2 = block all teams)
+A3W_disableSideVoice = 2;          // Auto-switch channel to Direct communication whenever broadcasting voice on side (0 = no, 1 = block Ind team, 2 = block all teams)
 A3W_antiHackUnitCheck = 1;         // Detect players who spawn unauthorized AI units (0 = no, 1 = yes) - disable if you have custom unit scripts/mods like AI recruitment or ALiVE
 A3W_antiHackMinRecoil = 1.0;       // Mininum recoil coefficient enforced by the antihack (recommended values: default = 1.0, TMR Mod = 0.5, VTS Weapon Resting = 0.25) (minimum: 0.02)
 A3W_townSpawnCooldown = 5*60;      // Number of seconds to wait between each spawn on a specific town (0 = disabled)
@@ -75,12 +75,12 @@ A3W_vehicleMaxUnusedTime = 2*24;   // Maximum parking time in hours after which 
 A3W_storageLifetime = 0;           // Maximum lifetime in horus for player's private storage (0 = no time limit)
 
 PDB_PlayerFileID = "A3W_";         // Player savefile prefix (change this in case you run multiple servers from the same folder)
-PDB_ObjectFileID = "A3W_";         // Object savefile prefix (change this in case you run multiple servers from the same folder)
-PDB_VehicleFileID = "A3W_";        // Vehicle savefile prefix (change this in case you run multiple servers from the same folder)
-PDB_MessagesFileID = "A3W_";       // Messages savefile prefix (change this in case you run multiple servers from the same folder)
-PDB_AdminLogFileID = "A3W_";       // Admin log savefile prefix (change this in case you run multiple servers from the same folder)
-PDB_HackerLogFileID = "A3W_";      // Hacker log savefile prefix (change this in case you run multiple servers from the same folder)
-PDB_PlayersListFileID = "A3W_";    // PlayerList savefile prefix (change this in case you run multiple servers from the same folder)
+PDB_ObjectFileID = "A3W3_";         // Object savefile prefix (change this in case you run multiple servers from the same folder)
+PDB_VehicleFileID = "A3W3_";        // Vehicle savefile prefix (change this in case you run multiple servers from the same folder)
+PDB_MessagesFileID = "A3W3_";       // Messages savefile prefix (change this in case you run multiple servers from the same folder)
+PDB_AdminLogFileID = "A3W3_";       // Admin log savefile prefix (change this in case you run multiple servers from the same folder)
+PDB_HackerLogFileID = "A3W3_";      // Hacker log savefile prefix (change this in case you run multiple servers from the same folder)
+PDB_PlayersListFileID = "A3W3_";    // PlayerList savefile prefix (change this in case you run multiple servers from the same folder)
 
 A3W_vehicle_saveInterval = 60*60;     // Number of seconds between vehicle saves
 A3W_object_saveInterval = 60*60;      // Number of seconds between object saves
