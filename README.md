@@ -1,4 +1,4 @@
-###Wasteland.Altis (Sock-RPC-Stats fork) ###
+###Wasteland.Chernarus (Sock-RPC-Stats fork) ###
 
 This is a fork of the Wasteland mission with persistence support using the [sock-rpc-stats Node.js module](https://www.npmjs.org/package/sock-rpc-stats), and the [sock.dll / sock.so](https://bitbucket.org/micovery/sock.dll) Arma 3 extension.
 
