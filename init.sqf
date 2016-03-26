@@ -107,4 +107,5 @@ if (hasInterface || isServer) then
   [] execVM "addons\scripts\resupply_actions.sqf";
   [] execVM "addons\lsd_nvg\init.sqf";
   [] execVM "addons\vsave\vsfunctions.sqf";
+  [] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
 };
