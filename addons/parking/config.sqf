@@ -1,6 +1,6 @@
 
 //List of cities where private parking is available (empty or unset means all cities)
-pp_cities_whitelist = ["Agios Konstantinos", "Ioannina", "Panagia", "Lakka", "Aggelochori", "Therisa", "Panochori", "Syrta"];
+pp_cities_whitelist = [];
 
 //whether or not to show map markers for private parking locations
 pp_markers_enabled = true; 
