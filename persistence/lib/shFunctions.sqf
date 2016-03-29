@@ -306,23 +306,17 @@ sh_restoreVehicleTurrets = {
 
   if (!isNil "_turret2") then {
     {
-      _veh setVehicleAmmo 0;
-      _veh setVehicleAmmoDef 0; 
+      _veh addMagazineTurret [_x select 0, _x select 1];
+      _veh setVehicleAmmo (_x select 2);
     } forEach _turret2;
   };
 
   if (!isNil "_turret0") then {
-    {
-      _veh setVehicleAmmo 0;
-      _veh setVehicleAmmoDef 0; 
-    } forEach _turret0;
+    { _veh addMagazine _x } forEach _turret0;
   };
 
   if (!isNil "_turret1") then {
-    {
-      _veh setVehicleAmmo 0;
-      _veh setVehicleAmmoDef 0; 
-    } forEach _turret1;
+    { _veh addMagazineTurret _x } forEach _turret1;
   };
 
 };

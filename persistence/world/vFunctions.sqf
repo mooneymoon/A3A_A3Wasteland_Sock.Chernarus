@@ -249,21 +249,9 @@ v_restoreVehicle = {
 
   if (isSCALAR(_cargo_repair)) then {
     _obj setRepairCargo _cargo_repair;
-  };
-
-  if (_obj isKindOf "MRAP_03_base_F") then {
-    _obj setVehicleAmmo 0;
-    _obj setVehicleAmmoDef 0;
-  };
-
-  if (_obj isKindOf "O_Heli_Light_02_F") then {
-    _obj removeWeaponTurret ["missiles_DAGR",[-1]];
-    _obj addWeaponTurret ["missiles_DAR",[-1]];
   };*/
   
   if (_obj isKindOf "AllVehicles") then {
-    _obj setVehicleAmmo 1;
-    _obj setVehicleAmmoDef 1;	
 
     switch (true) do
     {
@@ -302,7 +290,7 @@ v_restoreVehicle = {
           _obj setRepairCargo 25;
       };
 
-      case ({_obj isKindOf _x} count ["B_UAV_02_F", "O_UAV_02_F", "I_UAV_02_F"] > 0):
+      /*case ({_obj isKindOf _x} count ["B_UAV_02_F", "O_UAV_02_F", "I_UAV_02_F"] > 0):
       {
           _obj setVehicleAmmo 0;
           _obj setVehicleAmmoDef 0;	
@@ -431,7 +419,7 @@ v_restoreVehicle = {
           _obj addWeaponTurret ["gatling_30mm",[0]];
           _obj addWeaponTurret ["missiles_SCALPEL",[0]]; 
           _obj addWeaponTurret ["rockets_Skyfire",[0]]; 
-      };		
+      };*/		
 
       case ({_obj isKindOf _x} count ["B_Mortar_01_F", "O_Mortar_01_F", "I_Mortar_01_F"] > 0):
       {
