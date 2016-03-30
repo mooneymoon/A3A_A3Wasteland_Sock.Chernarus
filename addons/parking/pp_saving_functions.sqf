@@ -68,7 +68,7 @@ if (not(isClient)) then {
     deleteVehicle _vehicle;
 
     _player setVariable ["parked_vehicles", _parked_vehicles, true];
-    [_player] call fn_savePlayerData;
+    [_player] call p_addPlayerSave;
     [_player, format["%1, your %2 has been parked.", (name _player), _display_name]] call pp_notify;
   };
 
@@ -116,11 +116,11 @@ if (not(isClient)) then {
 
     [_parked_vehicles, _vehicle_id] call fn_removeFromPairs;
     _player setVariable ["parked_vehicles", _parked_vehicles, true];
-
+    [_player] call p_addPlayerSave;
+	
     def(_display_name);
     _display_name = [typeOf _vehicle] call generic_display_name;
     [_player, format["%1, your %2 has been retrieved (marked on map)", (name _player), _display_name]] call pp_notify;
-    [_player] call fn_savePlayerData;
     [_player, _vehicle] call pp_mark_vehicle;
   };
 

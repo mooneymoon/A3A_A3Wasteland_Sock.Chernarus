@@ -6,7 +6,7 @@
 
 if (!hasInterface) exitWith {};
 
-#define IS_FRIENDLY_PLAYER(UNIT) (isPlayer UNIT && {(group UNIT == group player || (!_isIndie && side group UNIT == playerSide))})
+#define IS_FRIENDLY_PLAYER(UNIT) (isPlayer UNIT && [UNIT, player] call A3W_fnc_isFriendly)
 #define DEFAULT_ICON_POS(UNIT) (UNIT modelToWorld (UNIT selectionPosition "spine3"))
 #define MISSION_AI_FAR_DISTANCE 75
 #define IS_IN_GROUP(UNIT) (isPlayer UNIT && {(group UNIT == group player)})
@@ -77,7 +77,6 @@ A3W_mapDraw_thread = [] spawn
 
 		if (_showPlayers) then
 		{
-			_isIndie = !(playerSide in [BLUFOR,OPFOR]);
 			_mapIconsEnabled = difficultyEnabled "map";
 
 			_allUAVs = allUnitsUAV;
