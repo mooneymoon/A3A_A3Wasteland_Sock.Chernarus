@@ -38,9 +38,9 @@
 	["<t color='#47B247'>Surrender</t>",  "addons\Surrender\fn_surrender_confirm.sqf", [], 1,false,false,"","(isPlayer cursorTarget) && {[] call wasSuggestedToSurrender}"],	
 	["<t color='#FF0000'>Extort</t>",  "addons\Surrender\fn_surrender_actions.sqf", [cursorTarget,"extort"], 1,false,false,"","(isPlayer cursorTarget) && {(cursorTarget getVariable ['sur_isSurrendering',false]) && {(player distance cursorTarget) < 5}}"],	
 	["<t color='#FF0000'>Look in pockets</t>",  "addons\Surrender\fn_surrender_actions.sqf", [cursorTarget,"money"], 1,false,false,"","(isPlayer cursorTarget) && {(cursorTarget getVariable ['sur_isSurrendering',false]) && {(player distance cursorTarget) < 5}}"],	
-	["<t color='#FF0000'>Release</t>",  "addons\Surrender\fn_surrender_actions.sqf", [cursorTarget,"release"], 1,false,false,"","(isPlayer cursorTarget) && {(cursorTarget getVariable ['sur_isSurrendering',false]) && {(player distance cursorTarget) < 5}}"],
+	["<t color='#FF0000'>Release</t>",  "addons\Surrender\fn_surrender_actions.sqf", [cursorTarget,"release"], 1,false,false,"","(isPlayer cursorTarget) && {(cursorTarget getVariable ['sur_isSurrendering',false]) && {(player distance cursorTarget) < 5}}"]
 	
-	["Airdrop Menu", "addons\APOC_Airdrop_Assistance\APOC_cli_menu.sqf",[], -100, false, false]
+	//["Airdrop Menu", "addons\APOC_Airdrop_Assistance\APOC_cli_menu.sqf",[], -100, false, false]
 ];
 
 
