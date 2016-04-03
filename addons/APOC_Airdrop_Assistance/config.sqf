@@ -18,7 +18,7 @@ APOC_AA_SupOptions =
 //["DLC LMGs", 			"airdrop_DLC_LMGs", 			45000, "supply"],
 
 //"Menu Text",			"Crate Type", 			"Cost", "drop type"
-["Food",				"Land_Sacks_goods_F",	4000, 	"picnic"],
-["Water",				"Land_BarrelWater_F",	4000, 	"picnic"],
-["Base Building","Land_Pod_Heli_Transport_04_box_F",7500,"base"]
+["Food",				"Land_Sacks_goods_F",	3000, 	"picnic"],
+["Water",				"Land_BarrelWater_F",	3000, 	"picnic"]
+//["Base Building","Land_Pod_Heli_Transport_04_box_F",7500,"base"]
 ];
