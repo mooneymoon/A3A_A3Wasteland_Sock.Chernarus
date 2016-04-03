@@ -108,4 +108,5 @@ if (hasInterface || isServer) then
   [] execVM "addons\lsd_nvg\init.sqf";
   [] execVM "addons\vsave\vsfunctions.sqf";
   [] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
+  [] execVM "addons\statusBar\statusBar.sqf";   // shows FPS and teamspeak details
 };

@@ -76,6 +76,7 @@ class RscTitles
 	#include "client\systems\playerMenu\dialog\welcome.hpp"
 	#include "client\systems\scoreboard\score_gui.hpp"
 	#include "addons\boomerang\hud.hpp"
+	#include "addons\statusBar\statusBar.hpp"
 };
 
 class CfgDebriefing
