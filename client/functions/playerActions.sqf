@@ -40,7 +40,7 @@
 	["<t color='#FF0000'>Look in pockets</t>",  "addons\Surrender\fn_surrender_actions.sqf", [cursorTarget,"money"], 1,false,false,"","(isPlayer cursorTarget) && {(cursorTarget getVariable ['sur_isSurrendering',false]) && {(player distance cursorTarget) < 5}}"],	
 	["<t color='#FF0000'>Release</t>",  "addons\Surrender\fn_surrender_actions.sqf", [cursorTarget,"release"], 1,false,false,"","(isPlayer cursorTarget) && {(cursorTarget getVariable ['sur_isSurrendering',false]) && {(player distance cursorTarget) < 5}}"],
 	
-	[format ["<img image='\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa' color='%1'/> <t color='%1'>[</t>Airdrop Menu<t color='%1'>]</t>", "#FF0000"],"addons\APOC_Airdrop_Assistance\APOC_cli_menu.sqf",[], -100, false, false]
+	["Airdrop Menu", "addons\APOC_Airdrop_Assistance\APOC_cli_menu.sqf",[], -100, false, false]
 ];
 
 
