@@ -115,7 +115,7 @@
 			60 setRain (SWS_Rain);
 			setWind (SWS_Wind);
 			60 setWaves (SWS_Waves);	
-			//hint format ["::::::: Simple Weather Script ::::::: SWS_Fog = %3 ::: SWS_Overcast = %4 ::: SWS_Wind = %5 ::: SWS_Rain = %6 ::: SWS_Waves = %7 ::: SWS_BadWeatherCounter = %8", SWS_Fog, SWS_Overcast, SWS_Wind, SWS_Rain, SWS_Waves, SWS_BadWeatherCounter];
+			//hint format ["::::::: Simple Weather Script ::::::: SWS_Fog = %1 ::: SWS_Overcast = %2 ::: SWS_Wind = %3 ::: SWS_Rain = %4", SWS_Fog, SWS_Overcast, SWS_Wind, SWS_Rain];
 			uiSleep 120;
 		};
 	};
