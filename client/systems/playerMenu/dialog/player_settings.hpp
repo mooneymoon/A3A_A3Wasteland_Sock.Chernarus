@@ -198,6 +198,22 @@ class playerSettings {
 			x = 0.228; y = 0.254;
 			w = 0.225; h = 0.033 * safezoneH;
 		};
+		
+		class airdrop : w_RscButton {
+			idc = -1;
+			text = "Airdrop Menu";
+			onButtonClick = "[] execVM 'addons\APOC_Airdrop_Assistance\APOC_cli_menu.sqf'";
+			x = 0.158; y = 0.48;
+			w = 0.225; h = 0.033 * safezoneH;
+		};
+		
+		class vdistance : w_RscButton {
+			idc = -1;
+			text = "View Distance";
+			onButtonClick = "[] spawn TAWVD_fnc_openTAWVD;";
+			x = 0.158; y = 0.57;
+			w = 0.225; h = 0.033 * safezoneH;
+		};
     
     /*class btnDistanceInsane : w_RscButton {
 			text = "Insane";
