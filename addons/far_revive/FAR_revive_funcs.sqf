@@ -15,8 +15,7 @@ FAR_Player_Actions =
 		[
 			["<t color='#00C900'>" + "Revive" + "</t>", "addons\FAR_revive\FAR_handleAction.sqf", ["action_revive"], 100, true, true, "", FAR_Check_Revive],
 			["<t color='#00C900'>" + "Stabilize" + "</t>", "addons\FAR_revive\FAR_handleAction.sqf", ["action_stabilize"], 99, true, true, "", FAR_Check_Stabilize],
-			["<t color='#C9C900'>" + "Drag" + "</t>", "addons\FAR_revive\FAR_handleAction.sqf", ["action_drag"], 98, true, true, "", FAR_Check_Dragging],
-			["<t color='#C90000'>" + "Kill" + "</t>", "addons\FAR_revive\FAR_handleAction.sqf", ["action_kill"], 97, true, true, "", FAR_Check_Dragging]		
+			["<t color='#C9C900'>" + "Drag" + "</t>", "addons\FAR_revive\FAR_handleAction.sqf", ["action_drag"], 98, true, true, "", FAR_Check_Dragging]
 		];
 	};
 }
@@ -281,20 +280,6 @@ call mf_compile;
 FAR_Check_Revive =
 {
 	call FAR_Check_Dragging && IS_MEDIC(player)
-}
-call mf_compile;
-
-////////////////////////////////////////////////
-// Kill Player Action
-////////////////////////////////////////////////
-FAR_Kill =
-{
-  call FAR_Check_Dragging;
-  _target = cursorTarget; 
-  if ((_target isKindOf "Man") && { _target call A3W_fnc_isUnconscious}) then {
-    _target allowDamage true;
-    _target setDamage 1;
-  };
 }
 call mf_compile;
 
