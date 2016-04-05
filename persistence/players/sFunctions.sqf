@@ -274,7 +274,7 @@ p_getPlayerParking = {
   };} forEach _parked_vehicles;
 
 
-  if (count(_vehicles) == 0) exitWith {};
+  //if (count(_vehicles) == 0) exitWith {};
 
 
   (_vehicles call sock_hash)
