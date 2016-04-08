@@ -68,7 +68,7 @@ if (not(isClient)) then {
     deleteVehicle _vehicle;
 
     _player setVariable ["parked_vehicles", _parked_vehicles, true];
-    [_player] call p_addPlayerSave;
+    [_player] call fn_saveAccount;
     [_player, format["%1, your %2 has been parked.", (name _player), _display_name]] call pp_notify;
   };
 
@@ -116,7 +116,7 @@ if (not(isClient)) then {
 
     [_parked_vehicles, _vehicle_id] call fn_removeFromPairs;
     _player setVariable ["parked_vehicles", _parked_vehicles, true];
-    [_player] call p_addPlayerSave;
+    [_player] call fn_saveAccount;
 	
     def(_display_name);
     _display_name = [typeOf _vehicle] call generic_display_name;
