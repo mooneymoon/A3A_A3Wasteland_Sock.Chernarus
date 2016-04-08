@@ -18,6 +18,12 @@ fn_logAdminMenu = [_playerFuncs, "logAdminMenu.sqf"] call mf_compile;
 fn_logBankTransfer = [_playerFuncs, "logBankTransfer.sqf"] call mf_compile;
 fn_kickPlayerIfFlagged = "persistence\server\players\fn_kickPlayerIfFlagged.sqf" call mf_compile;
 
+A3W_fnc_checkPlayerFlag =
+{
+	_player = param [0, objNull, [objNull]];
+	[getPlayerUID _player, name _player, owner _player] call fn_kickPlayerIfFlagged;
+} call mf_compile;
+
 "pvar_savePlayerData" addPublicVariableEventHandler
 {
 	(_this select 1) spawn
@@ -73,4 +79,12 @@ fn_kickPlayerIfFlagged = "persistence\server\players\fn_kickPlayerIfFlagged.sqf"
 	};
 };
 
-"pvar_deletePlayerData" addPublicVariableEventHandler { (_this select 1) spawn fn_deletePlayerSave };
+"pvar_deletePlayerData" addPublicVariableEventHandler
+{
+	_player = param [1, objNull, [objNull]];
+
+	if (isPlayer _player) then
+	{
+		(getPlayerUID _player) spawn fn_deletePlayerSave;
+	};
+};

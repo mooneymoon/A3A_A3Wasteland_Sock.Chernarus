@@ -577,6 +577,7 @@ genItemArray = compileFinal str
 	["Binoculars", "Binocular", 50, "binoc"],
 	["Rangefinder", "Rangefinder", 150, "binoc"],
 	["Laser Designator", "Laserdesignator", 1000, "binoc"],
+	["Laser Designator Batteries", "Laserbatteries", 25, "mag"],	
 	["Chemlight (Blue)", "Chemlight_blue", 25, "mag"],
 	["Chemlight (Red)", "Chemlight_red", 25, "mag"],
 	["Chemlight (Green)", "Chemlight_green", 25, "mag"],
@@ -625,7 +626,7 @@ allStoreGear = compileFinal str (call headArray + call uniformArray + call vestA
 
 genObjectsArray = compileFinal str
 [
-	["Empty Ammo Crate", "Box_NATO_Ammo_F", 200, "ammocrate"],
+	["Camo Ammo Cache", "Box_FIA_Support_F", 250, "ammocrate"],
 	//["Metal Barrel", "Land_MetalBarrel_F", 25, "object"],
 	//["Toilet Box", "Land_ToiletBox_F", 25, "object"],
 	["Lamp Post (Harbour)", "Land_LampHarbour_F", 100, "object"],
@@ -664,9 +665,9 @@ genObjectsArray = compileFinal str
 	["Concrete Ramp", "Land_RampConcrete_F", 350, "object"],
 	["Concrete Ramp (High)", "Land_RampConcreteHigh_F", 500, "object"],
 	["Scaffolding", "Land_Scaffolding_F", 250, "object"],
-	["Campfire", "Campfire_burning_F", 50, "object"],
-	["Camping Chair", "Land_CampingChair_V1_F", 50, "object"],
-	["Camping Table", "Land_CampingTable_F", 80, "object"]	
+	["Campfire", "Campfire_burning_F", 2250, "object"],
+	["Camping Chair", "Land_CampingChair_V1_F", 100, "object"],
+	["Camping Table", "Land_CampingTable_F", 150, "object"]	
 ];
 
 allGenStoreVanillaItems = compileFinal str (call genItemArray + call genObjectsArray + call allStoreGear);
@@ -779,16 +780,14 @@ helicoptersArray = compileFinal str
 	["Mi-290 Taru (Medical) [DLC]", "O_Heli_Transport_04_medevac_F",12500, "vehicle"],
 	["Mi-290 Taru (Repair) [DLC]", "O_Heli_Transport_04_repair_F", 15000, "vehicle"],
 
-	["UH-80 Ghost Hawk (Black)", "B_Heli_Transport_01_F", 25000, "vehicle"], // UH-60 Stealth with 2 side miniguns
-	["UH-80 Ghost Hawk (Green)", "B_Heli_Transport_01_camo_F", 25000, "vehicle"], // UH-60 Stealth with 2 side miniguns (green camo)
+	["UH-80 Ghost Hawk", "B_Heli_Transport_01_F", 25000, "vehicle"], // UH-60 Stealth with 2 side miniguns
 	["CH-67 Huron (Armed) [DLC]", "B_Heli_Transport_03_F", 30000, "vehicle"], // CH-47 with 2 side miniguns
 	["AH-9 Pawnee", "B_Heli_Light_01_armed_F", 30000, "vehicle"], // Armed AH-6
 	["PO-30 Orca (Armed, Black)", "O_Heli_Light_02_v2_F", 35000, "vehicle"], // Armed Ka-60 with orca paintjob
 	["PO-30 Orca (Armed, Hex)", "O_Heli_Light_02_F", 35000, "vehicle"], // Armed Ka-60
 	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 40000, "vehicle"], // Armed AW159
 	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 62500, "vehicle"], // RAH-66 with gunner
-	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 65000, "vehicle"], // Mi-28 with gunner
-	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 65000, "vehicle"] // Mi-28 with gunner (black camo)
+	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 65000, "vehicle"] // Mi-28 with gunner
 ];
 
 planesArray = compileFinal str
@@ -849,6 +848,8 @@ _kartDir = "\A3\soft_f_kart\Kart_01\Data\";
 _mh9Dir = "\A3\air_f\Heli_Light_01\Data\";
 _mohawkDir = "\A3\air_f_beta\Heli_Transport_02\Data\";
 _taruDir = "\A3\air_f_heli\Heli_Transport_04\Data\";
+_wreckDir = "\A3\structures_f\wrecks\data\";
+_gorgonDir = "\A3\armor_f_gamma\APC_Wheeled_03\data\";
 
 colorsArray = compileFinal str
 [
@@ -981,6 +982,58 @@ colorsArray = compileFinal str
 		"O_Heli_Transport_04_fuel_F",
 		[
 			["Black (Taru)", [[2, _taruDir + "heli_transport_04_fuel_black_co.paa"]]]
+		]
+	],
+	[ // Kajman paintjobs
+		"Heli_Attack_02_base_F",
+		[
+			["Black (Kajman)", [
+				[0, "\A3\air_f_beta\Heli_Attack_02\Data\heli_attack_02_body1_black_co.paa"],
+				[1, "\A3\air_f_beta\Heli_Attack_02\Data\heli_attack_02_body2_black_co.paa"]
+			]],
+			["Rusty (Kajman)", [
+				[0, _wreckDir + "wreck_heli_attack_02_body1_co.paa"],
+				[1, _wreckDir + "wreck_heli_attack_02_body2_co.paa"]
+			]],
+			["Mossy (Kajman)", [
+				[0, _wreckDir + "uwreck_heli_attack_02_body1_co.paa"],
+				[1, _wreckDir + "uwreck_heli_attack_02_body2_co.paa"]
+			]]
+		]
+	],
+	[ // Ghost Hawk camo 
+		"Heli_Transport_01_base_F",
+		[
+			["Olive (Ghost Hawk)", [
+				[0, "\A3\air_f_beta\Heli_Transport_01\Data\heli_transport_01_ext01_blufor_co.paa"],
+				[1, "\A3\air_f_beta\Heli_Transport_01\Data\heli_transport_01_ext02_blufor_co.paa"]
+			]]
+		]
+	],
+	[ // Strider NATO color
+		"MRAP_03_base_F",
+		[
+			["NATO Tan (Strider)", [
+				[0, "\A3\soft_f_beta\MRAP_03\Data\mrap_03_ext_co.paa"],
+				[1, "\A3\data_f\vehicles\turret_co.paa"]
+			]]
+		]
+	],
+	[ // Gorgon NATO color
+		"APC_Wheeled_03_base_F",
+		[
+			["NATO Tan (Gorgon)", [
+				[0, _gorgonDir + "apc_wheeled_03_ext_co.paa"],
+				[1, _gorgonDir + "apc_wheeled_03_ext2_co.paa"],
+				[2, _gorgonDir + "rcws30_co.paa"],
+				[3, _gorgonDir + "apc_wheeled_03_ext_alpha_co.paa"]
+			]]
+		]
+	],
+	[ // Hatchback wreck paintjob
+		"Hatchback_01_base_F",
+		[
+			["Rusty (Hatchback)", [[0, _wreckDir + "civilcar_extwreck_co.paa"]]]
 		]
 	]
 ];

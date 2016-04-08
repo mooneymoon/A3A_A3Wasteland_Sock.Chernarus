@@ -52,7 +52,8 @@ while {true} do
 				{!(_objet_pointe getVariable "R3F_LOG_disabled")};
 		};
 
-		if ({_objet_pointe isKindOf _x} count R3F_LOG_CFG_objets_remorquablesH > 0) then
+		if ({_objet_pointe isKindOf _x} count R3F_LOG_CFG_objets_remorquablesH > 0 &&
+		    {_objet_pointe isKindOf _x} count R3F_LOG_CFG_objets_remorquables_excl == 0) then
 		{
 			// Condition action selectionner_objet_remorque
 			R3F_LOG_action_selectionner_objet_remorque_valide =
@@ -96,7 +97,8 @@ while {true} do
 			};
 		};
 		// Si l'objet est un objet remorquable
-		if ({_objet_pointe isKindOf _x} count R3F_LOG_CFG_objets_remorquables > 0) then
+		if ({_objet_pointe isKindOf _x} count R3F_LOG_CFG_objets_remorquables > 0 &&
+		    {_objet_pointe isKindOf _x} count R3F_LOG_CFG_objets_remorquables_excl == 0) then
 		{
 			// Condition action selectionner_objet_remorque
 			R3F_LOG_action_selectionner_objet_remorque_valide =
@@ -179,6 +181,7 @@ while {true} do
 				alive R3F_LOG_joueur_deplace_objet &&
 				{!(R3F_LOG_joueur_deplace_objet getVariable "R3F_LOG_disabled")} &&
 				{{R3F_LOG_joueur_deplace_objet isKindOf _x} count R3F_LOG_CFG_objets_remorquablesH > 0} &&
+				{{R3F_LOG_joueur_deplace_objet isKindOf _x} count R3F_LOG_CFG_objets_remorquables_excl == 0} &&
 				{isNull (_objet_pointe getVariable "R3F_LOG_remorque")} &&
 				{vectorMagnitude velocity _objet_pointe < 6} &&
 				{(getPos _objet_pointe) select 2 < 2} &&
@@ -192,6 +195,7 @@ while {true} do
 				{R3F_LOG_objet_selectionne != _objet_pointe} &&
 				{!(R3F_LOG_objet_selectionne getVariable "R3F_LOG_disabled")} &&
 				{{R3F_LOG_objet_selectionne isKindOf _x} count R3F_LOG_CFG_objets_remorquablesH > 0} &&
+				{{R3F_LOG_joueur_deplace_objet isKindOf _x} count R3F_LOG_CFG_objets_remorquables_excl == 0} &&
 				{isNull (_objet_pointe getVariable "R3F_LOG_remorque")} &&
 				{vectorMagnitude velocity _objet_pointe < 6} &&
 				{(getPos _objet_pointe) select 2 < 2} &&
@@ -207,6 +211,7 @@ while {true} do
 				alive R3F_LOG_joueur_deplace_objet &&
 				{!(R3F_LOG_joueur_deplace_objet getVariable "R3F_LOG_disabled")} &&
 				{{R3F_LOG_joueur_deplace_objet isKindOf _x} count R3F_LOG_CFG_objets_remorquables > 0} &&
+				{{R3F_LOG_joueur_deplace_objet isKindOf _x} count R3F_LOG_CFG_objets_remorquables_excl == 0} &&
 				{isNull (_objet_pointe getVariable "R3F_LOG_remorque")} &&
 				{vectorMagnitude velocity _objet_pointe < 6} &&
 				{(getPos _objet_pointe) select 2 < 2} &&
@@ -221,6 +226,7 @@ while {true} do
 				{R3F_LOG_objet_selectionne != _objet_pointe} &&
 				{!(R3F_LOG_objet_selectionne getVariable "R3F_LOG_disabled")} &&
 				{{R3F_LOG_objet_selectionne isKindOf _x} count R3F_LOG_CFG_objets_remorquables > 0} &&
+				{{R3F_LOG_objet_selectionne isKindOf _x} count R3F_LOG_CFG_objets_remorquables_excl == 0} &&
 				{isNull (_objet_pointe getVariable "R3F_LOG_remorque")} &&
 				{vectorMagnitude velocity _objet_pointe < 6} &&
 				{(getPos _objet_pointe) select 2 < 2} &&

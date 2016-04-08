@@ -15,6 +15,8 @@ private ["_box", "_boxType", "_boxItems", "_item", "_qty", "_mag"];
 _box = _this select 0;
 _boxType = _this select 1;
 
+_box setVariable [call vChecksum, true];
+
 _box allowDamage false; // No more fucking busted crates
 _box setVariable ["A3W_inventoryLockR3F", true, true];
 
@@ -130,28 +132,6 @@ switch (_boxType) do
 			["wep", "launch_Titan_F", RANDOM_BETWEEN(1,2), RANDOM_BETWEEN(1,2)],
 			["mag", ["SLAMDirectionalMine_Wire_Mag", "ATMine_Range_Mag", "DemoCharge_Remote_Mag", "SatchelCharge_Remote_Mag"], RANDOM_BETWEEN(3,5)],
 			["mag", "Titan_AP", RANDOM_BETWEEN(1,3)]
-		];
-	};
-	case "airdrop_DLC_Rifles":
-	{
-		_boxItems =
-		[
-			// Item type, Item class(es), # of items, # of magazines per weapon
-			["wep", ["srifle_DMR_03_multicam_F", "srifle_DMR_02_sniper_F", "srifle_DMR_05_hex_F", "srifle_DMR_04_Tan_F"], 2,4],
-			["itm", ["V_RebreatherB", "V_PlateCarrierIAGL_dgtl", "V_TacVest_camo", "V_PlateCarrierGL_rgr"], RANDOM_BETWEEN(1,8)],
-			["itm", ["B_Carryall_mcamo", "B_Kitbag_mcamo"], RANDOM_BETWEEN(2,5)],
-			["itm", ["bipod_01_F_blk", "bipod_02_F_hex"], 3]
-		];
-	};
-	case "airdrop_DLC_LMGs":
-	{
-		_boxItems =
-		[
-			// Item type, Item class(es), # of items, # of magazines per weapon
-			["wep", ["MMG_02_black_F", "MMG_01_hex_F"], 2,5],
-			["itm", ["V_RebreatherB", "V_PlateCarrierIAGL_dgtl", "V_TacVest_camo", "V_PlateCarrierGL_rgr"], RANDOM_BETWEEN(1,8)],
-			["itm", ["B_Carryall_mcamo", "B_Kitbag_mcamo"], RANDOM_BETWEEN(2,5)],
-			["itm", ["bipod_01_F_blk", "bipod_02_F_hex"], 2]
 		];
 	};
 };

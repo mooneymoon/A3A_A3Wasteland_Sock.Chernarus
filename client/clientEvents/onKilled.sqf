@@ -29,9 +29,9 @@ if (_killer == _player) then { _killer = objNull };
 
 if (_player == player) then
 {
-	closeDialog 2001; // Close Gunstore
-	closeDialog 2009; // Close Genstore
-	closeDialog 5285; // Close Vehstore
+	(findDisplay 2001) closeDisplay 0; // Close Gunstore
+	(findDisplay 2009) closeDisplay 0; // Close Genstore
+	(findDisplay 5285) closeDisplay 0; // Close Vehstore
 	uiNamespace setVariable ["BIS_fnc_guiMessage_status", false]; // close message boxes
 
 	// Load scoreboard in render scope
@@ -48,8 +48,10 @@ if (_player == player) then
 
 	playerData_infoPairs = nil;
 	playerData_savePairs = nil;
-	//combatTimestamp = -1; // Reset abort timer
+	combatTimestamp = -1; // Reset abort timer
 };
+
+diag_log format ["KILLED by %1", if (isPlayer _killer) then { "player " + str [name _killer, getPlayerUID _killer] } else { _killer }];
 
 _player setVariable ["FAR_killerPrimeSuspect", nil];
 _player setVariable ["FAR_killerVehicle", nil];

@@ -12,7 +12,7 @@ _corpse = _this select 1;
 
 if (!local _player) then
 {
-	_player addEventHandler ["WeaponDisassembled", weaponDisassembledServer];
+	//_player addEventHandler ["WeaponDisassembled", weaponDisassembledServer];
 
 	// Bank money reset fix attempt
 	_bmoney = _corpse getVariable "bmoney";
@@ -24,3 +24,5 @@ if (!local _player) then
 
 _this call respawnEventServer;
 _player setVariable ["A3W_respawnEH", _player addEventHandler ["Respawn", respawnEventServer]];
+
+_this remoteExec ["fn_remotePlayerSetup", -(owner _player)];

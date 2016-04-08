@@ -18,12 +18,12 @@ switch (["A3W_disableGlobalVoice", 1] call getPublicVar) do
 	{
 		if (_waitSpeak) then
 		{
-			["A3W_voiceChatControl", "onEachFrame",
+			["A3W_voiceChatControl_global", "onEachFrame",
 			{
 				if (!isNull findDisplay 55) then
 				{
 					SWITCH_DIRECT;
-					["A3W_voiceChatControl", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+					["A3W_voiceChatControl_global", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 				};
 			}] call BIS_fnc_addStackedEventHandler;
 		}
@@ -39,12 +39,12 @@ switch (["A3W_disableGlobalVoice", 1] call getPublicVar) do
 	{
 		if (_waitSpeak) then
 		{
-			["A3W_voiceChatControl", "onEachFrame",
+			["A3W_voiceChatControl_global", "onEachFrame",
 			{
 				if (!isNull findDisplay 55) then
 				{
 					SWITCH_ADMIN_DIRECT;
-					["A3W_voiceChatControl", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+					["A3W_voiceChatControl_global", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 				};
 			}] call BIS_fnc_addStackedEventHandler;
 		}
@@ -64,12 +64,12 @@ switch (["A3W_disableSideVoice", 1] call getPublicVar) do
 	{
 		if (_waitSpeak) then
 		{
-			["A3W_voiceChatControl", "onEachFrame",
+			["A3W_voiceChatControl_side", "onEachFrame",
 			{
 				if (!isNull findDisplay 55) then
 				{
 					SWITCH_SIDE_DIRECT;
-					["A3W_voiceChatControl", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+					["A3W_voiceChatControl_side", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 				};
 			}] call BIS_fnc_addStackedEventHandler;
 		}
@@ -85,12 +85,12 @@ switch (["A3W_disableSideVoice", 1] call getPublicVar) do
 	{
 		if (_waitSpeak) then
 		{
-			["A3W_voiceChatControl", "onEachFrame",
+			["A3W_voiceChatControl_side", "onEachFrame",
 			{
 				if (!isNull findDisplay 55) then
 				{
 					SWITCH_ALLSIDE_DIRECT;
-					["A3W_voiceChatControl", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+					["A3W_voiceChatControl_side", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 				};
 			}] call BIS_fnc_addStackedEventHandler;
 		}
