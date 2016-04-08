@@ -506,9 +506,8 @@ va_outside_target = {
   ARGVX3(1,_distance,0);
   if (!isPlayer _player) exitWith {};
   
-
-  def(_target);
-  /*if (surfaceIsWater (position _player)) then {
+  /*def(_target);
+  if (surfaceIsWater (position _player)) then {
    //line intersect does not work well when vehicle is in water
     _target = cursorTarget;
   }
@@ -521,7 +520,9 @@ va_outside_target = {
 	if (!isARRAY(_objects) || {count _objects == 0}) exitWith {};
 	_target = _objects select 0;
   };*/
-  _target = cursorObject;
+
+  def(_target);
+    _target = cursorObject;
 
   if (isNil "_target") exitWith {};
 
@@ -529,6 +530,7 @@ va_outside_target = {
   
   _target
 };
+
 
 va_check_outside_actions = {
   //player groupChat format["va_check_outside_actions"];

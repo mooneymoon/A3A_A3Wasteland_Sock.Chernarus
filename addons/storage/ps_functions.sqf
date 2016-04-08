@@ -169,7 +169,7 @@ ps_is_object_storage = {
 
 ps_is_player_near = {
   private["_objects"];
-  _objects = nearestObjects [player, ["Land_PaperBox_open_full_F", "Land_Pallet_MilBoxes_F", "Land_PaperBox_open_empty_F", "Land_PaperBox_closed_F"], 5];
+  _objects = nearestObjects [player, ["Land_PaperBox_open_full_F", "Land_Pallet_MilBoxes_F", "Land_PaperBox_open_empty_F", "Land_PaperBox_closed_F"], 2];
   if (isNil "_objects") exitWith {false};
 
   private["_found"];
