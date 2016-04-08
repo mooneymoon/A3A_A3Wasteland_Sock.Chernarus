@@ -323,7 +323,7 @@ pp_is_object_parking = {
 
 pp_is_player_near = {
   private["_objects"];
-  _objects = nearestObjects [player, ["Land_Laptop_unfolded_F", "Land_CampingTable_small_F"], 5];
+  _objects = nearestObjects [player, ["Land_Laptop_unfolded_F", "Land_CampingTable_small_F"], 2];
   if (isNil "_objects") exitWith {false};
 
   private["_found"];
