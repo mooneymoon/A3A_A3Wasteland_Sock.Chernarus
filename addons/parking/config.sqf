@@ -9,7 +9,7 @@ pp_markers_enabled = true;
 pp_markers_properties = ["ICON", "mil_dot", "ColorKhaki", [1.2,1.2], "Parking"];
 
 //number of seconds to wait (after joining the sever) before a vehicle can be retrieved (0 = no wait)
-pp_retrieve_wait = 900;
+pp_retrieve_wait = 300;
 
 //amount of money to charge player for retrieving a vehicle from parking (0 = no charge)
 pp_retrieve_cost = 2500;
