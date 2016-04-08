@@ -624,6 +624,10 @@ o_addSaveObject = {
   init(_fuelCargo,getFuelCargo _obj);
   init(_repairCargo,getRepairCargo _obj);
   
+  // Fix for -1.#IND
+  if (isNil "_ammoCargo" || {!finite _ammoCargo}) then { _ammoCargo = 0 };
+  if (isNil "_fuelCargo" || {!finite _fuelCargo}) then { _fuelCargo = 0 };
+  if (isNil "_repairCargo" || {!finite _repairCargo}) then { _repairCargo = 0 };
   
   def(_objName);
   _objName = _obj getVariable "object_key";
