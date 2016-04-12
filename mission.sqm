@@ -8,36 +8,40 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=466;
+		nextID=468;
 	};
 	class MarkerIDProvider
 	{
-		nextID=224;
+		nextID=174;
 	};
 	class Camera
 	{
-		pos[]={4585.3647,302.55823,21443.559};
-		dir[]={0.87130296,-0.20492716,0.44598007};
-		up[]={0.18245015,0.97876406,0.093388855};
-		aside[]={0.45565346,8.8618253e-007,-0.89019746};
+		pos[]={14548.78,50.924011,5698.4326};
+		dir[]={-0.25207707,-0.20365734,0.94603634};
+		up[]={-0.052443594,0.97903603,0.19681883};
+		aside[]={0.96628791,-5.1222742e-009,0.2574732};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
-	"A3_Structures_F_Households_House_Big01",
-	"A3_Structures_F_Households_House_Small02",
-	"A3_Structures_F_Mil_Cargo",
-	"A3_Structures_F_Households_Slum",
-	"A3_Structures_F_Civ_Market",
-	"A3_Structures_F_EPC_Civ_Accessories",
 	"A3_Characters_F_BLUFOR",
 	"a3_characters_f",
 	"A3_Characters_F_OPFOR",
 	"A3_Characters_F_INDEP",
-	"A3_Characters_F_Civil"
+	"A3_Characters_F_Civil",
+	"A3_Structures_F_Households_House_Small02",
+	"A3_Structures_F_Mil_Cargo",
+	"A3_Structures_F_Households_Slum",
+	"A3_Structures_F_Civ_Market",
+	"A3_Structures_F_Civ_Camping",
+	"A3_Structures_F_EPC_Civ_Accessories"
 };
-randomSeed=15313976;
+randomSeed=3783014;
+class ScenarioData
+{
+	author="Gigatek";
+};
 class Mission
 {
 	class Intel
@@ -60,7 +64,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=306;
+		items=307;
 		class Item0
 		{
 			dataType="Group";
@@ -73,14 +77,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.131,11.636594,5865.1357};
-						angles[]={6.1967349,0,6.1901212};
+						position[]={14502.228,9.1839705,5863.8672};
+						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayer=1;
 						isPlayable=1;
@@ -93,13 +96,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.372,11.520809,5865.1357};
-						angles[]={6.1967349,0,6.1901212};
+						position[]={14503.728,8.5761185,5863.8672};
+						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -111,13 +113,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.613,11.404941,5865.1357};
-						angles[]={6.1967349,0,6.1901212};
+						position[]={14505.228,8.0135565,5863.8672};
+						angles[]={0.13386136,0,6.0793881};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -129,13 +130,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.858,11.287659,5865.123};
-						angles[]={6.1967349,0,6.1901212};
+						position[]={14506.728,7.6517439,5863.8672};
+						angles[]={0.22543514,0,5.9905062};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -160,16 +160,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,11.634695,5863.9326};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14501.728,9.6562872,5861.8672};
+						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=6;
@@ -180,13 +178,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,11.483395,5863.9326};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14503.228,9.0480642,5861.8672};
+						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -198,13 +195,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.613,11.367697,5863.9326};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14504.728,8.4402132,5861.8672};
+						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -216,13 +212,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,11.251059,5863.9199};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14506.228,8.0760803,5861.8672};
+						angles[]={0.13386136,0,6.0793881};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -247,16 +242,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,11.64594,5862.7275};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14501.228,9.8936043,5859.8672};
+						angles[]={6.256525,0,6.0438619};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=11;
@@ -267,13 +260,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,11.485378,5862.7275};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14502.728,9.5200109,5859.8672};
+						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -285,13 +277,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.614,11.335482,5862.7275};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14504.228,8.9121599,5859.8672};
+						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -303,13 +294,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,11.218929,5862.7148};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14505.728,8.4489069,5859.8672};
+						angles[]={0.13386136,0,6.0793881};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -334,16 +324,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,11.657506,5861.4888};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14500.728,9.9622421,5857.8672};
+						angles[]={6.256525,0,6.0438619};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=16;
@@ -354,13 +342,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,11.496944,5861.4888};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14502.228,9.5961084,5857.8672};
+						angles[]={6.256525,0,6.0438619};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -372,13 +359,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.614,11.336501,5861.4888};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14503.728,9.230197,5857.8672};
+						angles[]={6.256525,0,6.0438619};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -390,13 +376,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,11.185897,5861.4761};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14505.228,8.8215437,5857.8672};
+						angles[]={0.13386136,0,6.0793881};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -421,16 +406,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,11.668751,5860.2837};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14500.228,9.9837761,5855.8672};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=21;
@@ -441,13 +424,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,11.508189,5860.2837};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14501.728,9.6178656,5855.8672};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -459,13 +441,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.614,11.347746,5860.2837};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14503.228,9.2517309,5855.8672};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -477,13 +458,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,11.186831,5860.271};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14504.728,8.8858204,5855.8672};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -508,16 +488,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,11.679945,5859.0845};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14499.728,9.9615211,5853.8672};
+						angles[]={6.2046804,0,6.0666351};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=26;
@@ -528,13 +506,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,11.519383,5859.0845};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14501.228,9.6305046,5853.8672};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -546,13 +523,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.614,11.35894,5859.0845};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14502.728,9.26437,5853.8672};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -564,13 +540,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,11.198024,5859.0718};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14504.228,8.8984594,5853.8672};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -595,16 +570,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,11.69119,5857.8794};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14499.228,9.9141645,5851.8672};
+						angles[]={6.2046804,0,6.0666351};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=31;
@@ -615,13 +588,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,11.530628,5857.8794};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14500.728,9.5842447,5851.8672};
+						angles[]={6.2046804,0,6.0666351};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -633,13 +605,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.614,11.370185,5857.8794};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14502.228,9.2541237,5851.8672};
+						angles[]={6.2046804,0,6.0666351};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -651,13 +622,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,11.209269,5857.8667};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14503.728,8.9110975,5851.8672};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -682,16 +652,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,11.56211,5856.6431};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14498.728,9.8677778,5849.8672};
+						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=36;
@@ -702,13 +670,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,11.462407,5856.6431};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14500.228,9.537858,5849.8672};
+						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -720,13 +687,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.614,11.301964,5856.6431};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14501.728,9.2079391,5849.8672};
+						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -738,13 +704,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,11.13992,5856.6304};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14503.228,8.8778181,5849.8672};
+						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -769,16 +734,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,11.366571,5855.4004};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14498.228,9.9999886,5847.8672};
+						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=41;
@@ -789,13 +752,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,11.303671,5855.4004};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14499.728,9.5011673,5847.8672};
+						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -807,13 +769,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.614,11.204195,5855.4004};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14501.228,9.1712484,5847.8672};
+						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -825,13 +786,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,11.04215,5855.3877};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14502.728,8.8411274,5847.8672};
+						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -856,16 +816,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,11.171825,5854.1626};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14497.728,10.253281,5845.8672};
+						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=46;
@@ -876,13 +834,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,11.108925,5854.1626};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14499.228,9.7490959,5845.8672};
+						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -894,13 +851,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.614,11.046071,5854.1626};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14500.728,9.2452183,5845.8672};
+						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -912,13 +868,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,10.944777,5854.1499};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14502.228,8.8044357,5845.8672};
+						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -943,16 +898,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,10.975927,5852.9175};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14497.228,10.428986,5843.8672};
+						angles[]={0.042641956,0,6.2325621};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=51;
@@ -963,13 +916,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,10.913027,5852.9175};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14498.728,10.002386,5843.8672};
+						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -981,13 +933,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.614,10.850173,5852.9175};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14500.228,9.4985094,5843.8672};
+						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -999,13 +950,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,10.78507,5852.9048};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14501.728,8.9946327,5843.8672};
+						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1030,16 +980,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14490.132,10.780893,5851.6777};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14496.728,10.355329,5841.8672};
+						angles[]={5.8686786,0,6.0489016};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=56;
@@ -1050,13 +998,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.373,10.717993,5851.6777};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14498.228,10.234164,5841.8672};
+						angles[]={0.010669862,0,5.9590368};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -1068,13 +1015,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.614,10.655139,5851.6777};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14499.728,9.7299795,5841.8672};
+						angles[]={0.010669862,0,5.9590368};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1086,13 +1032,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14493.859,10.590036,5851.665};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14501.228,9.2261019,5841.8672};
+						angles[]={0.010669862,0,5.9590368};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1117,16 +1062,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.483,11.137255,5865.1377};
-						angles[]={6.1967349,0,6.1901212};
+						position[]={14513.228,5.6835752,5863.8672};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=61;
@@ -1137,13 +1080,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.725,11.021386,5865.1377};
-						angles[]={6.1967349,0,6.1901212};
+						position[]={14514.728,5.3480787,5863.8672};
+						angles[]={0.09834861,0,6.1012206};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -1155,13 +1097,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.966,10.756775,5865.1377};
-						angles[]={6.2312322,0,5.8980899};
+						position[]={14516.228,5.0721459,5863.8672};
+						angles[]={0.09834861,0,6.1012206};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1173,13 +1114,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.211,10.251421,5865.125};
-						angles[]={6.2312322,0,5.8980899};
+						position[]={14517.728,4.7960448,5863.8672};
+						angles[]={0.09834861,0,6.1012206};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1204,16 +1144,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.484,11.099776,5863.9346};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14512.728,6.29953,5861.8672};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=66;
@@ -1224,13 +1162,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.726,10.983907,5863.9346};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14514.228,5.8273568,5861.8672};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -1242,13 +1179,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.967,10.79755,5863.9346};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14515.728,5.3614531,5861.8672};
+						angles[]={0.09834861,0,6.1012206};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1260,13 +1196,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.211,10.399326,5863.9219};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14517.228,5.0853524,5861.8672};
+						angles[]={0.09834861,0,6.1012206};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1291,16 +1226,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.484,11.067648,5862.7295};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14512.228,6.9118595,5859.8672};
+						angles[]={0.22543514,0,5.9905062};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=71;
@@ -1311,13 +1244,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.726,10.951778,5862.7295};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14513.728,6.4433112,5859.8672};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -1329,13 +1261,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.967,10.765422,5862.7295};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14515.228,5.9714265,5859.8672};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1347,13 +1278,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.212,10.461271,5862.7168};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14516.728,5.4995418,5859.8672};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1378,16 +1308,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.484,11.034616,5861.4907};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14511.728,7.4781599,5857.8672};
+						angles[]={0.13386136,0,6.0793881};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=76;
@@ -1398,13 +1326,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.726,10.918746,5861.4907};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14513.228,7.0595541,5857.8672};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -1416,13 +1343,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.967,10.732389,5861.4907};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14514.728,6.5873814,5857.8672};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1434,13 +1360,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.212,10.428239,5861.478};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14516.228,6.1154962,5857.8672};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1465,16 +1390,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.484,11.002475,5860.2856};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14511.228,7.5995765,5855.8672};
+						angles[]={6.2685208,0,6.0793877};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=81;
@@ -1485,13 +1408,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.726,10.886605,5860.2856};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14512.728,7.291172,5855.8672};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -1503,13 +1425,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.967,10.700249,5860.2856};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14515.728,6.5138764,5855.8672};
+						angles[]={0.09966857,0,5.9783278};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1521,13 +1442,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.212,10.396098,5860.2729};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14514.228,6.9857612,5855.8672};
+						angles[]={0.09966857,0,5.9783278};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1552,16 +1472,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.484,10.987713,5859.0864};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14510.728,7.6735511,5853.8672};
+						angles[]={6.2685208,0,6.0793877};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=86;
@@ -1572,13 +1490,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.726,10.854623,5859.0864};
-						angles[]={6.256525,0,6.1901217};
+						position[]={14512.228,7.363627,5853.8672};
+						angles[]={6.2685208,0,6.0793877};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -1590,13 +1507,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.967,10.668266,5859.0864};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14513.728,7.0617046,5853.8672};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1608,13 +1524,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.212,10.364128,5859.0737};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14515.228,6.7617779,5853.8672};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1639,16 +1554,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.484,10.998958,5857.8813};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14510.228,7.7293816,5851.8672};
+						angles[]={6.2285728,0,6.1180367};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=91;
@@ -1659,13 +1572,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.726,10.838396,5857.8813};
-						angles[]={0.0093286335,0,6.1545663};
+						position[]={14511.728,7.4376025,5851.8672};
+						angles[]={6.2685208,0,6.0793877};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -1677,13 +1589,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.967,10.636137,5857.8813};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14513.228,7.1325312,5851.8672};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1695,13 +1606,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.212,10.331987,5857.8687};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14514.728,6.8324213,5851.8672};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1726,16 +1636,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.484,10.930898,5856.645};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14509.728,7.6989899,5849.8672};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=96;
@@ -1746,13 +1654,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.726,10.770336,5856.645};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14511.228,7.4490509,5849.8672};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -1764,13 +1671,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.967,10.567358,5856.645};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14512.728,7.1854401,5849.8672};
+						angles[]={6.1716504,0,6.0857902};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1782,13 +1688,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.212,10.27333,5856.6323};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14514.228,6.8853302,5849.8672};
+						angles[]={6.1716504,0,6.0857902};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1813,16 +1718,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.484,10.833129,5855.4023};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14509.228,7.6251249,5847.8672};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=101;
@@ -1833,13 +1736,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.726,10.672567,5855.4023};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14510.728,7.3750334,5847.8672};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -1851,13 +1753,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.967,10.469589,5855.4023};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14512.228,7.1250944,5847.8672};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1869,13 +1770,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.212,10.194691,5855.3896};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14513.728,6.7930937,5847.8672};
+						angles[]={6.2046804,0,6.0539536};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1900,16 +1800,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.484,10.735756,5854.1646};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14508.728,7.5535293,5845.8672};
+						angles[]={6.2099833,0,6.1128521};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=106;
@@ -1920,13 +1818,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.726,10.575194,5854.1646};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14510.228,7.3010149,5845.8672};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -1938,13 +1835,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.967,10.372216,5854.1646};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14511.728,7.0510759,5845.8672};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -1956,13 +1852,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.212,10.097318,5854.1519};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14513.228,6.752614,5845.8672};
+						angles[]={6.2046804,0,6.0539536};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -1987,16 +1882,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.482,10.638116,5852.9199};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14508.228,7.4928432,5843.8672};
+						angles[]={6.2099833,0,6.1128521};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=111;
@@ -2007,13 +1900,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.724,10.477554,5852.9199};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14509.728,7.2347488,5843.8672};
+						angles[]={6.2099833,0,6.1128521};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -2025,13 +1917,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.965,10.274741,5852.9199};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14511.228,6.9770579,5843.8672};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2043,13 +1934,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.21,9.9998074,5852.9072};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14512.728,6.7119217,5843.8672};
+						angles[]={6.2046804,0,6.0539536};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2074,16 +1964,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14495.482,10.510169,5851.6802};
-						angles[]={6.127131,0,6.2325611};
+						position[]={14507.728,7.5131168,5841.8672};
+						angles[]={0.045303639,0,6.1128521};
 					};
 					side="East";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=116;
@@ -2094,14 +1982,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.724,10.380001,5851.6802};
-						angles[]={6.2046804,0,6.1545658};
+						position[]={14509.228,7.2551804,5841.8672};
+						angles[]={0.045303639,0,6.1128521};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
-						description="Diver";
 						isPlayable=1;
 					};
 					id=117;
@@ -2112,13 +1998,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.965,10.177188,5851.6802};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14510.728,6.9970851,5841.8672};
+						angles[]={0.045303639,0,6.1128521};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2130,13 +2015,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.21,9.9022903,5851.6675};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14512.228,6.7391486,5841.8672};
+						angles[]={0.045303639,0,6.1128521};
 					};
 					side="East";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2161,16 +2045,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.875,9.5777149,5865.1362};
-						angles[]={6.2312322,0,5.8980899};
+						position[]={14524.228,3.8691778,5863.8672};
+						angles[]={0.097027972,0,6.1637564};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=121;
@@ -2181,13 +2063,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.117,9.0741405,5865.1362};
-						angles[]={6.2312322,0,5.8980899};
+						position[]={14525.728,3.6891119,5863.8672};
+						angles[]={0.097027972,0,6.1637564};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -2199,13 +2080,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.357,8.5713091,5865.1362};
-						angles[]={6.2312322,0,5.8980899};
+						position[]={14527.228,3.5091555,5863.8672};
+						angles[]={0.097027972,0,6.1637564};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2217,13 +2097,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.603,8.06598,5865.1235};
-						angles[]={6.2312322,0,5.8980899};
+						position[]={14528.728,3.2387598,5863.8672};
+						angles[]={6.2791739,0,6.187479};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2248,16 +2127,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.876,9.7231979,5863.9331};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14523.728,4.123827,5861.8672};
+						angles[]={0.097027972,0,6.1637564};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=126;
@@ -2268,13 +2145,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.117,9.2199945,5863.9331};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14525.228,3.9437611,5861.8672};
+						angles[]={0.097027972,0,6.1637564};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -2286,13 +2162,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.358,8.7167912,5863.9331};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14526.728,3.7638049,5861.8672};
+						angles[]={0.097027972,0,6.1637564};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2304,13 +2179,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,8.21383,5863.9204};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14528.228,3.5275619,5861.8672};
+						angles[]={0.097027354,0,6.0883555};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2335,16 +2209,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.877,9.8850784,5862.728};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14523.228,4.3810811,5859.8672};
+						angles[]={0.09834861,0,6.1624427};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=131;
@@ -2355,13 +2227,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.117,9.382246,5862.728};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14524.728,4.1990151,5859.8672};
+						angles[]={0.09834861,0,6.1624427};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -2373,13 +2244,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.358,8.8790426,5862.728};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14526.228,4.0184536,5859.8672};
+						angles[]={0.097027972,0,6.1637564};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2391,13 +2261,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,8.3760815,5862.7153};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14527.728,3.820868,5859.8672};
+						angles[]={0.097027354,0,6.0883555};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2422,16 +2291,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.877,10.022424,5861.4893};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14522.728,4.6390629,5857.8672};
+						angles[]={0.09834861,0,6.1624427};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=136;
@@ -2442,13 +2309,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.117,9.5490589,5861.4893};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14524.228,4.4571075,5857.8672};
+						angles[]={0.09834861,0,6.1624427};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -2460,13 +2326,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.358,9.0458555,5861.4893};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14525.728,4.2750416,5857.8672};
+						angles[]={0.09834861,0,6.1624427};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2478,13 +2343,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,8.5428944,5861.4766};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14527.228,4.0931468,5857.8672};
+						angles[]={0.097027972,0,6.1637564};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2509,16 +2373,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.877,9.990283,5860.2842};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14522.228,4.9127464,5855.8672};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=141;
@@ -2529,13 +2391,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.118,9.6873674,5860.2842};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14523.728,4.7307911,5855.8672};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -2547,13 +2408,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.359,9.2077971,5860.2842};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14525.228,4.5487251,5855.8672};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2565,13 +2425,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,8.7052069,5860.2715};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14526.728,4.3667688,5855.8672};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2596,16 +2455,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.877,9.9583006,5859.085};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14521.728,5.1737657,5853.8672};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=146;
@@ -2616,13 +2473,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.117,9.6556082,5859.085};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14523.228,5.0038071,5853.8672};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -2634,13 +2490,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.358,9.3526936,5859.085};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14524.728,4.8253732,5853.8672};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2652,13 +2507,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,8.8666563,5859.0723};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14526.228,4.6434174,5853.8672};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2683,16 +2537,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.877,9.9261723,5857.8799};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14521.228,5.4304156,5851.8672};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=151;
@@ -2703,13 +2555,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.118,9.6232567,5857.8799};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14522.728,5.260457,5851.8672};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -2721,13 +2572,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.359,9.3203421,5857.8799};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14524.228,5.090498,5851.8672};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2739,13 +2589,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,9.0164146,5857.8672};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14525.728,4.9200664,5851.8672};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2770,16 +2619,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.877,9.867835,5856.6436};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14520.728,5.6456294,5849.8672};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=156;
@@ -2790,13 +2637,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.117,9.5651436,5856.6436};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14522.228,5.4755673,5849.8672};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -2808,13 +2654,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.358,9.262228,5856.6436};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14523.728,5.3056092,5849.8672};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2826,13 +2671,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,8.9577188,5856.6309};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14525.228,5.1355467,5849.8672};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2857,16 +2701,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.877,9.7998934,5855.4009};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14520.228,5.4775534,5847.8672};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=161;
@@ -2877,13 +2719,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.118,9.4969778,5855.4009};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14521.728,5.2834826,5847.8672};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -2895,13 +2736,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.359,9.1940641,5855.4009};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14523.228,5.1062655,5847.8672};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -2913,13 +2753,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,8.8898029,5855.3882};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14524.728,4.9362035,5847.8672};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2944,16 +2783,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.877,9.732007,5854.1631};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14519.728,5.3374224,5845.8672};
+						angles[]={6.1716504,0,6.0857902};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=166;
@@ -2964,13 +2801,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.117,9.4295368,5854.1631};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14521.228,5.1241369,5845.8672};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -2982,13 +2818,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.358,9.1266212,5854.1631};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14522.728,4.9301839,5845.8672};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -3000,13 +2835,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,8.8221369,5854.1504};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14524.228,4.7369633,5845.8672};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -3031,16 +2865,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.877,9.634634,5852.9253};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14519.228,5.2134018,5843.8672};
+						angles[]={6.1716504,0,6.0857902};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=171;
@@ -3051,13 +2883,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.118,9.3615141,5852.9253};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14520.728,4.9649096,5843.8672};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Sniper";
 						isPlayable=1;
 					};
@@ -3069,13 +2900,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.359,9.058732,5852.9253};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14522.228,4.7708378,5843.8672};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -3087,13 +2917,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,8.7544708,5852.9126};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14523.728,4.5768852,5843.8672};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -3118,16 +2947,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.877,9.537117,5851.6855};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14518.728,5.1708493,5841.8672};
+						angles[]={6.2285728,0,6.0539536};
 					};
 					side="Independent";
 					flags=2;
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=176;
@@ -3138,13 +2965,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.117,9.2641993,5851.6855};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14520.228,4.8574095,5841.8672};
+						angles[]={6.2285728,0,6.2099824};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Diver";
 						isPlayable=1;
 					};
@@ -3156,13 +2982,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.358,8.9910784,5851.6855};
-						angles[]={6.2046804,0,6.0666351};
+						position[]={14521.728,4.6887946,5841.8672};
+						angles[]={0.0013372133,0,6.1545663};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Combat Life Saver";
 						isPlayable=1;
 					};
@@ -3174,13 +2999,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.604,8.6866798,5851.6729};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14523.228,4.4948421,5841.8672};
+						angles[]={0.0013372133,0,6.1545663};
 					};
 					side="Independent";
 					class Attributes
 					{
-						skill=0.60000002;
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -3198,10 +3022,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14497.367,10.181035,5849.4287};
+				position[]={14509.5,4.8439064,5828};
 			};
-			name="HeadlessClient";
+			name="A3W_HC1";
 			isPlayable=1;
+			description="DO NOT RENAME";
 			id=180;
 			type="HeadlessClient_F";
 		};
@@ -3217,26 +3042,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11533.004,19.73955,9433.6475};
-						angles[]={0.011995304,4.1887903,6.272521};
+						position[]={11533.004,19.740152,9433.5977};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="GenStore1";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=182;
+					id=183;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=181;
+			id=182;
 		};
 		class Item38
 		{
@@ -3250,26 +3072,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20786.578,35.677643,6807.9883};
-						angles[]={0.053282689,4.3633232,6.2113094};
+						position[]={20786.578,35.680283,6807.9385};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="GenStore2";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=184;
+					id=185;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=183;
+			id=184;
 		};
 		class Item39
 		{
@@ -3283,26 +3102,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18087.299,25.084833,15245.903};
-						angles[]={0.0093350215,0.78539819,6.2432065};
+						position[]={18087.299,25.085295,15245.854};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="GenStore3";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=186;
+					id=187;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=185;
+			id=186;
 		};
 		class Item40
 		{
@@ -3316,26 +3132,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9268.7627,120.79496,15869.039};
-						angles[]={0.0039967569,4.6251225,6.2432065};
+						position[]={9268.7627,120.79516,15868.989};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="GenStore4";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=188;
+					id=189;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=187;
+			id=188;
 		};
 		class Item41
 		{
@@ -3349,26 +3162,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4564.2896,299.50058,21378.98};
-						angles[]={6.2445378,6.1086521,0.0039967569};
+						position[]={4565.4165,299.6936,21384.443};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="GenStore5";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=190;
+					id=191;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=189;
+			id=190;
 		};
 		class Item42
 		{
@@ -3382,26 +3192,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3366.886,2.6612144,13206.872};
-						angles[]={0.0093286335,0,0.010664274};
+						position[]={3366.886,2.6616757,13206.822};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="GunStore1";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=192;
+					id=193;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=191;
+			id=192;
 		};
 		class Item43
 		{
@@ -3415,26 +3222,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16708.83,18.714495,12779.339};
-						angles[]={6.2671871,1.3089969,0.013332055};
+						position[]={16708.83,18.713705,12779.289};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="GunStore2";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=194;
+					id=195;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=193;
+			id=194;
 		};
 		class Item44
 		{
@@ -3448,26 +3252,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={25786.891,20.237038,21354.955};
-						angles[]={6.2392135,2.3561945,6.2671871};
+						position[]={25786.891,20.234783,21354.904};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="GunStore3";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=196;
+					id=197;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=195;
+			id=196;
 		};
 		class Item45
 		{
@@ -3481,26 +3282,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9435.292,125.5105,20267.117};
-						angles[]={0.037316564,1.134464,0.021328852};
+						position[]={9435.292,125.51241,20267.066};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="GunStore4";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=198;
+					id=199;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=197;
+			id=198;
 		};
 		class Item46
 		{
@@ -3514,26 +3312,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26714.498,20.504219,24600.443};
-						angles[]={0.038647637,1.3089969,0.02399601};
+						position[]={26712.592,20.400131,24601.951};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="VehStore1";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=200;
+					id=201;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=199;
+			id=200;
 		};
 		class Item47
 		{
@@ -3547,26 +3342,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22958.713,4.9257846,18879.072};
-						angles[]={6.2805333,0.78539819,6.2751846};
+						position[]={22958.713,4.925653,18879.021};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="VehStore2";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=202;
+					id=203;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=201;
+			id=202;
 		};
 		class Item48
 		{
@@ -3580,26 +3372,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20766.475,28.246328,7259.9746};
-						angles[]={0.010664274,5.7421331,6.2791886};
+						position[]={20761.709,28.230583,7264.3013};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="VehStore3";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=204;
+					id=205;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=203;
+			id=204;
 		};
 		class Item49
 		{
@@ -3613,26 +3402,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.723,18.846844,16333.288};
-						angles[]={0,3.9269907,6.2805333};
+						position[]={14482.604,18.865522,16330.717};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="VehStore4";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=206;
+					id=207;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=205;
+			id=206;
 		};
 		class Item50
 		{
@@ -3646,922 +3432,853 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3578.8682,26.269464,10781.352};
-						angles[]={0.053282689,1.2042772,6.2618566};
+						position[]={3578.8682,26.270664,10781.252};
 					};
 					side="Civilian";
-					flags=2;
+					flags=3;
 					class Attributes
 					{
-						skill=0.60000002;
 						init="[this] spawn A3W_fnc_setupStoreNPC";
 						name="VehStore5";
-						description="DO NOT MODIFY IN EDITOR";
 					};
-					id=208;
+					id=209;
 					type="C_man_1_1_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=207;
+			id=208;
 		};
 		class Item51
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5857.9956,226.1514,20099.225};
-						angles[]={0.014664836,4.9218283,0.035984326};
-					};
-					side="Civilian";
-					flags=2;
-					class Attributes
-					{
-						skill=0.60000002;
-						init="[this] spawn A3W_fnc_setupStoreNPC";
-						name="VehStore6";
-						description="DO NOT MODIFY IN EDITOR";
-					};
-					id=210;
-					type="C_man_1_1_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=209;
-		};
-		class Item52
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12399.979,24.920662,15566.139};
-						angles[]={0.034652505,1.4486233,6.2685208};
-					};
-					side="Civilian";
-					flags=2;
-					class Attributes
-					{
-						skill=0.60000002;
-						init="[this] spawn A3W_fnc_setupStoreNPC";
-						name="GunStore5";
-						description="DO NOT MODIFY IN EDITOR";
-					};
-					id=212;
-					type="C_man_1_1_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=211;
-		};
-		class Item53
 		{
 			dataType="Marker";
 			position[]={3612.1487,12.11851,13020.892};
 			name="Town_1";
 			type="Empty";
 			colorName="ColorRed";
-			id=213;
+			id=210;
 		};
-		class Item54
+		class Item52
 		{
 			dataType="Marker";
 			position[]={9317.1064,119.8391,15885.136};
 			name="Town_2";
 			type="Empty";
 			colorName="ColorRed";
-			id=214;
+			id=211;
 		};
-		class Item55
+		class Item53
 		{
 			dataType="Marker";
 			position[]={9432.9238,125.046,20263.176};
 			name="Town_3";
 			type="Empty";
 			colorName="ColorRed";
-			id=215;
+			id=212;
 		};
-		class Item56
+		class Item54
 		{
 			dataType="Marker";
 			position[]={14055.694,27.452692,18694.422};
 			name="Town_4";
 			type="Empty";
 			colorName="ColorRed";
-			id=216;
+			id=213;
 		};
-		class Item57
+		class Item55
 		{
 			dataType="Marker";
 			position[]={16341.712,24.1644,17247.732};
 			name="Town_5";
 			type="Empty";
 			colorName="ColorRed";
-			id=217;
+			id=214;
 		};
-		class Item58
+		class Item56
 		{
 			dataType="Marker";
 			position[]={25679.355,20.010403,21331.949};
 			name="Town_6";
 			type="Empty";
 			colorName="ColorRed";
-			id=218;
+			id=215;
 		};
-		class Item59
+		class Item57
 		{
 			dataType="Marker";
 			position[]={20955.451,42.944462,16957.541};
 			name="Town_7";
 			type="Empty";
 			colorName="ColorRed";
-			id=219;
+			id=216;
 		};
-		class Item60
+		class Item58
 		{
 			dataType="Marker";
 			position[]={16833.287,22.291538,12624.834};
 			name="Town_8";
 			type="Empty";
 			colorName="ColorRed";
-			id=220;
+			id=217;
 		};
-		class Item61
+		class Item59
 		{
 			dataType="Marker";
 			position[]={20796.57,36.397057,6736.7026};
 			name="Town_9";
 			type="Empty";
 			colorName="ColorRed";
-			id=221;
+			id=218;
 		};
-		class Item62
+		class Item60
 		{
 			dataType="Marker";
 			position[]={11749.551,12.631503,9549.2197};
 			name="Town_10";
 			type="Empty";
 			colorName="ColorRed";
-			id=222;
+			id=219;
 		};
-		class Item63
+		class Item61
 		{
 			dataType="Marker";
 			position[]={9109.3525,19.560486,11964.215};
 			name="Town_11";
 			type="Empty";
 			colorName="ColorRed";
-			id=223;
+			id=220;
 		};
-		class Item64
+		class Item62
 		{
 			dataType="Marker";
 			position[]={3379.3052,0,12903.999};
 			name="boatSpawn_1";
 			type="Empty";
 			colorName="ColorBlue";
-			id=224;
+			id=221;
 		};
-		class Item65
+		class Item63
 		{
 			dataType="Marker";
 			position[]={3365.1289,0.00045464744,12921.535};
 			name="boatSpawn_2";
 			type="Empty";
 			colorName="ColorBlue";
-			id=225;
+			id=222;
 		};
-		class Item66
+		class Item64
 		{
 			dataType="Marker";
 			position[]={3347.668,-0.0054006642,12939.927};
 			name="boatSpawn_3";
 			type="Empty";
 			colorName="ColorBlue";
-			id=226;
+			id=223;
 		};
-		class Item67
+		class Item65
 		{
 			dataType="Marker";
 			position[]={3316.4521,-0.0041424665,13223.059};
 			name="boatSpawn_4";
 			type="Empty";
 			colorName="ColorBlue";
-			id=227;
+			id=224;
 		};
-		class Item68
+		class Item66
 		{
 			dataType="Marker";
 			position[]={3395.3687,-0.052440763,13294.066};
 			name="boatSpawn_5";
 			type="Empty";
 			colorName="ColorBlue";
-			id=228;
+			id=225;
 		};
-		class Item69
+		class Item67
 		{
 			dataType="Marker";
 			position[]={3442.0825,5.5953052e-007,13361.04};
 			name="boatSpawn_6";
 			type="Empty";
 			colorName="ColorBlue";
-			id=229;
+			id=226;
 		};
-		class Item70
+		class Item68
 		{
 			dataType="Marker";
 			position[]={16556.371,-0.0012100644,12414.795};
 			name="boatSpawn_7";
 			type="Empty";
 			colorName="ColorBlue";
-			id=230;
+			id=227;
 		};
-		class Item71
+		class Item69
 		{
 			dataType="Marker";
 			position[]={16536.527,0,12443.762};
 			name="boatSpawn_8";
 			type="Empty";
 			colorName="ColorBlue";
-			id=231;
+			id=228;
 		};
-		class Item72
+		class Item70
 		{
 			dataType="Marker";
 			position[]={16516.713,0.0037349223,12490.429};
 			name="boatSpawn_9";
 			type="Empty";
 			colorName="ColorBlue";
-			id=232;
+			id=229;
 		};
-		class Item73
+		class Item71
 		{
 			dataType="Marker";
 			position[]={16495.326,0.002824977,12519.413};
 			name="boatSpawn_10";
 			type="Empty";
 			colorName="ColorBlue";
-			id=233;
+			id=230;
 		};
-		class Item74
+		class Item72
 		{
 			dataType="Marker";
 			position[]={3648.8506,10.218255,13110.333};
 			name="heliSpawn_1";
 			type="Empty";
 			colorName="ColorGreen";
-			id=234;
+			id=231;
 		};
-		class Item75
+		class Item73
 		{
 			dataType="Marker";
 			position[]={3652.9355,7.0275793,13388.76};
 			name="heliSpawn_2";
 			type="Empty";
 			colorName="ColorGreen";
-			id=235;
+			id=232;
 		};
-		class Item76
+		class Item74
 		{
 			dataType="Marker";
 			position[]={20946.139,28.005131,7197.1421};
 			name="heliSpawn_3";
 			type="Empty";
 			colorName="ColorGreen";
-			id=236;
+			id=233;
 		};
-		class Item77
+		class Item75
 		{
 			dataType="Marker";
 			position[]={9743.3174,114,15870.909};
 			name="heliSpawn_4";
 			type="Empty";
 			colorName="ColorGreen";
-			id=237;
+			id=234;
 		};
-		class Item78
+		class Item76
 		{
 			dataType="Marker";
 			position[]={9705.9941,214.1759,20171.119};
 			name="heliSpawn_5";
 			type="Empty";
 			colorName="ColorGreen";
-			id=238;
+			id=235;
 		};
-		class Item79
+		class Item77
 		{
 			dataType="Marker";
 			position[]={13851.459,19.780001,18597.205};
 			name="heliSpawn_6";
 			type="Empty";
 			colorName="ColorGreen";
-			id=239;
+			id=236;
 		};
-		class Item80
+		class Item78
 		{
 			dataType="Marker";
 			position[]={15154.662,17.91,17253.836};
 			name="heliSpawn_7";
 			type="Empty";
 			colorName="ColorGreen";
-			id=240;
+			id=237;
 		};
-		class Item81
+		class Item79
 		{
 			dataType="Marker";
 			position[]={25239.041,87.3088,21829.594};
 			name="heliSpawn_8";
 			type="Empty";
 			colorName="ColorGreen";
-			id=241;
+			id=238;
 		};
-		class Item82
+		class Item80
 		{
 			dataType="Marker";
 			position[]={20702.363,35.599998,16608.479};
 			name="heliSpawn_9";
 			type="Empty";
 			colorName="ColorGreen";
-			id=242;
+			id=239;
 		};
-		class Item83
+		class Item81
 		{
 			dataType="Marker";
 			position[]={16533.285,2.27,12547.022};
 			name="heliSpawn_10";
 			type="Empty";
 			colorName="ColorGreen";
-			id=243;
+			id=240;
 		};
-		class Item84
+		class Item82
 		{
 			dataType="Marker";
 			position[]={17411.523,14.13992,13175.231};
 			name="heliSpawn_11";
 			type="Empty";
 			colorName="ColorGreen";
-			id=244;
+			id=241;
 		};
-		class Item85
+		class Item83
 		{
 			dataType="Marker";
 			position[]={11802.776,14.966475,9570.042};
 			name="heliSpawn_12";
 			type="Empty";
 			colorName="ColorGreen";
-			id=245;
+			id=242;
 		};
-		class Item86
+		class Item84
 		{
 			dataType="Marker";
 			position[]={9247.4893,15.199592,11962.815};
 			name="heliSpawn_13";
 			type="Empty";
 			colorName="ColorGreen";
-			id=246;
+			id=243;
 		};
-		class Item87
+		class Item85
 		{
 			dataType="Marker";
 			position[]={7042.917,13.922895,11416.329};
 			name="Mission_1";
 			type="Empty";
 			colorName="ColorOrange";
-			id=247;
+			id=244;
 		};
-		class Item88
+		class Item86
 		{
 			dataType="Marker";
 			position[]={8674.9541,192.55379,18092.541};
 			name="Mission_2";
 			type="Empty";
 			colorName="ColorOrange";
-			id=248;
+			id=245;
 		};
-		class Item89
+		class Item87
 		{
 			dataType="Marker";
 			position[]={12574.066,33.292294,16320.846};
 			name="Mission_3";
 			type="Empty";
 			colorName="ColorOrange";
-			id=249;
+			id=246;
 		};
-		class Item90
+		class Item88
 		{
 			dataType="Marker";
 			position[]={15903.801,45.815987,18170.334};
 			name="Mission_4";
 			type="Empty";
 			colorName="ColorOrange";
-			id=250;
+			id=247;
 		};
-		class Item91
+		class Item89
 		{
 			dataType="Marker";
 			position[]={23823.162,7.3760862,16418.084};
 			name="Mission_5";
 			type="Empty";
 			colorName="ColorOrange";
-			id=251;
+			id=248;
 		};
-		class Item92
+		class Item90
 		{
 			dataType="Marker";
 			position[]={19886.855,65.16983,17849.635};
 			name="Mission_7";
 			type="Empty";
 			colorName="ColorOrange";
-			id=252;
+			id=249;
 		};
-		class Item93
+		class Item91
 		{
 			dataType="Marker";
 			position[]={26838.061,26.449696,24341.111};
 			name="Mission_8";
 			type="Empty";
 			colorName="ColorOrange";
-			id=253;
+			id=250;
 		};
-		class Item94
+		class Item92
 		{
 			dataType="Marker";
 			position[]={21197.471,18.571796,7365.332};
 			name="Mission_9";
 			type="Empty";
 			colorName="ColorOrange";
-			id=254;
+			id=251;
 		};
-		class Item95
+		class Item93
 		{
 			dataType="Marker";
 			position[]={12093.65,3.3626416,10467.896};
 			name="Mission_10";
 			type="Empty";
 			colorName="ColorOrange";
-			id=255;
+			id=252;
 		};
-		class Item96
+		class Item94
 		{
 			dataType="Marker";
 			position[]={3607.2749,15.698098,10276.05};
 			name="Mission_11";
 			type="Empty";
 			colorName="ColorOrange";
-			id=256;
+			id=253;
 		};
-		class Item97
+		class Item95
 		{
 			dataType="Marker";
 			position[]={9794.957,5.1698751,22320.566};
 			name="Mission_12";
 			type="Empty";
 			colorName="ColorOrange";
-			id=257;
+			id=254;
 		};
-		class Item98
+		class Item96
 		{
 			dataType="Marker";
 			position[]={2998.4082,32.631886,18508.988};
 			name="Mission_13";
 			type="Empty";
 			colorName="ColorOrange";
-			id=258;
+			id=255;
 		};
-		class Item99
+		class Item97
 		{
 			dataType="Marker";
 			position[]={6580.0361,94.924103,22660.633};
 			name="Mission_14";
 			type="Empty";
 			colorName="ColorOrange";
-			id=259;
+			id=256;
 		};
-		class Item100
+		class Item98
 		{
 			dataType="Marker";
 			position[]={16806.289,6.3426394,21895.252};
 			name="Mission_15";
 			type="Empty";
 			colorName="ColorOrange";
-			id=260;
+			id=257;
 		};
-		class Item101
+		class Item99
 		{
 			dataType="Marker";
 			position[]={20150.699,15.581096,19873.928};
 			name="Mission_16";
 			type="Empty";
 			colorName="ColorOrange";
-			id=261;
+			id=258;
 		};
-		class Item102
+		class Item100
 		{
 			dataType="Marker";
 			position[]={21236.416,2.4247937,10639.023};
 			name="Mission_17";
 			type="Empty";
 			colorName="ColorOrange";
-			id=262;
+			id=259;
 		};
-		class Item103
+		class Item101
 		{
 			dataType="Marker";
 			position[]={16720.473,10.761951,13549.766};
 			name="Mission_18";
 			type="Empty";
 			colorName="ColorOrange";
-			id=263;
+			id=260;
 		};
-		class Item104
+		class Item102
 		{
 			dataType="Marker";
 			position[]={9187.7529,109.82971,11440.142};
 			name="Mission_19";
 			type="Empty";
 			colorName="ColorOrange";
-			id=264;
+			id=261;
 		};
-		class Item105
+		class Item103
 		{
 			dataType="Marker";
-			position[]={6171.6982,44.522717,16368.712};
+			position[]={6170.2021,44.518726,16368.712};
 			name="Mission_20";
 			type="Empty";
 			colorName="ColorOrange";
-			id=265;
+			id=262;
 		};
-		class Item106
+		class Item104
 		{
 			dataType="Marker";
 			position[]={12507.703,11.897883,14336.156};
 			name="Town_12";
 			type="Empty";
 			colorName="ColorRed";
-			id=266;
+			id=263;
 		};
-		class Item107
+		class Item105
 		{
 			dataType="Marker";
 			position[]={3805.4927,15.651279,13676.223};
 			name="Town_13";
 			type="Empty";
 			colorName="ColorRed";
-			id=267;
+			id=264;
 		};
-		class Item108
+		class Item106
 		{
 			dataType="Marker";
 			position[]={5090.4146,49.096569,11243.831};
 			name="Town_14";
 			type="Empty";
 			colorName="ColorRed";
-			id=268;
+			id=265;
 		};
-		class Item109
+		class Item107
 		{
 			dataType="Marker";
 			position[]={11578.455,23.20907,11907.604};
 			name="heliSpawn_14";
 			type="Empty";
 			colorName="ColorGreen";
-			id=269;
+			id=266;
 		};
-		class Item110
+		class Item108
 		{
 			dataType="Marker";
 			position[]={11702.541,22.855795,11858.401};
 			name="heliSpawn_15";
 			type="Empty";
 			colorName="ColorGreen";
-			id=270;
+			id=267;
 		};
-		class Item111
+		class Item109
 		{
 			dataType="Marker";
 			position[]={14206.271,20.601877,16180.13};
 			name="heliSpawn_16";
 			type="Empty";
 			colorName="ColorGreen";
-			id=271;
+			id=268;
 		};
-		class Item112
+		class Item110
 		{
 			dataType="Marker";
 			position[]={14319.85,19.426311,16286.842};
 			name="heliSpawn_17";
 			type="Empty";
 			colorName="ColorGreen";
-			id=272;
+			id=269;
 		};
-		class Item113
+		class Item111
 		{
 			dataType="Marker";
 			position[]={14791.563,17.91,16753.174};
 			name="heliSpawn_18";
 			type="Empty";
 			colorName="ColorGreen";
-			id=273;
+			id=270;
 		};
-		class Item114
+		class Item112
 		{
 			dataType="Marker";
 			position[]={9184.7617,14.445386,21652.504};
 			name="heliSpawn_19";
 			type="Empty";
 			colorName="ColorGreen";
-			id=274;
+			id=271;
 		};
-		class Item115
+		class Item113
 		{
 			dataType="Marker";
 			position[]={18126.504,24.121754,15230.355};
 			name="Town_15";
 			type="Empty";
 			colorName="ColorRed";
-			id=275;
+			id=272;
 		};
-		class Item116
+		class Item114
 		{
 			dataType="Marker";
 			position[]={23100.211,3.1900001,18912.086};
 			name="heliSpawn_20";
 			type="Empty";
 			colorName="ColorGreen";
-			id=276;
+			id=273;
 		};
-		class Item117
+		class Item115
 		{
 			dataType="Marker";
 			position[]={23097.063,3.1900001,18405.309};
 			name="heliSpawn_21";
 			type="Empty";
 			colorName="ColorGreen";
-			id=277;
+			id=274;
 		};
-		class Item118
+		class Item116
 		{
 			dataType="Marker";
 			position[]={26776.605,19.743946,24677.945};
 			name="heliSpawn_22";
 			type="Empty";
 			colorName="ColorGreen";
-			id=278;
+			id=275;
 		};
-		class Item119
+		class Item117
 		{
 			dataType="Marker";
 			position[]={27108.734,24.523888,24922.395};
 			name="heliSpawn_23";
 			type="Empty";
 			colorName="ColorGreen";
-			id=279;
+			id=276;
 		};
-		class Item120
+		class Item118
 		{
 			dataType="Marker";
 			position[]={20244.461,54.229702,11664.655};
 			name="Town_16";
 			type="Empty";
 			colorName="ColorRed";
-			id=280;
+			id=277;
 		};
-		class Item121
+		class Item119
 		{
 			dataType="Marker";
 			position[]={12688.393,0.0017221348,14185.458};
 			name="boatSpawn_11";
 			type="Empty";
 			colorName="ColorBlue";
-			id=281;
+			id=278;
 		};
-		class Item122
+		class Item120
 		{
 			dataType="Marker";
 			position[]={12728.464,-0.0037108874,14217.215};
 			name="boatSpawn_12";
 			type="Empty";
 			colorName="ColorBlue";
-			id=282;
+			id=279;
 		};
-		class Item123
+		class Item121
 		{
 			dataType="Marker";
 			position[]={12770.819,-0.0044515883,14233.495};
 			name="boatSpawn_13";
 			type="Empty";
 			colorName="ColorBlue";
-			id=283;
+			id=280;
 		};
-		class Item124
+		class Item122
 		{
 			dataType="Marker";
 			position[]={12812.358,-0.0088316621,14213.079};
 			name="boatSpawn_14";
 			type="Empty";
 			colorName="ColorBlue";
-			id=284;
+			id=281;
 		};
-		class Item125
+		class Item123
 		{
 			dataType="Marker";
 			position[]={3523.8828,-5.7158845e-006,13714.704};
 			name="boatSpawn_15";
 			type="Empty";
 			colorName="ColorBlue";
-			id=285;
+			id=282;
 		};
-		class Item126
+		class Item124
 		{
 			dataType="Marker";
 			position[]={15184.546,17.919924,17299.602};
 			name="milSpawn_1";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=286;
+			id=283;
 		};
-		class Item127
+		class Item125
 		{
 			dataType="Marker";
 			position[]={12821.175,86.788078,16696.854};
 			name="milSpawn_2";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=287;
+			id=284;
 		};
-		class Item128
+		class Item126
 		{
 			dataType="Marker";
 			position[]={16084.608,15.852898,17002.037};
 			name="milSpawn_3";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=288;
+			id=285;
 		};
-		class Item129
+		class Item127
 		{
 			dataType="Marker";
 			position[]={4562.8262,270.01544,15418.016};
 			name="milSpawn_4";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=289;
+			id=286;
 		};
-		class Item130
+		class Item128
 		{
 			dataType="Marker";
 			position[]={15328.909,24.655939,17447.445};
 			name="milSpawn_5";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=290;
+			id=287;
 		};
-		class Item131
+		class Item129
 		{
 			dataType="Marker";
 			position[]={14323.82,19.495234,16256.428};
 			name="milSpawn_6";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=291;
+			id=288;
 		};
-		class Item132
+		class Item130
 		{
 			dataType="Marker";
 			position[]={17427.08,13.768087,13176.61};
 			name="milSpawn_7";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=292;
+			id=289;
 		};
-		class Item133
+		class Item131
 		{
 			dataType="Marker";
 			position[]={20780.018,27.856224,7285.9478};
 			name="milSpawn_8";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=293;
+			id=290;
 		};
-		class Item134
+		class Item132
 		{
 			dataType="Marker";
 			position[]={20943.949,13.98167,19254.709};
 			name="milSpawn_9";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=294;
+			id=291;
 		};
-		class Item135
+		class Item133
 		{
 			dataType="Marker";
 			position[]={23573.084,91.641685,21107.93};
 			name="milSpawn_10";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=295;
+			id=292;
 		};
-		class Item136
+		class Item134
 		{
 			dataType="Marker";
 			position[]={20083.025,101.0014,6729.5781};
 			name="milSpawn_11";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=296;
+			id=293;
 		};
-		class Item137
+		class Item135
 		{
 			dataType="Marker";
 			position[]={12297.888,123.94805,8873.0127};
 			name="milSpawn_12";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=297;
+			id=294;
 		};
-		class Item138
+		class Item136
 		{
 			dataType="Marker";
 			position[]={8301.9346,76.223221,10079.425};
 			name="milSpawn_13";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=298;
+			id=295;
 		};
-		class Item139
+		class Item137
 		{
 			dataType="Marker";
 			position[]={14585.606,17.91,16843.018};
 			name="milSpawn_14";
 			type="Empty";
 			colorName="ColorKhaki";
-			id=299;
+			id=296;
 		};
-		class Item140
+		class Item138
 		{
 			dataType="Marker";
 			position[]={26701.904,20.800213,24587.266};
 			name="VehStore1_landSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=300;
+			id=297;
 		};
-		class Item141
+		class Item139
 		{
 			dataType="Marker";
 			position[]={26749.461,21.928879,24573.195};
 			name="VehStore1_heliSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=301;
+			id=298;
 		};
-		class Item142
+		class Item140
 		{
 			dataType="Marker";
 			position[]={26481.359,-0.00056290452,24687.391};
 			name="VehStore1_seaSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=302;
+			id=299;
 		};
-		class Item143
+		class Item141
 		{
 			dataType="Marker";
 			position[]={22954.973,4.9896584,18865.762};
 			name="VehStore2_landSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=303;
+			id=300;
 		};
-		class Item144
+		class Item142
 		{
 			dataType="Marker";
 			position[]={22994.232,3.5937061,18835.289};
 			name="VehStore2_heliSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=304;
+			id=301;
 		};
-		class Item145
+		class Item143
 		{
 			dataType="Marker";
 			position[]={23016.986,3.2045362,18820.279};
@@ -4569,148 +4286,148 @@ class Mission
 			type="Empty";
 			colorName="ColorBlack";
 			angle=180;
-			id=305;
+			id=302;
 		};
-		class Item146
+		class Item144
 		{
 			dataType="Marker";
 			position[]={20773.408,28.854717,7242.7178};
 			name="VehStore3_landSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=306;
+			id=303;
 		};
-		class Item147
+		class Item145
 		{
 			dataType="Marker";
 			position[]={20798.02,29.127123,7227.4385};
 			name="VehStore3_heliSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=307;
+			id=304;
 		};
-		class Item148
+		class Item146
 		{
 			dataType="Marker";
 			position[]={14501.121,18.800117,16310.477};
 			name="VehStore4_landSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=308;
+			id=305;
 		};
-		class Item149
+		class Item147
 		{
 			dataType="Marker";
 			position[]={14515.698,18.365541,16297.085};
 			name="VehStore4_heliSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=309;
+			id=306;
 		};
-		class Item150
+		class Item148
 		{
 			dataType="Marker";
 			position[]={14556.957,17.871447,16253.292};
 			name="VehStore4_planeSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			angle=42.999992;
-			id=310;
+			angle=42.999985;
+			id=307;
 		};
-		class Item151
+		class Item149
 		{
 			dataType="Marker";
 			position[]={27638.926,-0.015435035,24535.307};
 			name="boatSpawn_16";
 			type="Empty";
 			colorName="ColorBlue";
-			id=311;
+			id=308;
 		};
-		class Item152
+		class Item150
 		{
 			dataType="Marker";
 			position[]={20620.508,-4.2066345e-006,19465.514};
 			name="boatSpawn_17";
 			type="Empty";
 			colorName="ColorBlue";
-			id=312;
+			id=309;
 		};
-		class Item153
+		class Item151
 		{
 			dataType="Marker";
 			position[]={20653.291,-0.00034511639,19496.777};
 			name="boatSpawn_18";
 			type="Empty";
 			colorName="ColorBlue";
-			id=313;
+			id=310;
 		};
-		class Item154
+		class Item152
 		{
 			dataType="Marker";
 			position[]={15313.724,7.6848111e-005,15805.473};
 			name="boatSpawn_19";
 			type="Empty";
 			colorName="ColorBlue";
-			id=314;
+			id=311;
 		};
-		class Item155
+		class Item153
 		{
 			dataType="Marker";
 			position[]={15358.271,0.0016034088,15814.451};
 			name="boatSpawn_20";
 			type="Empty";
 			colorName="ColorBlue";
-			id=315;
+			id=312;
 		};
-		class Item156
+		class Item154
 		{
 			dataType="Marker";
 			position[]={15461.659,2.0609285e-005,15824.374};
 			name="boatSpawn_22";
 			type="Empty";
 			colorName="ColorBlue";
-			id=316;
+			id=313;
 		};
-		class Item157
+		class Item155
 		{
 			dataType="Marker";
 			position[]={15407.742,-0.0050302646,15821.843};
 			name="boatSpawn_21";
 			type="Empty";
 			colorName="ColorBlue";
-			id=317;
+			id=314;
 		};
-		class Item158
+		class Item156
 		{
 			dataType="Marker";
 			position[]={14293.118,17.827518,15828.741};
 			name="planeSpawn_1";
 			type="Empty";
 			colorName="ColorGUER";
-			angle=42.999992;
-			id=318;
+			angle=42.999985;
+			id=315;
 		};
-		class Item159
+		class Item157
 		{
 			dataType="Marker";
 			position[]={11687.582,23.211342,11938.496};
 			name="planeSpawn_5";
 			type="Empty";
 			colorName="ColorGUER";
-			angle=212.99997;
-			id=319;
+			angle=212.99979;
+			id=316;
 		};
-		class Item160
+		class Item158
 		{
 			dataType="Marker";
 			position[]={15078.744,17.91,17238.578};
 			name="planeSpawn_3";
 			type="Empty";
 			colorName="ColorGUER";
-			angle=133.99997;
-			id=320;
+			angle=133.99992;
+			id=317;
 		};
-		class Item161
+		class Item159
 		{
 			dataType="Marker";
 			position[]={23145.227,3.1900001,18903.689};
@@ -4718,18 +4435,18 @@ class Mission
 			type="Empty";
 			colorName="ColorGUER";
 			angle=180;
-			id=321;
+			id=318;
 		};
-		class Item162
+		class Item160
 		{
 			dataType="Marker";
 			position[]={15210.702,16.640888,11096.551};
 			name="Mission_6";
 			type="Empty";
 			colorName="ColorOrange";
-			id=322;
+			id=319;
 		};
-		class Item163
+		class Item161
 		{
 			dataType="Marker";
 			position[]={11560.475,23.67717,11969.147};
@@ -4737,136 +4454,136 @@ class Mission
 			type="Empty";
 			colorName="ColorGUER";
 			angle=120;
-			id=323;
+			id=320;
 		};
-		class Item164
+		class Item162
 		{
 			dataType="Marker";
 			position[]={14206.063,17.92,15895.131};
 			name="planeSpawn_2";
 			type="Empty";
 			colorName="ColorGUER";
-			angle=42.999992;
-			id=324;
+			angle=42.999985;
+			id=321;
 		};
-		class Item165
+		class Item163
 		{
 			dataType="Marker";
 			position[]={11541.983,19.547377,9443.0586};
 			name="GenStore1_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=325;
+			id=322;
 		};
-		class Item166
+		class Item164
 		{
 			dataType="Marker";
 			position[]={20795.758,35.181652,6811.291};
 			name="GenStore2_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=326;
+			id=323;
 		};
-		class Item167
+		class Item165
 		{
 			dataType="Marker";
 			position[]={18097.91,25.078211,15254.862};
 			name="GenStore3_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=327;
+			id=324;
 		};
-		class Item168
+		class Item166
 		{
 			dataType="Marker";
 			position[]={9281.6826,120.48088,15875.171};
 			name="GenStore4_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=328;
+			id=325;
 		};
-		class Item169
+		class Item167
 		{
 			dataType="Marker";
 			position[]={3361.3064,2.4381764,13215.17};
 			name="GunStore1_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=329;
+			id=326;
 		};
-		class Item170
+		class Item168
 		{
 			dataType="Marker";
 			position[]={16717.84,18.870035,12775.421};
 			name="GunStore2_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=330;
+			id=327;
 		};
-		class Item171
+		class Item169
 		{
 			dataType="Marker";
 			position[]={25778.363,20.712324,21368.246};
 			name="GunStore3_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=331;
+			id=328;
 		};
-		class Item172
+		class Item170
 		{
 			dataType="Marker";
 			position[]={9448.4199,125.69973,20273.068};
 			name="GunStore4_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=332;
+			id=329;
 		};
-		class Item173
+		class Item171
 		{
 			dataType="Marker";
 			position[]={4596.5674,298.37622,21421.836};
 			name="Town_17";
 			type="Empty";
 			colorName="ColorRed";
-			id=333;
+			id=330;
 		};
-		class Item174
+		class Item172
 		{
 			dataType="Marker";
 			position[]={5843.0659,223.83578,20123.916};
 			name="Town_18";
 			type="Empty";
 			colorName="ColorRed";
-			id=334;
+			id=331;
 		};
-		class Item175
+		class Item173
 		{
 			dataType="Marker";
 			position[]={4572.313,299.72269,21392.563};
 			name="GenStore5_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=335;
+			id=332;
 		};
-		class Item176
+		class Item174
 		{
 			dataType="Marker";
 			position[]={4897.1328,77.540359,16169.696};
 			name="Town_19";
 			type="Empty";
 			colorName="ColorRed";
-			id=336;
+			id=333;
 		};
-		class Item177
+		class Item175
 		{
 			dataType="Marker";
 			position[]={14617.251,46.803207,20777.959};
 			name="Town_20";
 			type="Empty";
 			colorName="ColorRed";
-			id=337;
+			id=334;
 		};
-		class Item178
+		class Item176
 		{
 			dataType="Marker";
 			position[]={11514.684,22.955761,11703.154};
@@ -4879,9 +4596,9 @@ class Mission
 			a=300;
 			b=120;
 			angle=301.42526;
-			id=338;
+			id=335;
 		};
-		class Item179
+		class Item177
 		{
 			dataType="Marker";
 			position[]={14387.867,18.944099,16220.769};
@@ -4892,10 +4609,10 @@ class Mission
 			fillName="DiagGrid";
 			a=300;
 			b=300;
-			angle=43.968025;
-			id=339;
+			angle=43.968014;
+			id=336;
 		};
-		class Item180
+		class Item178
 		{
 			dataType="Marker";
 			position[]={14806.477,17.91,16653.357};
@@ -4906,10 +4623,10 @@ class Mission
 			fillName="DiagGrid";
 			a=300;
 			b=300;
-			angle=43.967991;
-			id=340;
+			angle=43.967979;
+			id=337;
 		};
-		class Item181
+		class Item179
 		{
 			dataType="Marker";
 			position[]={15225.079,17.516605,17085.578};
@@ -4920,10 +4637,10 @@ class Mission
 			fillName="DiagGrid";
 			a=300;
 			b=300;
-			angle=43.967991;
-			id=341;
+			angle=43.967979;
+			id=338;
 		};
-		class Item182
+		class Item180
 		{
 			dataType="Marker";
 			position[]={9104.8623,15.541224,21519.289};
@@ -4934,10 +4651,10 @@ class Mission
 			fillName="DiagGrid";
 			a=180;
 			b=90;
-			angle=323.73187;
-			id=342;
+			angle=323.73181;
+			id=339;
 		};
-		class Item183
+		class Item181
 		{
 			dataType="Marker";
 			position[]={26941.389,20.260515,24762.58};
@@ -4948,10 +4665,10 @@ class Mission
 			fillName="DiagGrid";
 			a=100;
 			b=280;
-			angle=40.578892;
-			id=343;
+			angle=40.578884;
+			id=340;
 		};
-		class Item184
+		class Item182
 		{
 			dataType="Marker";
 			position[]={20978.602,26.419388,7222.4941};
@@ -4963,9 +4680,9 @@ class Mission
 			a=220;
 			b=190;
 			angle=144.13901;
-			id=344;
+			id=341;
 		};
-		class Item185
+		class Item183
 		{
 			dataType="Marker";
 			position[]={4228.3794,18.116827,15052.348};
@@ -4977,9 +4694,9 @@ class Mission
 			a=50;
 			b=80;
 			angle=91.654846;
-			id=345;
+			id=342;
 		};
-		class Item186
+		class Item184
 		{
 			dataType="Marker";
 			position[]={23144.682,3.1900001,18681.383};
@@ -4991,9 +4708,9 @@ class Mission
 			a=310;
 			b=90;
 			angle=269.92511;
-			id=346;
+			id=343;
 		};
-		class Item187
+		class Item185
 		{
 			dataType="Marker";
 			position[]={4837.5459,337.90045,21931.078};
@@ -5005,9 +4722,9 @@ class Mission
 			a=100;
 			b=100;
 			angle=181.46498;
-			id=347;
+			id=344;
 		};
-		class Item188
+		class Item186
 		{
 			dataType="Marker";
 			position[]={3081.7656,47.866707,13189.091};
@@ -5018,10 +4735,10 @@ class Mission
 			fillName="DiagGrid";
 			a=80;
 			b=80;
-			angle=359.29486;
-			id=348;
+			angle=359.2948;
+			id=345;
 		};
-		class Item189
+		class Item187
 		{
 			dataType="Marker";
 			position[]={15502.717,12.702961,16301.681};
@@ -5032,10 +4749,10 @@ class Mission
 			fillName="DiagGrid";
 			a=50;
 			b=80;
-			angle=83.320999;
-			id=349;
+			angle=83.320992;
+			id=346;
 		};
-		class Item190
+		class Item188
 		{
 			dataType="Marker";
 			position[]={21592.693,19.400345,21265.885};
@@ -5046,10 +4763,10 @@ class Mission
 			fillName="DiagGrid";
 			a=40;
 			b=30;
-			angle=89.166687;
-			id=350;
+			angle=89.166656;
+			id=347;
 		};
-		class Item191
+		class Item189
 		{
 			dataType="Marker";
 			position[]={21498.473,12.088601,10836.145};
@@ -5061,9 +4778,9 @@ class Mission
 			a=50;
 			b=110;
 			angle=37.967197;
-			id=351;
+			id=348;
 		};
-		class Item192
+		class Item190
 		{
 			dataType="Marker";
 			position[]={4556.8101,262.84003,15408.569};
@@ -5074,10 +4791,10 @@ class Mission
 			fillName="DiagGrid";
 			a=60;
 			b=50;
-			angle=113.571;
-			id=352;
+			angle=113.57082;
+			id=349;
 		};
-		class Item193
+		class Item191
 		{
 			dataType="Marker";
 			position[]={9328.2363,267.96201,19306.725};
@@ -5089,9 +4806,9 @@ class Mission
 			a=80;
 			b=200;
 			angle=259.332;
-			id=353;
+			id=350;
 		};
-		class Item194
+		class Item192
 		{
 			dataType="Marker";
 			position[]={16066.309,15.243137,16998.768};
@@ -5102,101 +4819,101 @@ class Mission
 			fillName="DiagGrid";
 			a=125;
 			b=140;
-			angle=9.4329576;
-			id=354;
+			angle=9.4329548;
+			id=351;
 		};
-		class Item195
+		class Item193
 		{
 			dataType="Marker";
 			position[]={13664.722,-0.120299,11892.979};
 			name="SunkenMission_0";
 			type="Empty";
 			colorName="ColorWhite";
-			id=355;
+			id=352;
 		};
-		class Item196
+		class Item194
 		{
 			dataType="Marker";
 			position[]={15421.785,-0.20875727,14276.165};
 			name="SunkenMission_1";
 			type="Empty";
 			colorName="ColorWhite";
-			id=356;
+			id=353;
 		};
-		class Item197
+		class Item195
 		{
 			dataType="Marker";
 			position[]={13106.126,-0.24947838,9494.5898};
 			name="SunkenMission_2";
 			type="Empty";
 			colorName="ColorWhite";
-			id=357;
+			id=354;
 		};
-		class Item198
+		class Item196
 		{
 			dataType="Marker";
 			position[]={4992.7637,-0.020654676,9908.2881};
 			name="SunkenMission_3";
 			type="Empty";
 			colorName="ColorWhite";
-			id=358;
+			id=355;
 		};
-		class Item199
+		class Item197
 		{
 			dataType="Marker";
 			position[]={3000.5508,-0.29678684,13521.053};
 			name="SunkenMission_4";
 			type="Empty";
 			colorName="ColorWhite";
-			id=359;
+			id=356;
 		};
-		class Item200
+		class Item198
 		{
 			dataType="Marker";
 			position[]={2357.9688,0.1024858,19374.357};
 			name="SunkenMission_5";
 			type="Empty";
 			colorName="ColorWhite";
-			id=360;
+			id=357;
 		};
-		class Item201
+		class Item199
 		{
 			dataType="Marker";
 			position[]={6276.0981,0.2718358,22660.088};
 			name="SunkenMission_6";
 			type="Empty";
 			colorName="ColorWhite";
-			id=361;
+			id=358;
 		};
-		class Item202
+		class Item200
 		{
 			dataType="Marker";
 			position[]={17603.389,-0.027867785,18805.65};
 			name="SunkenMission_7";
 			type="Empty";
 			colorName="ColorWhite";
-			id=362;
+			id=359;
 		};
-		class Item203
+		class Item201
 		{
 			dataType="Marker";
 			position[]={23156.707,-0.036080703,24039.277};
 			name="SunkenMission_8";
 			type="Empty";
 			colorName="ColorWhite";
-			id=363;
+			id=360;
 		};
-		class Item204
+		class Item202
 		{
 			dataType="Marker";
 			position[]={15100.404,17.900801,17260.949};
 			name="planeSpawn_4";
 			type="Empty";
 			colorName="ColorGUER";
-			angle=133.99997;
-			id=364;
+			angle=133.99992;
+			id=361;
 		};
-		class Item205
+		class Item203
 		{
 			dataType="Marker";
 			position[]={26779.346,23.465689,24558.525};
@@ -5204,19 +4921,19 @@ class Mission
 			type="Empty";
 			colorName="ColorBlack";
 			angle=135;
-			id=365;
+			id=362;
 		};
-		class Item206
+		class Item204
 		{
 			dataType="Marker";
 			position[]={20816.563,27.98922,7258.4517};
 			name="VehStore3_planeSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			angle=79.999985;
-			id=366;
+			angle=79.999969;
+			id=363;
 		};
-		class Item207
+		class Item205
 		{
 			dataType="Marker";
 			position[]={21075.549,26.424484,7093.2808};
@@ -5224,9 +4941,9 @@ class Mission
 			type="Empty";
 			colorName="ColorGUER";
 			angle=10.999998;
-			id=367;
+			id=364;
 		};
-		class Item208
+		class Item206
 		{
 			dataType="Marker";
 			position[]={26834.336,24.213842,24541.688};
@@ -5234,9 +4951,9 @@ class Mission
 			type="Empty";
 			colorName="ColorGUER";
 			angle=37.999996;
-			id=368;
+			id=365;
 		};
-		class Item209
+		class Item207
 		{
 			dataType="Marker";
 			position[]={26754.703,20.465672,24654.771};
@@ -5244,133 +4961,151 @@ class Mission
 			type="Empty";
 			colorName="ColorGUER";
 			angle=130;
-			id=369;
+			id=366;
 		};
-		class Item210
+		class Item208
 		{
 			dataType="Marker";
 			position[]={10982.468,27.277164,13424.412};
 			name="Town_21";
 			type="Empty";
 			colorName="ColorRed";
-			id=370;
+			id=367;
 		};
-		class Item211
+		class Item209
 		{
 			dataType="Marker";
 			position[]={7139.9814,113.59856,16450.223};
 			name="Town_22";
 			type="Empty";
 			colorName="ColorRed";
-			id=371;
+			id=368;
 		};
-		class Item212
+		class Item210
 		{
 			dataType="Marker";
 			position[]={8635.8496,182.03915,18260.393};
 			name="Town_23";
 			type="Empty";
 			colorName="ColorRed";
-			id=372;
+			id=369;
 		};
-		class Item213
+		class Item211
 		{
 			dataType="Marker";
 			position[]={12370.079,24.217855,15654.707};
 			name="Town_24";
 			type="Empty";
 			colorName="ColorRed";
-			id=373;
+			id=370;
 		};
-		class Item214
+		class Item212
 		{
 			dataType="Marker";
 			position[]={19408.883,39.291336,13239.641};
 			name="Town_25";
 			type="Empty";
 			colorName="ColorRed";
-			id=374;
+			id=371;
 		};
-		class Item215
+		class Item213
 		{
 			dataType="Marker";
 			position[]={20533.469,34.293266,8877.2207};
 			name="Town_26";
 			type="Empty";
 			colorName="ColorRed";
-			id=375;
+			id=372;
 		};
-		class Item216
+		class Item214
 		{
 			dataType="Marker";
 			position[]={21379.736,19.919834,16358.808};
 			name="Town_27";
 			type="Empty";
 			colorName="ColorRed";
-			id=376;
+			id=373;
 		};
-		class Item217
+		class Item215
 		{
 			dataType="Marker";
 			position[]={21690.945,15.570066,7555.9463};
 			name="Town_28";
 			type="Empty";
 			colorName="ColorRed";
-			id=377;
+			id=374;
 		};
-		class Item218
+		class Item216
 		{
 			dataType="Marker";
 			position[]={27029.561,20.629999,23216.389};
 			name="Town_29";
 			type="Empty";
 			colorName="ColorRed";
-			id=378;
+			id=375;
 		};
-		class Item219
+		class Item217
 		{
 			dataType="Marker";
 			position[]={18799.342,30.400841,16576.244};
 			name="Town_30";
 			type="Empty";
 			colorName="ColorRed";
-			id=379;
+			id=376;
+		};
+		class Item218
+		{
+			dataType="Marker";
+			position[]={14498.5,8.8249712,5838.5};
+			name="respawn_west";
+			type="Empty";
+			colorName="ColorWEST";
+			id=377;
+		};
+		class Item219
+		{
+			dataType="Marker";
+			position[]={14509.5,7.3571835,5838.5};
+			name="respawn_east";
+			type="Empty";
+			colorName="ColorEAST";
+			id=378;
 		};
 		class Item220
 		{
 			dataType="Marker";
-			position[]={14506.591,8.1136971,5860.9707};
-			name="respawn_west";
+			position[]={14520.5,4.6546364,5838.5};
+			name="respawn_guerrila";
 			type="Empty";
-			colorName="ColorWEST";
-			id=380;
+			colorName="ColorGUER";
+			id=379;
 		};
 		class Item221
 		{
 			dataType="Marker";
-			position[]={14506.592,8.3491783,5859.2207};
-			name="respawn_east";
+			position[]={14510,4.4858618,5826};
+			name="respawn_civilian";
 			type="Empty";
-			colorName="ColorEAST";
-			id=381;
+			colorName="ColorCIV";
+			id=380;
 		};
 		class Item222
 		{
 			dataType="Marker";
-			position[]={14506.592,8.5806561,5857.4785};
-			name="respawn_guerrila";
+			position[]={3620.7668,26.371962,10751.382};
+			name="VehStore5_landSpawn";
 			type="Empty";
-			colorName="ColorGUER";
-			id=382;
+			colorName="ColorBlack";
+			id=381;
 		};
 		class Item223
 		{
 			dataType="Marker";
-			position[]={14506.591,8.548233,5855.7334};
-			name="respawn_civilian";
+			position[]={3568.3159,39.908432,10713.679};
+			name="VehStore5_heliSpawn";
 			type="Empty";
-			colorName="ColorCIV";
-			id=383;
+			colorName="ColorBlack";
+			id=382;
 		};
 		class Item224
 		{
@@ -5379,282 +5114,486 @@ class Mission
 			name="VehStore5_seaSpawn";
 			type="Empty";
 			colorName="ColorBlack";
-			id=384;
+			id=383;
 		};
 		class Item225
 		{
-			dataType="Marker";
-			position[]={3568.3159,39.908432,10713.679};
-			name="VehStore5_heliSpawn";
-			type="Empty";
-			colorName="ColorBlack";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5802.8735,224.46057,20116.91};
+				angles[]={0,1.7045017,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=385;
+			type="Land_u_House_Small_02_V1_F";
 		};
 		class Item226
 		{
-			dataType="Marker";
-			position[]={3620.7668,26.371962,10751.382};
-			name="VehStore5_landSpawn";
-			type="Empty";
-			colorName="ColorBlack";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5813.3647,224.96677,20114.463};
+				angles[]={0,1.7045017,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=386;
+			type="Land_u_House_Small_02_V1_F";
 		};
 		class Item227
 		{
-			dataType="Marker";
-			position[]={5862.7539,223.64549,20136.576};
-			name="VehStore6_heliSpawn";
-			type="Empty";
-			colorName="ColorBlack";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5905.1416,230.47223,20187.549};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=387;
+			type="Land_Cargo_Patrol_V1_F";
 		};
 		class Item228
 		{
-			dataType="Marker";
-			position[]={5860.1025,224.68323,20118.383};
-			name="VehStore6_landSpawn";
-			type="Empty";
-			colorName="ColorBlack";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5778,226.24654,20115.25};
+				angles[]={0,0.13592474,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=388;
+			type="Land_Cargo_Patrol_V1_F";
 		};
 		class Item229
 		{
-			dataType="Marker";
-			position[]={12412.868,24.364281,15579.608};
-			name="GunStore5_objSpawn";
-			type="Empty";
-			colorName="ColorBlack";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5884,232.22942,20090};
+				angles[]={0,0.67704695,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=389;
+			type="Land_Cargo_Patrol_V1_F";
 		};
 		class Item230
 		{
-			dataType="Marker";
-			position[]={11709.138,54.848961,18224.15};
-			name="Mission_21";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5940.6113,224.59773,20237.91};
+				angles[]={0,4.9491563,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=390;
+			type="Land_Cargo_Patrol_V1_F";
 		};
 		class Item231
 		{
-			dataType="Marker";
-			position[]={18755.395,208.82076,10202.748};
-			name="Mission_22";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5852.5229,219.84566,20176.203};
+				angles[]={0.2267009,1.4855975,6.2751846};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=391;
+			type="Land_Slum_House03_F";
 		};
 		class Item232
 		{
-			dataType="Marker";
-			position[]={19436.357,23.452351,14351.174};
-			name="Mission_23";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5851.6704,222.06619,20164.402};
+				angles[]={0.1755093,2.1724367,6.2658529};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=392;
+			type="Land_Slum_House02_F";
 		};
 		class Item233
 		{
-			dataType="Marker";
-			position[]={16657.51,16.230467,12689.979};
-			name="Mission_24";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5847.6592,223.41342,20155.99};
+				angles[]={0.094386458,2.3353145,6.2020311};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=393;
+			type="Land_Slum_House03_F";
 		};
 		class Item234
 		{
-			dataType="Marker";
-			position[]={11327.046,138.86478,8257.0918};
-			name="Mission_25";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5840.231,224.11783,20151.053};
+				angles[]={0.030656165,2.6811304,0.038649179};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=394;
+			type="Land_Slum_House01_F";
 		};
 		class Item235
 		{
-			dataType="Marker";
-			position[]={8454.9404,96.900978,25174.967};
-			name="Mission_26";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5831.6279,223.67336,20149.84};
+				angles[]={0.13516892,3.105926,0.0039967569};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=395;
+			type="Land_Slum_House03_F";
 		};
 		class Item236
 		{
-			dataType="Marker";
-			position[]={8196.7402,74.394363,22541.352};
-			name="Mission_27";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5838.5264,218.27036,20181.385};
+				angles[]={0.11943052,5.6214967,6.2658529};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=396;
+			type="Land_Slum_House01_F";
 		};
 		class Item237
 		{
-			dataType="Marker";
-			position[]={12363.744,77.006287,21894.768};
-			name="Mission_28";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5832.1348,218.6503,20173.762};
+				angles[]={0.043970551,5.4692187,6.2778587};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=397;
+			type="Land_Slum_House02_F";
 		};
 		class Item238
 		{
-			dataType="Marker";
-			position[]={16155.725,33.545872,19367.801};
-			name="Mission_29";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5827.1328,219.10722,20168.98};
+				angles[]={0.067897305,5.4692187,6.2192702};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=398;
+			type="Land_Slum_House01_F";
 		};
 		class Item239
 		{
-			dataType="Marker";
-			position[]={20955.344,15.493174,19268.236};
-			name="Mission_30";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5820.6426,220.49507,20158.555};
+				angles[]={0.1858315,4.7054186,6.2671871};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=399;
+			type="Land_Slum_House03_F";
 		};
 		class Item240
 		{
-			dataType="Marker";
-			position[]={22472.322,18.29957,20019.885};
-			name="Mission_31";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5841.7271,222.82593,20158.34};
+				angles[]={0.094386458,5.4992552,0.15344904};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=400;
+			type="Land_StallWater_F";
 		};
 		class Item241
 		{
-			dataType="Marker";
-			position[]={22614.143,20.432728,21617.762};
-			name="Mission_32";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5832.9619,221.73956,20159.164};
+				angles[]={0.20762902,5.1237135,0.17421664};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=401;
+			type="Land_Cages_F";
 		};
 		class Item242
 		{
-			dataType="Marker";
-			position[]={25432.072,9.7850418,20345.178};
-			name="Mission_33";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5843.7715,219.99072,20169.564};
+				angles[]={0.20890635,0,0.13647936};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=402;
+			type="Land_CratesShabby_F";
 		};
 		class Item243
 		{
-			dataType="Marker";
-			position[]={28192.398,28.236439,25684.068};
-			name="Mission_34";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5837.0347,221.25429,20165.293};
+				angles[]={0.34673622,5.4992552,0.15344943};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=403;
+			type="Land_MarketShelter_F";
 		};
 		class Item244
 		{
-			dataType="Marker";
-			position[]={27495.762,18.622601,21483.043};
-			name="Mission_35";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5836.3872,222.90039,20154.127};
+				angles[]={0.20762902,3.2448666,0.038649179};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=404;
+			type="Land_Sacks_heap_F";
 		};
 		class Item245
 		{
-			dataType="Marker";
-			position[]={3814.7158,189.58923,21497.254};
-			name="Mission_36";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5841.7266,218.37213,20176.707};
+				angles[]={0.11943052,4.1287827,6.2658529};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=405;
+			type="Land_WoodenCart_F";
 		};
 		class Item246
 		{
-			dataType="Marker";
-			position[]={2312.7026,74.332687,22269.027};
-			name="Mission_37";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5838.0112,220.10225,20164.893};
+				angles[]={0.36895874,2.854346,0.1286198};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=406;
+			type="Campfire_burning_F";
 		};
 		class Item247
 		{
-			dataType="Marker";
-			position[]={3814.9829,13.853227,17497.141};
-			name="Mission_38";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5846.2476,218.64534,20175.24};
+				angles[]={0.11943002,5.4992552,0.15344943};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, true] call A3W_fnc_setupMissionObject";
+			};
 			id=407;
+			type="Campfire_burning_F";
 		};
 		class Item248
 		{
-			dataType="Marker";
-			position[]={12820.76,46.35466,19690.66};
-			name="Mission_39";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3575.3025,12.993915,12800.407};
+				angles[]={0,5.2822738,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this] call A3W_fnc_setupMissionATM";
+			};
 			id=408;
+			type="Land_Atm_02_F";
 		};
 		class Item249
 		{
-			dataType="Marker";
-			position[]={14096.81,19.359612,18465.543};
-			name="Mission_40";
-			type="Empty";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14492.001,19.959717,16383.88};
+				angles[]={0,3.2379,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this] call A3W_fnc_setupMissionATM";
+			};
 			id=409;
+			type="Land_Atm_01_F";
 		};
 		class Item250
 		{
-			dataType="Marker";
-			position[]={24139,0,6025};
-			name="General Store";
-			text="General Store";
-			type="mil_dot";
-			colorName="ColorBlue";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={25618.539,22.301409,21353.535};
+				angles[]={0,2.3768661,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this] call A3W_fnc_setupMissionATM";
+			};
 			id=410;
+			type="Land_Atm_02_F";
 		};
 		class Item251
 		{
-			dataType="Marker";
-			position[]={24139,0,5330};
-			name="Gun Store";
-			text="Gun Store";
-			type="mil_dot";
-			colorName="ColorYellow";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9507.6455,119.6947,15937.184};
+				angles[]={0,0.076195836,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this] call A3W_fnc_setupMissionATM";
+			};
 			id=411;
+			type="Land_Atm_02_F";
 		};
 		class Item252
 		{
-			dataType="Marker";
-			position[]={24139,0,4635};
-			name="Parking";
-			text="Parking";
-			type="mil_dot";
-			colorName="ColorKhaki";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={21647.672,15.167987,7676.3281};
+				angles[]={0,4.0311179,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this] call A3W_fnc_setupMissionATM";
+			};
 			id=412;
+			type="Land_Atm_02_F";
 		};
 		class Item253
 		{
-			dataType="Marker";
-			position[]={24139,0,3940};
-			name="Storage";
-			text="Storage";
-			type="mil_dot";
-			colorName="ColorUNKNOWN";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16774.918,19.767099,12594.562};
+				angles[]={0,4.7172933,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this] call A3W_fnc_setupMissionATM";
+			};
 			id=413;
+			type="Land_Atm_02_F";
 		};
 		class Item254
 		{
-			dataType="Marker";
-			position[]={24139,0,3245};
-			name="Vehicle Store";
-			text="Vehicle Store";
-			type="mil_dot";
-			colorName="ColorOrange";
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4591.7295,302.01065,21445.844};
+				angles[]={0,1.4631039,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this] call A3W_fnc_setupMissionATM";
+			};
 			id=414;
+			type="Land_Atm_02_F";
 		};
 		class Item255
 		{
@@ -5768,623 +5707,408 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={23025.889,13.56551,19433.859};
-			name="RoadBlock_1";
+			name="Roadblock_1";
 			type="Empty";
 			colorName="ColorUNKNOWN";
-			angle=223.17883;
 			id=427;
 		};
 		class Item268
 		{
 			dataType="Marker";
 			position[]={17420.93,7.3394189,13728.772};
-			name="RoadBlock_2";
+			name="Roadblock_2";
 			type="Empty";
 			colorName="ColorUNKNOWN";
-			angle=206.74399;
 			id=428;
 		};
 		class Item269
 		{
 			dataType="Marker";
 			position[]={14780.016,21.329321,17714.207};
-			name="RoadBlock_3";
+			name="Roadblock_3";
 			type="Empty";
 			colorName="ColorUNKNOWN";
-			angle=132.14131;
 			id=429;
 		};
 		class Item270
 		{
 			dataType="Marker";
 			position[]={18568.914,40.868103,16534.154};
-			name="RoadBlock_4";
+			name="Roadblock_4";
 			type="Empty";
 			colorName="ColorUNKNOWN";
-			angle=248.28296;
 			id=430;
 		};
 		class Item271
 		{
 			dataType="Marker";
 			position[]={9129.1836,89.711617,15596.495};
-			name="RoadBlock_5";
+			name="Roadblock_5";
 			type="Empty";
 			colorName="ColorUNKNOWN";
-			angle=15.982398;
 			id=431;
 		};
 		class Item272
 		{
 			dataType="Marker";
 			position[]={3953.4282,49.114174,12210.488};
-			name="RoadBlock_6";
+			name="Roadblock_6";
 			type="Empty";
 			colorName="ColorUNKNOWN";
-			angle=95.785583;
 			id=432;
 		};
 		class Item273
 		{
 			dataType="Marker";
 			position[]={4434.0444,270.83322,20827.891};
-			name="RoadBlock_7";
+			name="Roadblock_7";
 			type="Empty";
 			colorName="ColorUNKNOWN";
-			angle=149.39801;
 			id=433;
 		};
 		class Item274
 		{
 			dataType="Marker";
 			position[]={9041.0586,18.735415,21335.852};
-			name="RoadBlock_8";
+			name="Roadblock_8";
 			type="Empty";
 			colorName="ColorUNKNOWN";
-			angle=63.058025;
 			id=434;
 		};
 		class Item275
 		{
 			dataType="Marker";
 			position[]={26760.328,22.531874,23035.527};
-			name="RoadBlock_9";
+			name="Roadblock_9";
 			type="Empty";
 			colorName="ColorUNKNOWN";
-			angle=207.45999;
 			id=435;
 		};
 		class Item276
 		{
 			dataType="Marker";
 			position[]={20561.07,27.045717,8117.4487};
-			name="RoadBlock_10";
+			name="Roadblock_10";
 			type="Empty";
 			colorName="ColorUNKNOWN";
-			angle=19.70064;
 			id=436;
 		};
 		class Item277
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5892.1162,228.12543,20124.455};
-				angles[]={0.015994642,0.43438035,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={11709.138,54.848961,18224.15};
+			name="Mission_21";
+			type="Empty";
+			colorName="ColorOrange";
 			id=437;
-			type="Land_i_House_Big_01_V1_F";
 		};
 		class Item278
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5802.8735,224.46057,20116.91};
-				angles[]={0.023998493,1.7045017,0.081154868};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={18755.395,208.82076,10202.748};
+			name="Mission_22";
+			type="Empty";
+			colorName="ColorOrange";
 			id=438;
-			type="Land_u_House_Small_02_V1_F";
 		};
 		class Item279
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5813.3647,224.96677,20114.463};
-				angles[]={0.046633169,1.7045017,0.050624419};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={19436.357,23.452351,14351.174};
+			name="Mission_23";
+			type="Empty";
+			colorName="ColorOrange";
 			id=439;
-			type="Land_u_House_Small_02_V1_F";
 		};
 		class Item280
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5905.1416,230.47223,20187.549};
-				angles[]={0.0053265258,0,6.2206011};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={16657.51,16.230467,12689.979};
+			name="Mission_24";
+			type="Empty";
+			colorName="ColorOrange";
 			id=440;
-			type="Land_Cargo_Patrol_V1_F";
 		};
 		class Item281
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5777.9878,226.45502,20115.297};
-				angles[]={0.086452015,0.13592474,0.086449943};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={11327.046,138.86478,8257.0918};
+			name="Mission_25";
+			type="Empty";
+			colorName="ColorOrange";
 			id=441;
-			type="Land_Cargo_Patrol_V1_F";
 		};
 		class Item282
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5884.2715,232.3436,20089.811};
-				angles[]={0.035984326,0.67704695,0.045301005};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={8454.9404,96.900978,25174.967};
+			name="Mission_26";
+			type="Empty";
+			colorName="ColorOrange";
 			id=442;
-			type="Land_Cargo_Patrol_V1_F";
 		};
 		class Item283
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5940.6113,224.66,20237.91};
-				angles[]={6.2765174,4.9491563,6.1193337};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={8196.7402,74.394363,22541.352};
+			name="Mission_27";
+			type="Empty";
+			colorName="ColorOrange";
 			id=443;
-			type="Land_Cargo_Patrol_V1_F";
 		};
 		class Item284
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5852.5229,219.84566,20176.203};
-				angles[]={0.2267009,1.4855975,6.2751846};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={12363.744,77.006287,21894.768};
+			name="Mission_28";
+			type="Empty";
+			colorName="ColorOrange";
 			id=444;
-			type="Land_Slum_House03_F";
 		};
 		class Item285
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5851.6704,222.06619,20164.402};
-				angles[]={0.1755093,2.1724367,6.2658529};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={16155.725,33.545872,19367.801};
+			name="Mission_29";
+			type="Empty";
+			colorName="ColorOrange";
 			id=445;
-			type="Land_Slum_House02_F";
 		};
 		class Item286
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5847.6592,223.41342,20155.99};
-				angles[]={0.094386458,2.3353145,6.2020311};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={20955.344,15.493174,19268.236};
+			name="Mission_30";
+			type="Empty";
+			colorName="ColorOrange";
 			id=446;
-			type="Land_Slum_House03_F";
 		};
 		class Item287
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5840.231,224.11783,20151.053};
-				angles[]={0.030656165,2.6811304,0.038649179};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={22472.322,18.29957,20019.885};
+			name="Mission_31";
+			type="Empty";
+			colorName="ColorOrange";
 			id=447;
-			type="Land_Slum_House01_F";
 		};
 		class Item288
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5831.6279,223.67336,20149.84};
-				angles[]={0.13516892,3.105926,0.0039967569};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={22614.143,20.432728,21617.762};
+			name="Mission_32";
+			type="Empty";
+			colorName="ColorOrange";
 			id=448;
-			type="Land_Slum_House03_F";
 		};
 		class Item289
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5838.5264,218.27036,20181.385};
-				angles[]={0.11943052,5.6214967,6.2658529};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={25432.072,9.7850418,20345.178};
+			name="Mission_33";
+			type="Empty";
+			colorName="ColorOrange";
 			id=449;
-			type="Land_Slum_House01_F";
 		};
 		class Item290
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5832.1348,218.6503,20173.762};
-				angles[]={0.043970551,5.4692187,6.2778587};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={28192.398,28.236439,25684.068};
+			name="Mission_34";
+			type="Empty";
+			colorName="ColorOrange";
 			id=450;
-			type="Land_Slum_House02_F";
 		};
 		class Item291
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5827.1328,219.10722,20168.98};
-				angles[]={0.067897305,5.4692187,6.2192702};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={27495.762,18.622601,21483.043};
+			name="Mission_35";
+			type="Empty";
+			colorName="ColorOrange";
 			id=451;
-			type="Land_Slum_House01_F";
 		};
 		class Item292
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5820.6426,220.49507,20158.555};
-				angles[]={0.1858315,4.7054186,6.2671871};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={3814.7158,189.58923,21497.254};
+			name="Mission_36";
+			type="Empty";
+			colorName="ColorOrange";
 			id=452;
-			type="Land_Slum_House03_F";
 		};
 		class Item293
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5841.7271,222.82593,20158.34};
-				angles[]={0.094386458,5.4992552,0.15344904};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={2312.7026,74.332687,22269.027};
+			name="Mission_37";
+			type="Empty";
+			colorName="ColorOrange";
 			id=453;
-			type="Land_StallWater_F";
 		};
 		class Item294
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5832.9619,221.73956,20159.164};
-				angles[]={0.20762902,5.1237135,0.17421664};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={3814.9829,13.853227,17497.141};
+			name="Mission_38";
+			type="Empty";
+			colorName="ColorOrange";
 			id=454;
-			type="Land_Cages_F";
 		};
 		class Item295
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5843.7715,219.99072,20169.564};
-				angles[]={0.20890635,0,0.13647936};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={12820.76,46.35466,19690.66};
+			name="Mission_39";
+			type="Empty";
+			colorName="ColorOrange";
 			id=455;
-			type="Land_CratesShabby_F";
 		};
 		class Item296
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5837.0347,221.25429,20165.293};
-				angles[]={0.34673622,5.4992552,0.15344943};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={14096.81,19.359612,18465.543};
+			name="Mission_40";
+			type="Empty";
+			colorName="ColorOrange";
 			id=456;
-			type="Land_MarketShelter_F";
 		};
 		class Item297
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5836.3872,222.90039,20154.127};
-				angles[]={0.20762902,3.2448666,0.038649179};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={5860.1025,224.68323,20118.383};
+			name="VehStore6_landSpawn";
+			type="Empty";
+			colorName="ColorBlack";
 			id=457;
-			type="Land_Sacks_heap_F";
 		};
 		class Item298
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5841.7266,218.37213,20176.707};
-				angles[]={0.11943052,4.1287827,6.2658529};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.2;
-				init="[this, true] call A3W_fnc_setupMissionObject";
-				description="DO NOT MODIFY IN EDITOR";
-			};
+			dataType="Marker";
+			position[]={5862.7539,223.64549,20136.576};
+			name="VehStore6_heliSpawn";
+			type="Empty";
+			colorName="ColorBlack";
 			id=458;
-			type="Land_WoodenCart_F";
 		};
 		class Item299
 		{
-			dataType="Object";
-			class PositionInfo
+			dataType="Group";
+			side="Civilian";
+			class Entities
 			{
-				position[]={3575.2083,12.980294,12800.373};
-				angles[]={6.2678065,5.2822738,0.077706158};
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5857.9956,226.15068,20099.123};
+					};
+					side="Civilian";
+					flags=3;
+					class Attributes
+					{
+						init="[this] spawn A3W_fnc_setupStoreNPC";
+						name="VehStore6";
+					};
+					id=460;
+					type="C_man_1_1_F";
+				};
 			};
-			side="Empty";
 			class Attributes
 			{
-				skill=0.60000002;
-				init="[this] call A3W_fnc_setupMissionATM";
-				description="DO NOT MODIFY IN EDITOR";
 			};
 			id=459;
-			type="Land_Atm_02_F";
 		};
 		class Item300
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14492.001,20.04837,16383.88};
-				angles[]={0.018660666,3.2379,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.60000002;
-				init="[this] call A3W_fnc_setupMissionATM";
-				description="DO NOT MODIFY IN EDITOR";
-			};
-			id=460;
-			type="Land_Atm_01_F";
+			dataType="Marker";
+			position[]={12412.868,24.364281,15579.608};
+			name="GunStore5_objSpawn";
+			type="Empty";
+			colorName="ColorBlack";
+			id=461;
 		};
 		class Item301
 		{
-			dataType="Object";
-			class PositionInfo
+			dataType="Group";
+			side="Civilian";
+			class Entities
 			{
-				position[]={25618.391,22.298559,21353.555};
-				angles[]={0.0051790103,2.3768661,0.024512138};
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12399.979,24.920925,15566.039};
+					};
+					side="Civilian";
+					flags=3;
+					class Attributes
+					{
+						init="[this] spawn A3W_fnc_setupStoreNPC";
+						name="GunStore5";
+					};
+					id=463;
+					type="C_man_1_1_F";
+				};
 			};
-			side="Empty";
 			class Attributes
 			{
-				skill=0.60000002;
-				init="[this] call A3W_fnc_setupMissionATM";
-				description="DO NOT MODIFY IN EDITOR";
 			};
-			id=461;
-			type="Land_Atm_02_F";
+			id=462;
 		};
 		class Item302
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={16774.967,19.853043,12594.53};
-				angles[]={6.2399864,4.7172933,0.043889116};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.60000002;
-				init="[this] call A3W_fnc_setupMissionATM";
-				description="DO NOT MODIFY IN EDITOR";
-			};
-			id=462;
-			type="Land_Atm_02_F";
+			dataType="Marker";
+			position[]={24139,0,6025};
+			name="General Store";
+			text="General Store";
+			type="mil_dot";
+			colorName="ColorBlue";
+			id=463;
 		};
 		class Item303
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={9507.5215,119.77499,15937.777};
-				angles[]={0.45308456,0.076195836,6.2281446};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.60000002;
-				init="[this] call A3W_fnc_setupMissionATM";
-				description="DO NOT MODIFY IN EDITOR";
-			};
-			id=463;
-			type="Land_Atm_02_F";
+			dataType="Marker";
+			position[]={24139,0,5330};
+			name="Gun Store";
+			text="Gun Store";
+			type="mil_dot";
+			colorName="ColorYellow";
+			id=464;
 		};
 		class Item304
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={21647.811,15.304413,7676.5278};
-				angles[]={0.019999012,4.0311179,6.2432065};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.60000002;
-				init="[this] call A3W_fnc_setupMissionATM";
-				description="DO NOT MODIFY IN EDITOR";
-			};
-			id=464;
-			type="Land_Atm_02_F";
+			dataType="Marker";
+			position[]={24139,0,4635};
+			name="Parking";
+			text="Parking";
+			type="mil_dot";
+			colorName="ColorKhaki";
+			id=465;
 		};
 		class Item305
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4591.7295,302.01065,21445.844};
-				angles[]={0,1.4631039,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.60000002;
-				init="[this] call A3W_fnc_setupMissionATM";
-				description="DO NOT MODIFY IN EDITOR";
-			};
-			id=465;
-			type="Land_Atm_02_F";
+			dataType="Marker";
+			position[]={24139,0,3940};
+			name="Storage";
+			text="Storage";
+			type="mil_dot";
+			colorName="ColorUNKNOWN";
+			id=466;
+		};
+		class Item306
+		{
+			dataType="Marker";
+			position[]={24139,0,3245};
+			name="Vehicle Store";
+			text="Vehicle Store";
+			type="mil_dot";
+			colorName="ColorOrange";
+			id=467;
 		};
 	};
 };
