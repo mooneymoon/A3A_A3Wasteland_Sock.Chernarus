@@ -3024,7 +3024,7 @@ class Mission
 			{
 				position[]={14509.5,4.8439064,5828};
 			};
-			name="A3W_HC1";
+			name="HeadlessClient";
 			isPlayable=1;
 			description="DO NOT RENAME";
 			id=180;
