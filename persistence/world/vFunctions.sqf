@@ -378,13 +378,13 @@ v_restoreVehicle = {
       };   
  			
       case ({_obj isKindOf _x} count ["B_Plane_CAS_01_F", "O_Plane_CAS_02_F", "I_Plane_Fighter_03_CAS_F"] > 0):
-				{		
+      {		
 					_obj removeWeaponTurret ["CMFlareLauncher", [-1]];
 					_obj addWeaponTurret ["CMFlareLauncher", [-1]]; 
       }; 
  			
       case ({_obj isKindOf _x} count ["O_Heli_Light_02_F", "B_Heli_Attack_01_F", "O_Heli_Attack_02_F", "O_Heli_Attack_02_black_F"] > 0):
-				{		
+      {		
 					_obj removeWeaponTurret ["CMFlareLauncher", [-1]];
 					_obj addWeaponTurret ["CMFlareLauncher", [-1]]; 
       };       

@@ -503,26 +503,12 @@ va_inside_remove_actions = {
 
 va_outside_target = {
   ARGVX3(0,_player,objNull);
-  ARGVX3(1,_distance,0);
   if (!isPlayer _player) exitWith {};
   
-  /*def(_target);
-  if (surfaceIsWater (position _player)) then {
-   //line intersect does not work well when vehicle is in water
-    _target = cursorTarget;
-  }
-  else {
-    def(_pos1);
-    def(_pos2);
-    _pos1 = (eyePos player);
-    _pos2 = ([_pos1, cameraDirDist(_distance)] call vector_add);
-	_objects = (lineIntersectsWith [_pos1,_pos2,objNull,objNull,true]);
-	if (!isARRAY(_objects) || {count _objects == 0}) exitWith {};
-	_target = _objects select 0;
-  };*/
-
   def(_target);
-    _target = cursorObject;
+  _objects = nearestObjects [_player, ["Helicopter", "Plane", "Ship_F", "Car", "Motorcycle", "Tank"], 10];
+  if (!isARRAY(_objects) || {count _objects == 0}) exitWith {};
+  _target = cursorObject;
 
   if (isNil "_target") exitWith {};
 
