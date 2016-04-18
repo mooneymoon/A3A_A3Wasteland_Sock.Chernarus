@@ -196,8 +196,8 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			//_object allowDamage _isDamageable;
 			//_object setVariable ["allowDamage", _isDamageable];
 
-			clearBackpackCargoGlobal _object;
-
+			clearBackpackCargoGlobal _object;		
+			
 			switch (true) do
 			{
 				case ({_object isKindOf _x} count ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F"] > 0):
@@ -238,15 +238,13 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				case ({_object isKindOf _x} count ["B_Truck_01_Repair_F", "O_Truck_02_box_F", "O_Truck_03_repair_F", "I_Truck_02_box_F"] > 0):
 				{
 					_object setRepairCargo 25;
-				};
-
+				};			
+				
 				case ({_object isKindOf _x} count ["B_UAV_02_F", "O_UAV_02_F", "I_UAV_02_F"] > 0):
 				{
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
-					_object removeWeaponTurret ["CMFlareLauncher", [-1]];
- 					_object removeWeaponTurret ["Laserdesignator_mounted", [0]];
-					_object removeWeaponTurret ["missiles_SCALPEL", [0]];
+					_object call fn_removeTurretWeapons;
 					_object addMagazineTurret ["120Rnd_CMFlare_Chaff_Magazine",[-1]];
 					_object addMagazineTurret ["Laserbatteries",[0]];
 					_object addMagazineTurret ["2Rnd_LG_scalpel",[0]];
@@ -259,13 +257,10 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				{
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
-					_object removeWeaponTurret ["Gatling_30mm_Plane_CAS_01_F",[-1]];
-					_object removeWeaponTurret ["Missile_AA_04_Plane_CAS_01_F",[-1]];
+					_object call fn_removeTurretWeapons;
 					_object removeWeaponTurret ["Missile_AGM_02_Plane_CAS_01_F",[-1]];
 					_object removeWeaponTurret ["Rocket_04_HE_Plane_CAS_01_F",[-1]];
 					_object removeWeaponTurret ["Rocket_04_AP_Plane_CAS_01_F", [-1]];
-					_object removeWeaponTurret ["Bomb_04_Plane_CAS_01_F", [-1]];
-					_object removeWeaponTurret ["CMFlareLauncher", [-1]];
 					_object addMagazineTurret ["1000Rnd_Gatling_30mm_Plane_CAS_01_F",[-1]];
 					_object addMagazineTurret ["2Rnd_Missile_AA_04_F",[-1]];
 					_object addMagazineTurret ["4Rnd_Bomb_04_F",[-1]];
@@ -280,13 +275,9 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				{
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
-					_object removeWeaponTurret ["Cannon_30mm_Plane_CAS_02_F",[-1]];
-					_object removeWeaponTurret ["Missile_AA_03_Plane_CAS_02_F",[-1]];
+					_object call fn_removeTurretWeapons;
 					_object removeWeaponTurret ["Missile_AGM_01_Plane_CAS_02_F",[-1]];
-					_object removeWeaponTurret ["Rocket_03_HE_Plane_CAS_02_F",[-1]];
 					_object removeWeaponTurret ["Rocket_03_AP_Plane_CAS_02_F", [-1]];
-					_object removeWeaponTurret ["Bomb_03_Plane_CAS_02_F", [-1]];
-					_object removeWeaponTurret ["CMFlareLauncher", [-1]];
 					_object addMagazineTurret ["500Rnd_Cannon_30mm_Plane_CAS_02_F",[-1]];
 					_object addMagazineTurret ["20Rnd_Rocket_03_HE_F",[-1]];
 					_object addMagazineTurret ["2Rnd_Missile_AA_03_F",[-1]];
@@ -303,11 +294,8 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				{
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
-					_object removeWeaponTurret ["Twin_Cannon_20mm",[-1]];
+					_object call fn_removeTurretWeapons;
 					_object removeWeaponTurret ["missiles_SCALPEL",[-1]];
-					_object removeWeaponTurret ["missiles_ASRAAM",[-1]];
-					_object removeWeaponTurret ["GBU12BombLauncher",[-1]];
-					_object removeWeaponTurret ["CMFlareLauncher", [-1]];
 					_object addMagazineTurret ["300Rnd_20mm_shells",[-1]];
 					_object addMagazineTurret ["300Rnd_20mm_shells",[-1]];
 					_object addMagazineTurret ["2Rnd_AAA_missiles",[-1]];
@@ -323,9 +311,8 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				{
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
-					_object removeWeaponTurret ["LMG_Minigun_heli",[-1]];
+					_object call fn_removeTurretWeapons;
 					_object removeWeaponTurret ["missiles_DAGR",[-1]];
-					_object removeWeaponTurret ["CMFlareLauncher",[-1]];
 					_object addMagazineTurret ["2000Rnd_65x39_Belt_Tracer_Green_Splash",[-1]];
 					_object addMagazineTurret ["12Rnd_missiles",[-1]];
 					_object addMagazineTurret ["168Rnd_CMFlare_Chaff_Magazine",[-1]];
@@ -338,10 +325,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				{
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
-					_object removeWeaponTurret ["CMFlareLauncher",[-1]];
-					_object removeWeaponTurret ["gatling_20mm",[0]];
-					_object removeWeaponTurret ["missiles_DAGR",[0]];
-					_object removeWeaponTurret ["missiles_ASRAAM",[0]];
+					_object call fn_removeTurretWeapons;
 					_object addMagazineTurret ["240Rnd_CMFlare_Chaff_Magazine",[-1]];
 					_object addMagazineTurret ["1000Rnd_20mm_shells",[0]];
 					_object addMagazineTurret ["12Rnd_PG_missiles",[0]];
@@ -356,10 +340,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				{
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
-					_object removeWeaponTurret ["CMFlareLauncher",[-1]];
-					_object removeWeaponTurret ["gatling_30mm",[0]];
-					_object removeWeaponTurret ["missiles_SCALPEL",[0]];
-					_object removeWeaponTurret ["rockets_Skyfire",[0]];
+					_object call fn_removeTurretWeapons;
 					_object addMagazineTurret ["192Rnd_CMFlare_Chaff_Magazine",[-1]];
 					_object addMagazineTurret ["250Rnd_30mm_HE_shells",[0]];
 					_object addMagazineTurret ["250Rnd_30mm_APDS_shells",[0]];
@@ -375,8 +356,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				{
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
-					_object removeWeaponTurret ["FakeWeapon",[0]];
-					_object removeWeaponTurret ["mortar_82mm",[0]];
+					_object call fn_removeTurretWeapons;
 					_object addMagazineTurret ["8Rnd_82mm_Mo_shells",[0]];
 					_object addMagazineTurret ["8Rnd_82mm_Mo_Flare_white",[0]];
 					_object addMagazineTurret ["8Rnd_82mm_Mo_LG",[0]];
@@ -389,6 +369,8 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object allowDamage false;
 				};
 			};
+			
+			_object hideObjectGlobal false;
 
 			if (needReload _object == 1) then {reload _object};
 

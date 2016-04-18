@@ -251,11 +251,6 @@ v_restoreVehicle = {
     _obj setRepairCargo _cargo_repair;
   };*/
   
-  if (_obj isKindOf "O_Heli_Light_02_F") then {
-    _obj removeWeaponTurret ["missiles_DAGR",[-1]];
-    _obj addWeaponTurret ["missiles_DAR",[-1]];
-   };
-  
   if (_obj isKindOf "AllVehicles") then {
 
     switch (true) do
@@ -298,51 +293,35 @@ v_restoreVehicle = {
       case (_obj isKindOf "I_MRAP_03_F"):
       {
           _obj setVehicleAmmo 0;
-          _obj setVehicleAmmoDef 0;	
-          _obj removeWeaponTurret ["Laserdesignator_mounted", [0]];
-          _obj removeWeaponTurret ["SmokeLauncher", [0]];
+          _obj setVehicleAmmoDef 0;
           _obj addMagazineTurret ["Laserbatteries", [0]]; 
-          _obj addMagazineTurret ["SmokeLauncherMag", [0]];           
-          _obj addWeaponTurret ["Laserdesignator_mounted", [0]];
-          _obj addWeaponTurret ["SmokeLauncher", [0]];          
+          _obj addMagazineTurret ["SmokeLauncherMag", [0]];      
       };
 
       case (_obj isKindOf "B_APC_Wheeled_01_cannon_F"):
       {
-          _obj removeWeaponTurret ["SmokeLauncher", [0,0]];
           _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-          _obj addWeaponTurret ["SmokeLauncher", [0,0]];          
       };   
       
       case (_obj isKindOf "O_APC_Wheeled_02_rcws_F"):
       {
-          _obj removeWeaponTurret ["SmokeLauncher", [0,0]];
           _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-          _obj addWeaponTurret ["SmokeLauncher", [0,0]];          
       };         
 
       case (_obj isKindOf "I_APC_Wheeled_03_cannon_F"):
       {
-          _obj removeWeaponTurret ["SmokeLauncher", [0,0]];
           _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-          _obj addWeaponTurret ["SmokeLauncher", [0,0]];          
       };    
 
       case (_obj isKindOf "B_MBT_01_cannon_F"):
       {
-          _obj removeWeaponTurret ["SmokeLauncher", [0,0]];
           _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-          _obj addWeaponTurret ["SmokeLauncher", [0,0]];              
       };
 
       case (_obj isKindOf "B_MBT_01_TUSK_F"):
       {
-          _obj removeWeaponTurret ["HMG_127_MBT", [0,0]];
-          _obj removeWeaponTurret ["SmokeLauncher", [0,0]];
           _obj addMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0,0]]; 
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];           
-          _obj addWeaponTurret ["HMG_127_MBT", [0,0]];
-          _obj addWeaponTurret ["SmokeLauncher", [0,0]];          
+          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];       
       };
 
       case (_obj isKindOf "O_MBT_02_cannon_F"):
@@ -352,42 +331,40 @@ v_restoreVehicle = {
           _obj removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]]; 
           _obj removeMagazineTurret ["SmokeLauncherMag", [0,0]];
           _obj removeMagazineTurret ["SmokeLauncherMag", [0,0]];
-          _obj removeMagazineTurret ["SmokeLauncherMag", [0,0]];          
-          _obj removeWeaponTurret ["HMG_NSVT", [0,0]];
-          _obj removeWeaponTurret ["SmokeLauncher", [0,0]];
+          _obj removeMagazineTurret ["SmokeLauncherMag", [0,0]];
           _obj addMagazineTurret ["450Rnd_127x108_Ball", [0,0]]; 
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];           
-          _obj addWeaponTurret ["HMG_NSVT", [0,0]];
-          _obj addWeaponTurret ["SmokeLauncher", [0,0]];          
+          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];        
       };
 
       case (_obj isKindOf "I_MBT_03_cannon_F"):
       {
-          _obj removeWeaponTurret ["HMG_127_APC", [0,0]];
-          _obj removeWeaponTurret ["SmokeLauncher", [0,0]];
           _obj addMagazineTurret ["500Rnd_127x99_mag_Tracer_Yellow", [0,0]]; 
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];           
-          _obj addWeaponTurret ["HMG_127_APC", [0,0]];
-          _obj addWeaponTurret ["SmokeLauncher", [0,0]];          
+          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];      
       };
-      
-      case (_obj isKindOf "UAV_02_base_F"):
+
+	  case (_obj isKindOf "B_Plane_CAS_01_F"):
       {
-					_obj removeWeaponTurret ["CMFlareLauncher", [-1]];    
-					_obj addWeaponTurret ["CMFlareLauncher", [-1]];   
-      };   
- 			
-      case ({_obj isKindOf _x} count ["B_Plane_CAS_01_F", "O_Plane_CAS_02_F", "I_Plane_Fighter_03_CAS_F"] > 0):
-      {		
-					_obj removeWeaponTurret ["CMFlareLauncher", [-1]];
-					_obj addWeaponTurret ["CMFlareLauncher", [-1]]; 
-      }; 
- 			
-      case ({_obj isKindOf _x} count ["O_Heli_Light_02_F", "B_Heli_Attack_01_F", "O_Heli_Attack_02_F", "O_Heli_Attack_02_black_F"] > 0):
-      {		
-					_obj removeWeaponTurret ["CMFlareLauncher", [-1]];
-					_obj addWeaponTurret ["CMFlareLauncher", [-1]]; 
-      };       
+          _obj removeWeaponTurret ["Missile_AGM_02_Plane_CAS_01_F",[-1]];
+          _obj removeWeaponTurret ["Rocket_04_HE_Plane_CAS_01_F",[-1]];
+          _obj removeWeaponTurret ["Rocket_04_AP_Plane_CAS_01_F", [-1]];
+      };
+
+      case (_obj isKindOf "O_Plane_CAS_02_F"):
+      {
+          _obj removeWeaponTurret ["Missile_AGM_01_Plane_CAS_02_F",[-1]];
+          _obj removeWeaponTurret ["Rocket_03_AP_Plane_CAS_02_F", [-1]];
+      };
+
+      case (_obj isKindOf "I_Plane_Fighter_03_CAS_F"):
+      {
+          _obj removeWeaponTurret ["missiles_SCALPEL",[-1]];
+      };
+
+      case (_obj isKindOf "O_Heli_Light_02_F"):
+      {
+          _obj removeWeaponTurret ["missiles_DAGR",[-1]];
+          _obj addWeaponTurret ["missiles_DAR",[-1]];
+      };	  
     };  
   };  
   

@@ -301,7 +301,7 @@ sh_restoreVehicleTurrets = {
   //legacy data did not contain turret information, in that case, don't attempt to restore them
   if (isNil "_turret0" && {isNil "_turret1" && {isNil "_turret3"}}) exitWith {};
 
-	if (!isNil "_turret0" && !isNil "_turret2" && {count _turret0 == 0 && count _turret2 == 0}) then
+	if (!isNil "_turret0" && !isNil "_turret2" && {_turret0 isEqualTo [] && _turret2 isEqualTo []}) then
 	{
 		// for vehicles saved from A3 v1.56 and onwards, remove all default mags because empty ones are saved
 		{ _veh removeMagazineTurret [_x select 0, _x select 1] } forEach magazinesAllTurrets _veh;
@@ -311,6 +311,9 @@ sh_restoreVehicleTurrets = {
 		// for older vehicle saves, mark all default mags as empty so it can still be resupplied to its default ammo capacity
 		_veh setVehicleAmmo 0;
 	}; 
+
+	// Remove all turret weapons to ensure they are reloaded properly
+	_turretWeapons = _veh call fn_removeTurretWeapons;
 
   if (!isNil "_turret2") then {
     {
@@ -327,6 +330,9 @@ sh_restoreVehicleTurrets = {
     { _veh addMagazineTurret _x } forEach _turret1;
   };
 
+	// Re-add all turret weapons to ensure they are reloaded properly
+	{ _veh addWeaponTurret _x } forEach _turretWeapons;
+	_veh hideObjectGlobal false;
 };
 
 sh_calcualte_vectors = {
