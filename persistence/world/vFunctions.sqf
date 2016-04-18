@@ -342,7 +342,7 @@ v_restoreVehicle = {
           _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];      
       };
 
-	  case (_obj isKindOf "B_Plane_CAS_01_F"):
+      case (_obj isKindOf "B_Plane_CAS_01_F"):
       {
           _obj removeWeaponTurret ["Missile_AGM_02_Plane_CAS_01_F",[-1]];
           _obj removeWeaponTurret ["Rocket_04_HE_Plane_CAS_01_F",[-1]];

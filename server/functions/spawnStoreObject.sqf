@@ -196,8 +196,8 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			//_object allowDamage _isDamageable;
 			//_object setVariable ["allowDamage", _isDamageable];
 
-			clearBackpackCargoGlobal _object;		
-			
+			clearBackpackCargoGlobal _object;
+
 			switch (true) do
 			{
 				case ({_object isKindOf _x} count ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F"] > 0):
@@ -238,8 +238,8 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				case ({_object isKindOf _x} count ["B_Truck_01_Repair_F", "O_Truck_02_box_F", "O_Truck_03_repair_F", "I_Truck_02_box_F"] > 0):
 				{
 					_object setRepairCargo 25;
-				};			
-				
+				};
+
 				case ({_object isKindOf _x} count ["B_UAV_02_F", "O_UAV_02_F", "I_UAV_02_F"] > 0):
 				{
 					_object setVehicleAmmo 0;
