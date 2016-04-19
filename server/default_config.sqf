@@ -22,6 +22,7 @@ A3W_spawnBeaconCooldown = 15*60;   // Number of seconds to wait between each use
 A3W_spawnBeaconSpawnHeight = 1500; // Altitude in meters at which players will spawn when using spawn beacons (0 = ground/sea)
 A3W_maxSpawnBeacons = 2;		   // Maxmimum number of spawn beacons (0 = disabled)
 A3W_uavControl = "group";          // Restrict connection to UAVs based on ownership ("owner", "group", "side")
+A3W_disableUavFeed = 0;            // Force disable UAV PIP feed to prevent thermal camera abuse (0 = no, 1 = yes)
 
 // Store settings
 A3W_showGunStoreStatus = 1;        // Show enemy and friendly presence at gunstores on map (0 = no, 1 = yes)
