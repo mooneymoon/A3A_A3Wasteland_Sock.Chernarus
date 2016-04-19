@@ -157,7 +157,7 @@ v_restoreVehicle = {
   };
   
   //disable autonomous mode by default on static designators so they stay on target after releasing controls
-  if ({_obj isKindOf _x} count ["UAV_01_base_F", "Static_Designator_01_base_F", "Static_Designator_02_base_F"] > 0) then {
+  if ({_obj isKindOf _x} count ["Static_Designator_01_base_F", "Static_Designator_02_base_F"] > 0) then {
     _obj setAutonomous false;
   };  
 

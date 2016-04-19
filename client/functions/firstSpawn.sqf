@@ -69,13 +69,17 @@ player addEventHandler ["WeaponAssembled",
 		_obj setVariable ["ownerUID", getPlayerUID _player, true];
 		_obj setVariable ["A3W_purchasedVehicle", true, true];
 		_obj setVariable ["ownerN", name _player, true];
-		_obj setAutonomous false;
 		trackVehicle = _obj;
 		publicVariableServer "trackVehicle";
 
 		if (!alive getConnectedUAV player) then
 		{
 			player connectTerminalToUAV _obj;
+		};
+
+		if ({_obj isKindOf _x} count ["Static_Designator_01_base_F","Static_Designator_02_base_F"] > 0) then
+		{
+			_obj setAutonomous false; // disable autonomous mode by default on static designators so they stay on target after releasing controls
 		};
 
 		if (_obj isKindOf "UAV_01_base_F") then
