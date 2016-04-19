@@ -69,7 +69,7 @@ player addEventHandler ["WeaponAssembled",
 		_obj setVariable ["ownerUID", getPlayerUID _player, true];
 		_obj setVariable ["A3W_purchasedVehicle", true, true];
 		_obj setVariable ["ownerN", name _player, true];
-        _obj setAutonomous false;
+		_obj setAutonomous false;
 		trackVehicle = _obj;
 		publicVariableServer "trackVehicle";
 
