@@ -286,58 +286,6 @@ v_restoreVehicle = {
           _obj setRepairCargo 25;
       };
 
-      case (_obj isKindOf "I_MRAP_03_F"):
-      {
-          _obj setVehicleAmmo 0;
-          _obj setVehicleAmmoDef 0;
-          _obj addMagazineTurret ["Laserbatteries", [0]];
-          _obj addMagazineTurret ["SmokeLauncherMag", [0]];
-      };
-
-      case (_obj isKindOf "B_APC_Wheeled_01_cannon_F"):
-      {
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-      };
-
-      case (_obj isKindOf "O_APC_Wheeled_02_rcws_F"):
-      {
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-      };
-
-      case (_obj isKindOf "I_APC_Wheeled_03_cannon_F"):
-      {
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-      };
-
-      case (_obj isKindOf "B_MBT_01_cannon_F"):
-      {
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-      };
-
-      case (_obj isKindOf "B_MBT_01_TUSK_F"):
-      {
-          _obj addMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0,0]];
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-      };
-
-      case (_obj isKindOf "O_MBT_02_cannon_F"):
-      {
-          _obj removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
-          _obj removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
-          _obj removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
-          _obj removeMagazineTurret ["SmokeLauncherMag", [0,0]];
-          _obj removeMagazineTurret ["SmokeLauncherMag", [0,0]];
-          _obj removeMagazineTurret ["SmokeLauncherMag", [0,0]];
-          _obj addMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-      };
-
-      case (_obj isKindOf "I_MBT_03_cannon_F"):
-      {
-          _obj addMagazineTurret ["500Rnd_127x99_mag_Tracer_Yellow", [0,0]];
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-      };
-
       case (_obj isKindOf "B_Plane_CAS_01_F"):
       {
           _obj removeWeaponTurret ["Missile_AGM_02_Plane_CAS_01_F",[-1]];
@@ -361,10 +309,20 @@ v_restoreVehicle = {
           _obj removeWeaponTurret ["missiles_DAGR",[-1]];
           _obj addWeaponTurret ["missiles_DAR",[-1]];
       };
+	  
+      case (_obj isKindOf "I_MRAP_03_F"):
+      {
+          _obj setVehicleAmmo 0;
+          _obj setVehicleAmmoDef 0;
+          _obj removeWeaponTurret ["Laserdesignator_mounted", [0]];
+          _obj removeWeaponTurret ["SmokeLauncher", [0]];
+          _obj addMagazineTurret ["Laserbatteries", [0]];
+          _obj addMagazineTurret ["SmokeLauncherMag", [0]];
+          _obj addWeaponTurret ["Laserdesignator_mounted", [0]];
+          _obj addWeaponTurret ["SmokeLauncher", [0]];
+      };	  
     };
   };
-
-  if (needReload _obj == 1) then {reload _obj};
 
   tracked_vehicles_list pushBack _obj;
 

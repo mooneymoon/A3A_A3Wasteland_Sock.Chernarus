@@ -175,6 +175,8 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVariable ["A3W_missionVehicle", false];
 					_object setVariable ["ownerUID", getPlayerUID _player, true];
 					_object setVariable ["ownerN", name _player, true];
+					_object setVariable ["baseSaving_spawningTime", nil, true];
+					_object setVariable ["baseSaving_hoursAlive", nil, true];					
 				};
 
 				if ({_object isKindOf _x} count A3W_autosave_vehicles_list > 0) then {
@@ -185,6 +187,8 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVariable ["A3W_missionVehicle", false];
 					_object setVariable ["ownerUID", getPlayerUID _player, true];
 					_object setVariable ["ownerN", name _player, true];
+					_object setVariable ["baseSaving_spawningTime", nil, true];
+					_object setVariable ["baseSaving_hoursAlive", nil, true];
 				};
 			};
 
@@ -362,10 +366,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object allowDamage false;
 				};
 			};
-			
-			_object hideObjectGlobal false;
-
-			if (needReload _object == 1) then {reload _object};
 
 			if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
 			{

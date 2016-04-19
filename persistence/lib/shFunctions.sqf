@@ -330,6 +330,56 @@ sh_restoreVehicleTurrets = {
     { _veh addMagazineTurret _x } forEach _turret1;
   };
 
+  if (_veh isKindOf "AllVehicles") then {
+
+    switch (true) do
+    {
+      case (_veh isKindOf "B_APC_Wheeled_01_cannon_F"):
+      {
+          _veh addMagazineTurret ["SmokeLauncherMag", [0,0]];
+      };
+
+      case (_veh isKindOf "O_APC_Wheeled_02_rcws_F"):
+      {
+          _veh addMagazineTurret ["SmokeLauncherMag", [0,0]];
+      };
+
+      case (_veh isKindOf "I_APC_Wheeled_03_cannon_F"):
+      {
+          _veh addMagazineTurret ["SmokeLauncherMag", [0,0]];
+      };
+
+      case (_veh isKindOf "B_MBT_01_cannon_F"):
+      {
+          _veh addMagazineTurret ["SmokeLauncherMag", [0,0]];
+      };
+
+      case (_veh isKindOf "B_MBT_01_TUSK_F"):
+      {
+          _veh addMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0,0]];
+          _veh addMagazineTurret ["SmokeLauncherMag", [0,0]];
+      };
+
+      case (_veh isKindOf "O_MBT_02_cannon_F"):
+      {
+          _veh removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
+          _veh removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
+          _veh removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
+          _veh removeMagazineTurret ["SmokeLauncherMag", [0,0]];
+          _veh removeMagazineTurret ["SmokeLauncherMag", [0,0]];
+          _veh removeMagazineTurret ["SmokeLauncherMag", [0,0]];
+          _veh addMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
+          _veh addMagazineTurret ["SmokeLauncherMag", [0,0]];
+      };
+
+      case (_veh isKindOf "I_MBT_03_cannon_F"):
+      {
+          _veh addMagazineTurret ["500Rnd_127x99_mag_Tracer_Yellow", [0,0]];
+          _veh addMagazineTurret ["SmokeLauncherMag", [0,0]];
+      };
+    };
+  }; 
+  
 	// Re-add all turret weapons to ensure they are reloaded properly
 	{ _veh addWeaponTurret _x } forEach _turretWeapons;
 	_veh hideObjectGlobal false;
