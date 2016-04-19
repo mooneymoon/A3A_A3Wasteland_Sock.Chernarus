@@ -61,13 +61,22 @@ player addEventHandler ["WeaponAssembled",
 	_obj = _this select 1;
 
 	if (round getNumber (configFile >> "CfgVehicles" >> typeOf _obj >> "isUav") > 0) then
-	{ 
+	{
 		_obj setVariable ["ownerUID", getPlayerUID _player, true];
 
-		if ({_obj isKindOf _x} count ["Static_Designator_02_base_F","Static_Designator_02_base_F"] > 0) then
+		if (!alive getConnectedUAV player) then
+		{
+			player connectTerminalToUAV _obj;
+		};
+
+		if ({_obj isKindOf _x} count ["Static_Designator_01_base_F","Static_Designator_02_base_F"] > 0) then
 		{
 			_obj setAutonomous false; // disable autonomous mode by default on static designators so they stay on target after releasing controls
 		};
+
+		{
+			[_x, ["AI","",""]] remoteExec ["A3W_fnc_setName"]; 
+		} forEach crew _obj;
 	};
 }];
 
@@ -149,7 +158,7 @@ player addEventHandler ["WeaponAssembled", {
 		_lastVeh = _currVeh;
 
 		// Prevent usage of commander camera
-		if (cameraView == "GROUP") then
+		if (cameraView == "GROUP" && cameraOn in [player, vehicle player]) then
 		{
 			cameraOn switchCamera "EXTERNAL";
 		};
