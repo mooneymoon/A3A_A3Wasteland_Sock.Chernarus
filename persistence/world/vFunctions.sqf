@@ -156,11 +156,6 @@ v_restoreVehicle = {
     _obj disableTIEquipment false;
   };
 
-  //disable autonomous mode by default on static designators so they stay on target after releasing controls
-  if ({_obj isKindOf _x} count ["Static_Designator_01_base_F", "Static_Designator_02_base_F"] > 0) then {
-    _obj setAutonomous false;
-  };
-
   //override the lock-state for vehicles form this this
   if ({_obj isKindOf _x} count A3W_locked_vehicles_list > 0) then {
     _lock_state = 2;
