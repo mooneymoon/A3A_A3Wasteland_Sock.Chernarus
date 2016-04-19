@@ -27,7 +27,7 @@ _hasInvite = false;
 
 diag_log "Invite to group: Before the checks";
 
-#define MAX_GROUP_COUNT 16
+/*#define MAX_GROUP_COUNT 16
 _groupCount = count units player;
 if (_groupCount < MAX_GROUP_COUNT) then
 {
@@ -39,7 +39,7 @@ if (_groupCount < MAX_GROUP_COUNT) then
 		};
 	} forEach currentInvites;
 };
-if (_groupCount >= MAX_GROUP_COUNT) exitWith { [format ["You cannot have more than %1 group members, including pending invites.", MAX_GROUP_COUNT]] spawn BIS_fnc_guiMessage };
+if (_groupCount >= MAX_GROUP_COUNT) exitWith { [format ["You cannot have more than %1 group members, including pending invites.", MAX_GROUP_COUNT]] spawn BIS_fnc_guiMessage };*/
 
 //Checks
 if(isNil "_target") exitWith {player globalChat "you must select someone to invite first"};
