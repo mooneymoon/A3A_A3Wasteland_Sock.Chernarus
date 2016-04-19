@@ -361,16 +361,16 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object addWeaponTurret ["mortar_82mm",[0]];
 				};
 
-				case (_object isKindOf "Box_NATO_Ammo_F"):
+				case (_object isKindOf "Box_FIA_Support_F"):
 				{
 					_object allowDamage false;
 				};
 			};
 
-			if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
+			/*if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
 			{
 				_object call fn_manualVehicleSave;
-			};
+			};*/
 		};
 	};
 };
