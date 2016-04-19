@@ -155,11 +155,11 @@ v_restoreVehicle = {
   if ({_obj isKindOf _x} count ["UAV_02_base_F", "UGV_01_base_F"] > 0) then {
     _obj disableTIEquipment false;
   };
-  
+
   //disable autonomous mode by default on static designators so they stay on target after releasing controls
   if ({_obj isKindOf _x} count ["Static_Designator_01_base_F", "Static_Designator_02_base_F"] > 0) then {
     _obj setAutonomous false;
-  };  
+  };
 
   //override the lock-state for vehicles form this this
   if ({_obj isKindOf _x} count A3W_locked_vehicles_list > 0) then {
@@ -229,7 +229,7 @@ v_restoreVehicle = {
   };
 
   if (isARRAY(_cargo_backpacks)) then {
-    { _obj addWeaponCargoGlobal _x } forEach _cargo_weapons;
+    { _obj addBackpackCargoGlobal _x } forEach _cargo_weapons;
   };
 
   if (isARRAY(_cargo_items)) then {
@@ -314,7 +314,7 @@ v_restoreVehicle = {
           _obj removeWeaponTurret ["missiles_DAGR",[-1]];
           _obj addWeaponTurret ["missiles_DAR",[-1]];
       };
-	  
+
       case (_obj isKindOf "I_MRAP_03_F"):
       {
           _obj setVehicleAmmo 0;
@@ -325,7 +325,7 @@ v_restoreVehicle = {
           _obj addMagazineTurret ["SmokeLauncherMag", [0]];
           _obj addWeaponTurret ["Laserdesignator_mounted", [0]];
           _obj addWeaponTurret ["SmokeLauncher", [0]];
-      };	  
+      };
     };
   };
 
