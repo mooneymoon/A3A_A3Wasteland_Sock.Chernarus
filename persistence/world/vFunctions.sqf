@@ -155,7 +155,7 @@ v_restoreVehicle = {
   if ({_obj isKindOf _x} count ["UAV_02_base_F", "UGV_01_base_F"] > 0) then {
     _obj disableTIEquipment false;
   };
-  
+
   //override the lock-state for vehicles form this this
   if ({_obj isKindOf _x} count A3W_locked_vehicles_list > 0) then {
     _lock_state = 2;
@@ -210,7 +210,7 @@ v_restoreVehicle = {
     _obj setVehicleAmmo 0;
     _obj setVehicleAmmoDef 0;
   };
-  
+
   //restore the stuff inside the vehicle
   clearWeaponCargoGlobal _obj;
   clearMagazineCargoGlobal _obj;
@@ -224,11 +224,7 @@ v_restoreVehicle = {
   };
 
   if (isARRAY(_cargo_backpacks)) then {
-    {
-      if (not((_x select 0) isKindOf "Weapon_Bag_Base")) then {
-        _obj addBackpackCargoGlobal _x
-      };
-    } forEach _cargo_backpacks;
+    { _obj addWeaponCargoGlobal _x } forEach _cargo_weapons;
   };
 
   if (isARRAY(_cargo_items)) then {
@@ -250,7 +246,7 @@ v_restoreVehicle = {
   if (isSCALAR(_cargo_repair)) then {
     _obj setRepairCargo _cargo_repair;
   };*/
-  
+
   if (_obj isKindOf "AllVehicles") then {
 
     switch (true) do
@@ -294,24 +290,24 @@ v_restoreVehicle = {
       {
           _obj setVehicleAmmo 0;
           _obj setVehicleAmmoDef 0;
-          _obj addMagazineTurret ["Laserbatteries", [0]]; 
-          _obj addMagazineTurret ["SmokeLauncherMag", [0]];      
+          _obj addMagazineTurret ["Laserbatteries", [0]];
+          _obj addMagazineTurret ["SmokeLauncherMag", [0]];
       };
 
       case (_obj isKindOf "B_APC_Wheeled_01_cannon_F"):
       {
           _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-      };   
-      
+      };
+
       case (_obj isKindOf "O_APC_Wheeled_02_rcws_F"):
       {
           _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-      };         
+      };
 
       case (_obj isKindOf "I_APC_Wheeled_03_cannon_F"):
       {
           _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
-      };    
+      };
 
       case (_obj isKindOf "B_MBT_01_cannon_F"):
       {
@@ -320,26 +316,26 @@ v_restoreVehicle = {
 
       case (_obj isKindOf "B_MBT_01_TUSK_F"):
       {
-          _obj addMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0,0]]; 
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];       
+          _obj addMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0,0]];
+          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
       };
 
       case (_obj isKindOf "O_MBT_02_cannon_F"):
       {
-          _obj removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]]; 
-          _obj removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]]; 
-          _obj removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]]; 
+          _obj removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
+          _obj removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
+          _obj removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
           _obj removeMagazineTurret ["SmokeLauncherMag", [0,0]];
           _obj removeMagazineTurret ["SmokeLauncherMag", [0,0]];
           _obj removeMagazineTurret ["SmokeLauncherMag", [0,0]];
-          _obj addMagazineTurret ["450Rnd_127x108_Ball", [0,0]]; 
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];        
+          _obj addMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
+          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
       };
 
       case (_obj isKindOf "I_MBT_03_cannon_F"):
       {
-          _obj addMagazineTurret ["500Rnd_127x99_mag_Tracer_Yellow", [0,0]]; 
-          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];      
+          _obj addMagazineTurret ["500Rnd_127x99_mag_Tracer_Yellow", [0,0]];
+          _obj addMagazineTurret ["SmokeLauncherMag", [0,0]];
       };
 
       case (_obj isKindOf "B_Plane_CAS_01_F"):
@@ -364,10 +360,10 @@ v_restoreVehicle = {
       {
           _obj removeWeaponTurret ["missiles_DAGR",[-1]];
           _obj addWeaponTurret ["missiles_DAR",[-1]];
-      };	  
-    };  
-  };  
-  
+      };
+    };
+  };
+
   if (needReload _obj == 1) then {reload _obj};
 
   tracked_vehicles_list pushBack _obj;
@@ -701,12 +697,12 @@ v_addSaveVehicle = {
   init(_fuelCargo,getFuelCargo _obj);
   init(_repairCargo,getRepairCargo _obj);
   init(_fuel, fuel _obj);
-  
+
   // Fix for -1.#IND
   if (isNil "_ammoCargo" || {!finite _ammoCargo}) then { _ammoCargo = 0 };
   if (isNil "_fuelCargo" || {!finite _fuelCargo}) then { _fuelCargo = 0 };
   if (isNil "_repairCargo" || {!finite _repairCargo}) then { _repairCargo = 0 };
-  
+
   def(_objName);
   _objName = _obj getVariable ["vehicle_key", nil];
 
@@ -719,7 +715,7 @@ v_addSaveVehicle = {
 
   def(_lock_state);
   _lock_state = locked _obj;
-  
+
   def(_result);
   _result = [
     ["Class", _class],

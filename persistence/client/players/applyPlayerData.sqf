@@ -78,19 +78,11 @@ else
 		case "Vest": { if (_value != "") then { player addVest _value } };
 		case "Backpack":
 		{
-			removeBackpack player;
-
-			if (_value != "") then
-			{
-				if (_value isKindOf "Weapon_Bag_Base" && ({_value isKindOf _x} count ["B_UAV_01_backpack_F", "B_Static_Designator_01_weapon_F", "O_Static_Designator_02_weapon_F"] == 0)) then
-				{
-					player addBackpack "B_AssaultPack_rgr"; // NO SOUP FOR YOU
-				}
-				else
+				removeBackpack player;
+				if (_value != "") then
 				{
 					player addBackpack _value;
 				};
-			};
 		};
 		case "Goggles": { if (_value != "") then { player addGoggles _value } };
 		case "Headgear":

@@ -41,13 +41,7 @@ p_resetPlayerData = {
 p_restoreBackpack = {
   ARGVX3(0,_value,"");
   removeBackpack player;
-
   if (_value == "") exitWith {};
-
-  if (_value isKindOf "Weapon_Bag_Base") exitWith {
-	player addBackpack "B_AssaultPack_rgr"; // NO SOUP FOR YOU
-  };
-
   player addBackpack _value;
 };
 
@@ -465,11 +459,7 @@ p_recreateStorageBox = {
   };
 
   if (isARRAY(_cargo_backpacks)) then {
-    {
-      if (not((_x select 0) isKindOf "Weapon_Bag_Base")) then {
-        _obj addBackpackCargoGlobal _x
-      };
-    } forEach _cargo_backpacks;
+    { _obj addBackpackCargoGlobal _x } forEach _cargo_backpacks;
   };
 
   if (isARRAY(_cargo_items)) then {
