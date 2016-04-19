@@ -258,9 +258,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
 					_object call fn_removeTurretWeapons;
-					_object removeWeaponTurret ["Missile_AGM_02_Plane_CAS_01_F",[-1]];
-					_object removeWeaponTurret ["Rocket_04_HE_Plane_CAS_01_F",[-1]];
-					_object removeWeaponTurret ["Rocket_04_AP_Plane_CAS_01_F", [-1]];
 					_object addMagazineTurret ["1000Rnd_Gatling_30mm_Plane_CAS_01_F",[-1]];
 					_object addMagazineTurret ["2Rnd_Missile_AA_04_F",[-1]];
 					_object addMagazineTurret ["4Rnd_Bomb_04_F",[-1]];
@@ -276,8 +273,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
 					_object call fn_removeTurretWeapons;
-					_object removeWeaponTurret ["Missile_AGM_01_Plane_CAS_02_F",[-1]];
-					_object removeWeaponTurret ["Rocket_03_AP_Plane_CAS_02_F", [-1]];
 					_object addMagazineTurret ["500Rnd_Cannon_30mm_Plane_CAS_02_F",[-1]];
 					_object addMagazineTurret ["20Rnd_Rocket_03_HE_F",[-1]];
 					_object addMagazineTurret ["2Rnd_Missile_AA_03_F",[-1]];
@@ -295,7 +290,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
 					_object call fn_removeTurretWeapons;
-					_object removeWeaponTurret ["missiles_SCALPEL",[-1]];
 					_object addMagazineTurret ["300Rnd_20mm_shells",[-1]];
 					_object addMagazineTurret ["300Rnd_20mm_shells",[-1]];
 					_object addMagazineTurret ["2Rnd_AAA_missiles",[-1]];
@@ -312,7 +306,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
 					_object call fn_removeTurretWeapons;
-					_object removeWeaponTurret ["missiles_DAGR",[-1]];
 					_object addMagazineTurret ["2000Rnd_65x39_Belt_Tracer_Green_Splash",[-1]];
 					_object addMagazineTurret ["12Rnd_missiles",[-1]];
 					_object addMagazineTurret ["168Rnd_CMFlare_Chaff_Magazine",[-1]];
