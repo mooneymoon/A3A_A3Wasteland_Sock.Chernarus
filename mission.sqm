@@ -8,18 +8,18 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=467;
+		nextID=468;
 	};
 	class MarkerIDProvider
 	{
-		nextID=224;
+		nextID=225;
 	};
 	class Camera
 	{
-		pos[]={14548.78,50.924011,5698.4326};
-		dir[]={-0.25207707,-0.20365734,0.94603634};
-		up[]={-0.052443594,0.97903603,0.19681883};
-		aside[]={0.96628791,-5.1222742e-009,0.2574732};
+		pos[]={12821.395,1338.3307,6408.1362};
+		dir[]={-0.17923893,-0.7913996,0.58446366};
+		up[]={-0.23204176,0.61126816,0.75664473};
+		aside[]={0.95607018,1.1792872e-007,0.29320094};
 	};
 };
 binarizationWanted=0;
@@ -64,7 +64,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=307;
+		items=308;
 		class Item0
 		{
 			dataType="Group";
@@ -6109,6 +6109,15 @@ class Mission
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=466;
+		};
+		class Item307
+		{
+			dataType="Marker";
+			position[]={21835.836,24.750977,20983.727};
+			name="Town_31";
+			type="Empty";
+			colorName="ColorRed";
+			id=467;
 		};
 	};
 };
