@@ -371,7 +371,7 @@ v_untrackVehicle = {
 //event handlers for object tracking, and untracking
 "untrackVehicle" addPublicVariableEventHandler { [_this select 1] call v_untrackVehicle;};
 
-fn_manualVehicleSave = {
+/*fn_manualVehicleSave = {
   ARGVX2(0,_object);
 
   if (isSTRING(_object)) then {
@@ -384,7 +384,7 @@ fn_manualVehicleSave = {
   _object setVariable ["vehSaving_lastUse", diag_tickTime, true];
   _object setVariable ["vehSaving_lastSave", diag_tickTime, true];
   [_object] call v_trackVehicle;
-};
+};*/
 
 
 v_trackedVehiclesListCleanup = {
