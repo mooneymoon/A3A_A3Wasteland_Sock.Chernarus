@@ -66,7 +66,6 @@ player addEventHandler ["WeaponAssembled",
 
 	if (round getNumber (configFile >> "CfgVehicles" >> typeOf _obj >> "isUav") > 0) then
 	{
-		_obj setVariable ["A3W_purchasedStoreObject", true, true];
 		_obj setVariable ["A3W_purchasedVehicle", true, true];
 		_obj setVariable ["ownerUID", getPlayerUID _player, true];
 		_obj setVariable ["ownerN", name _player, true];
