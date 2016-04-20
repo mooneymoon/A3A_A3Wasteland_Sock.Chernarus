@@ -38,7 +38,7 @@
 					else {SWS_ChanceN = 24};
 				};
 
-				if(SWS_ChanceN >=4 && SWS_ChanceN <= 13) then
+				if(SWS_ChanceN >=4 && SWS_ChanceN <= 15) then
 				{
 					if(SWS_BadWeatherCounter == 1) then 
 					{
@@ -58,7 +58,7 @@
 					else {SWS_ChanceN = 24};
 				};
 
-				if(SWS_ChanceN >=14 && SWS_ChanceN <= 74) then
+				if(SWS_ChanceN >=16 && SWS_ChanceN <= 94) then
 				{
 					SWS_BadWeatherCounter = 1;
 					SWS_WMod = round(random 9);
@@ -74,7 +74,7 @@
 					if(SWS_WMod == 9) then {SWS_Fog = [0,0,0]; SWS_Overcast = 0.2; SWS_Wind = [1, 1, true]; SWS_Rain = 0; SWS_Waves = 0;};
 				};
 
-				if(SWS_ChanceN >=75 && SWS_ChanceN <= 100) then
+				if(SWS_ChanceN >=95 && SWS_ChanceN <= 100) then
 				{
 					SWS_BadWeatherCounter = 1;
 					SWS_WMod = round(random 2);
