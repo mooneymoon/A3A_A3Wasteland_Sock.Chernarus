@@ -60,17 +60,38 @@ player addEventHandler ["WeaponAssembled",
 	_player = _this select 0;
 	_obj = _this select 1;
 
-	if (round getNumber (configFile >> "CfgVehicles" >> typeOf _obj >> "isUav") > 0) then
-	{ 
-		_obj setVariable ["ownerUID", getPlayerUID _player, true];
+	if (_player != player) exitWith {};
+	if !({_obj isKindOf _x} count ["Static_Designator_01_base_F","Static_Designator_02_base_F","UAV_01_base_F"] > 0) exitWith {};
+	if (getPlayerUID _player == "") exitWith {};
 
-		if ({_obj isKindOf _x} count ["Static_Designator_02_base_F","Static_Designator_02_base_F"] > 0) then
+	if (round getNumber (configFile >> "CfgVehicles" >> typeOf _obj >> "isUav") > 0) then
+	{
+		_obj setVariable ["ownerUID", getPlayerUID _player, true];
+		_obj setVariable ["A3W_purchasedVehicle", true, true];
+		_obj setVariable ["ownerN", name _player, true];
+		trackVehicle = _obj;
+		publicVariableServer "trackVehicle";
+
+		if (!alive getConnectedUAV player) then
+		{
+			player connectTerminalToUAV _obj;
+		};
+
+		if ({_obj isKindOf _x} count ["Static_Designator_01_base_F","Static_Designator_02_base_F"] > 0) then
 		{
 			_obj setAutonomous false; // disable autonomous mode by default on static designators so they stay on target after releasing controls
 		};
+
+		if (_obj isKindOf "UAV_01_base_F") then
+		{
+			_obj disableTIEquipment true; // disable thermal
+		};
+
+		{
+			[_x, ["AI","",""]] remoteExec ["A3W_fnc_setName"]; 
+		} forEach crew _obj;
 	};
 }];
-
 
 player addEventHandler ["InventoryOpened",
 {
@@ -102,29 +123,6 @@ player addEventHandler ["InventoryClosed",
 	_obj setVariable ["inventoryIsOpen", nil];
 }];
 
-
-//handler for UAV assembly
-player addEventHandler ["WeaponAssembled", {
-  private["_player", "_vehicle"];
-  _player = _this select 0;
-  _vehicle = _this select 1;
-
-  if (_player != player) exitWith {};
-  if (!(_vehicle isKindOf "UAV_01_base_F")) exitWith {};
-
-  private["_uid"];
-  _uid = getPlayerUID _player;
-  if (_uid == "") exitWith {};
-
-  _vehicle setVariable ["ownerUID", _uid, true];
-  _vehicle setVariable ["A3W_purchasedVehicle", true, true];
-  _vehicle setVariable ["ownerN", name _player, true];
-  _vehicle disableTIEquipment true;
-  trackVehicle = _vehicle;
-  publicVariableServer "trackVehicle";
-}];
-
-
 [] spawn
 {
 	_lastVeh = vehicle player;
@@ -149,7 +147,7 @@ player addEventHandler ["WeaponAssembled", {
 		_lastVeh = _currVeh;
 
 		// Prevent usage of commander camera
-		if (cameraView == "GROUP") then
+		if (cameraView == "GROUP" && cameraOn in [player, vehicle player]) then
 		{
 			cameraOn switchCamera "EXTERNAL";
 		};

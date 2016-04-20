@@ -130,8 +130,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			_object setVariable ["A3W_purchasedStoreObject", true];
 			//_object setVariable ["ownerUID", getPlayerUID _player, true];
 
-			[_object] call v_trackVehicle;
-
 			if (getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0) then
 			{
 				//assign AI to the vehicle so it can actually be used
@@ -142,7 +140,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_veh = _this select 0;
 					_side = _this select 1;
 
-					waitUntil {!isNull driver _veh};
+					waitUntil {count crew _veh > 0};
 
 					//assign AI to player's side to allow terminal connection
 					(crew _veh) joinSilent createGroup _side;
@@ -175,6 +173,9 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVariable ["A3W_missionVehicle", false];
 					_object setVariable ["ownerUID", getPlayerUID _player, true];
 					_object setVariable ["ownerN", name _player, true];
+					_object setVariable ["baseSaving_spawningTime", nil, true];
+					_object setVariable ["baseSaving_hoursAlive", nil, true];
+					[_object] call v_trackVehicle;
 				};
 
 				if ({_object isKindOf _x} count A3W_autosave_vehicles_list > 0) then {
@@ -185,6 +186,9 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVariable ["A3W_missionVehicle", false];
 					_object setVariable ["ownerUID", getPlayerUID _player, true];
 					_object setVariable ["ownerN", name _player, true];
+					_object setVariable ["baseSaving_spawningTime", nil, true];
+					_object setVariable ["baseSaving_hoursAlive", nil, true];
+					[_object] call v_trackVehicle;
 				};
 			};
 
@@ -258,9 +262,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
 					_object call fn_removeTurretWeapons;
-					_object removeWeaponTurret ["Missile_AGM_02_Plane_CAS_01_F",[-1]];
-					_object removeWeaponTurret ["Rocket_04_HE_Plane_CAS_01_F",[-1]];
-					_object removeWeaponTurret ["Rocket_04_AP_Plane_CAS_01_F", [-1]];
 					_object addMagazineTurret ["1000Rnd_Gatling_30mm_Plane_CAS_01_F",[-1]];
 					_object addMagazineTurret ["2Rnd_Missile_AA_04_F",[-1]];
 					_object addMagazineTurret ["4Rnd_Bomb_04_F",[-1]];
@@ -276,8 +277,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
 					_object call fn_removeTurretWeapons;
-					_object removeWeaponTurret ["Missile_AGM_01_Plane_CAS_02_F",[-1]];
-					_object removeWeaponTurret ["Rocket_03_AP_Plane_CAS_02_F", [-1]];
 					_object addMagazineTurret ["500Rnd_Cannon_30mm_Plane_CAS_02_F",[-1]];
 					_object addMagazineTurret ["20Rnd_Rocket_03_HE_F",[-1]];
 					_object addMagazineTurret ["2Rnd_Missile_AA_03_F",[-1]];
@@ -295,7 +294,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
 					_object call fn_removeTurretWeapons;
-					_object removeWeaponTurret ["missiles_SCALPEL",[-1]];
 					_object addMagazineTurret ["300Rnd_20mm_shells",[-1]];
 					_object addMagazineTurret ["300Rnd_20mm_shells",[-1]];
 					_object addMagazineTurret ["2Rnd_AAA_missiles",[-1]];
@@ -312,7 +310,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object setVehicleAmmo 0;
 					_object setVehicleAmmoDef 0;
 					_object call fn_removeTurretWeapons;
-					_object removeWeaponTurret ["missiles_DAGR",[-1]];
 					_object addMagazineTurret ["2000Rnd_65x39_Belt_Tracer_Green_Splash",[-1]];
 					_object addMagazineTurret ["12Rnd_missiles",[-1]];
 					_object addMagazineTurret ["168Rnd_CMFlare_Chaff_Magazine",[-1]];
@@ -364,20 +361,16 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					_object addWeaponTurret ["mortar_82mm",[0]];
 				};
 
-				case (_object isKindOf "Box_NATO_Ammo_F"):
+				case (_object isKindOf "Box_FIA_Support_F"):
 				{
 					_object allowDamage false;
 				};
 			};
-			
-			_object hideObjectGlobal false;
 
-			if (needReload _object == 1) then {reload _object};
-
-			if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
+			/*if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
 			{
 				_object call fn_manualVehicleSave;
-			};
+			};*/
 		};
 	};
 };

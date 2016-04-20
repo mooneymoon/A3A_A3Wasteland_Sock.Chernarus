@@ -165,10 +165,10 @@ else
 		_vehicle setVariable ["R3F_LOG_disabled", false, true];
 		_vehicle setVariable ["A3W_missionVehicle", true, true];
 
-		if (!isNil "fn_manualVehicleSave") then
+		/*if (!isNil "fn_manualVehicleSave") then
 		{
 			_vehicle call fn_manualVehicleSave;
-		};
+		};*/
 	};
 
 	if (!isNil "_vehicles" && {typeName _vehicles == "ARRAY"}) then

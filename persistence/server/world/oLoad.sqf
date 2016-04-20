@@ -167,14 +167,7 @@ _exclObjectIDs = [];
 				};
 				if (!isNil "_backpacks") then
 				{
-					{
-						_bpack = _x select 0;
-
-						if (!(_bpack isKindOf "Weapon_Bag_Base") || {{_bpack isKindOf _x} count ["B_UAV_01_backpack_F", "B_Static_Designator_01_weapon_F", "O_Static_Designator_02_weapon_F"] > 0}) then
-						{
-							_obj addBackpackCargoGlobal _x;
-						};
-					} forEach _backpacks;
+					{ _obj addBackpackCargoGlobal _x } forEach _backpacks;
 				};
 			};
 

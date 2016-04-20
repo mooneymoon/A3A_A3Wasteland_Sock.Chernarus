@@ -20,18 +20,18 @@ diag_log format ["=========================="];
 
 o_hasInventory = {
   ARGVX2(0,_arg);
-  
+
   def(_class);
   if (isOBJECT(_arg)) then {
     _class = typeOf _arg;
   };
-  
+
   if (isSTRING(_arg)) then {
     _class = _obj;
   };
-  
+
   if (!isSTRING(_class) || {_class == ""}) exitWith {false};
-  
+
   def(_config);
   _config = (configFile >> "CfgVehicles" >> _class);
 
@@ -40,7 +40,7 @@ o_hasInventory = {
    getNumber (_config >> "transportMaxMagazines") > 0 ||
    getNumber (_config >> "transportMaxBackpacks") > 0})
 };
-         
+
 o_isSaveable = {
   //diag_log format["%1 call o_isSaveable", _this];
   ARGVX4(0,_obj,objNull,false);
@@ -54,11 +54,11 @@ o_isSaveable = {
   if ([_obj] call sh_isBeacon) exitWith {
     (cfg_spawnBeaconSaving_on)
   };
-  
+
   if ([_obj] call sh_isWarchest) exitWith {
     (cfg_warchestSaving_on)
   };
-  
+
   if ([_obj] call sh_isStaticWeapon) exitWith {
     (cfg_staticWeaponSaving_on)
   };
@@ -174,17 +174,17 @@ o_restoreMineVisibility = {
 o_restoreObject = {
   //diag_log format["%1 call o_restoreObject", _this];
   ARGVX3(0,_data_pair,[]);
-  
+
   _this = _data_pair;
   ARGVX3(0,_object_key,"");
   ARGVX2(1,_object_hash);
-  
+
   if (!isCODE(_object_hash)) exitWith {};
-  
+
   def(_object_data);
   _object_data =  call _object_hash;
   //diag_log _object_data;
-  
+
   def(_hours_alive);
   def(_pos);
   def(_class);
@@ -206,7 +206,7 @@ o_restoreObject = {
 
   def(_key);
   def(_value);
-  
+
   {
     _key = _x select 0;
     _value = _x select 1;
@@ -240,7 +240,7 @@ o_restoreObject = {
 
   //AgentRev changed how position is saved, put this fail-safe to handle position with values as strings
   { if (isSTRING(_x)) then { _pos set [_forEachIndex, parseNumber _x] } } forEach _pos;
-  
+
   diag_log format["%1(%2) is being restored.", _object_key, _class];
 
   def(_max_life_time);
@@ -252,7 +252,7 @@ o_restoreObject = {
 
   def(_isMine);
   _isMine = [_class] call sh_isMine;
-  
+
   def(_obj);
   if (_isMine) then {
     _obj = createMine[_class, _pos, [], 0];
@@ -265,7 +265,7 @@ o_restoreObject = {
   if (!isOBJECT(_obj)) exitWith {
     diag_log format["object %1(%2) could not be created.", _object_key, _class];
   };
-  
+
   _obj setVariable ["object_key", _object_key, true];
 
   [_obj, _variables] call sh_restoreVariables;
@@ -276,7 +276,7 @@ o_restoreObject = {
   if (!isBOOLEAN(_objectLocked) && {[_obj] call o_isLockableObject}) then {
     _obj setVariable ["objectLocked", true, true];
   };
-  
+
   //Mine is revealed for all players in a side. Should do sth with independent side when it's possible.
   if (_isMine) then {
     [_obj,_variables] call o_restoreMineVisibility;
@@ -289,7 +289,7 @@ o_restoreObject = {
   };
 
 
-  
+
   _obj setPosWorld ATLtoASL _pos;
   [_obj, OR(_dir,nil)] call o_restoreDirection;
   [_obj, OR(_hours_alive,nil)] call o_restoreHoursAlive;
@@ -297,7 +297,7 @@ o_restoreObject = {
   if (isSCALAR(_damage)) then {
     _obj setDamage _damage;
   };
-  
+
   _allowDamage = true;
 
   if (_class isKindOf "Box_NATO_Wps_F" || _class isKindOf "Box_NATO_WpsSpecial_F" || _class isKindOf "Box_East_Wps_F" || _class isKindOf "Box_East_WpsSpecial_F" || _class isKindOf "Box_IND_Wps_F" || _class isKindOf "Box_IND_WpsSpecial_F" || _class isKindOf "Box_NATO_Ammo_F" || _class isKindOf "Box_FIA_Support_F" || _class isKindOf "Box_FIA_Wps_F" || _class isKindOf "Box_FIA_Ammo_F") then {
@@ -324,44 +324,40 @@ o_restoreObject = {
     cctv_cameras pushBack _obj;
     publicVariable "cctv_cameras";
   };
-  
-  //restore the stuff inside the object  
+
+  //restore the stuff inside the object
   clearWeaponCargoGlobal _obj;
   clearMagazineCargoGlobal _obj;
   clearItemCargoGlobal _obj;
   clearBackpackCargoGlobal _obj;
   _obj setVehicleAmmo 0;
-          
+
   if (isARRAY(_cargo_weapons)) then {
     { _obj addWeaponCargoGlobal _x } forEach _cargo_weapons;
   };
-  
+
   if (isARRAY(_cargo_backpacks)) then {
-    { 
-      if (isARRAY(_x) && {not((_x select 0) isKindOf "Weapon_Bag_Base")}) then {
-        _obj addBackpackCargoGlobal _x 
-      };
-    } forEach _cargo_backpacks;
+    { _obj addBackpackCargoGlobal _x } forEach _cargo_backpacks;
   };
-  
+
   if (isARRAY(_cargo_items)) then {
     { _obj addItemCargoGlobal _x } forEach _cargo_items;
   };
-  
+
   if (isARRAY(_cargo_magazines)) then {
     { _obj addMagazineCargoGlobal _x } forEach _cargo_magazines;
   };
-  
+
   [_obj, OR(_turret0,nil), OR(_turret1,nil), OR(_turret2,nil)] call sh_restoreVehicleTurrets;
 
   if (isSCALAR(_cargo_ammo)) then {
     _obj setAmmoCargo _cargo_ammo;
   };
-  
+
   if (isSCALAR(_cargo_fuel)) then {
     _obj setFuelCargo _cargo_fuel;
   };
-  
+
   if (isSCALAR(_cargo_repair)) then {
     _obj setRepairCargo _cargo_repair;
   };
@@ -370,15 +366,15 @@ o_restoreObject = {
   if ([_obj] call sh_isUAV_UGV) then {
     createVehicleCrew _obj;
   };
-  
-  //Remove money 
+
+  //Remove money
   private["_max_money"];
   _max_money = 1000000;
 
   if (_obj getVariable ["cmoney", 0] > _max_money) then {
     _obj setVariable ["cmoney", _max_money, true];
   };
-  
+
   if (not([_obj] call sh_isMine)) exitWith { //don't put mines in the tracked objects list (we use allMines)
     //objects, warchests, and beacons
     tracked_objects_list pushBack _obj;
@@ -395,11 +391,11 @@ o_saveList = [];
   if (!isARRAY(_x) || {count(_x) == 0}) exitWith {};
   def(_obj);
   _obj = _x select 1;
-  
+
   if (!isOBJECT(_obj)) exitWith {};
   if (_obj isKindOf "ReammoBox_F") exitWith {};
   if ((o_saveList find _obj) >= 0) exitWith {};
-  
+
   o_saveList pushBack _obj;
 };} forEach [OR(objectList,[]), OR(call genObjectsArray,[])];
 
@@ -412,15 +408,15 @@ o_isInSaveList = {
 o_fillVariables = {
   ARGVX3(0,_obj,objNull);
   ARGVX3(1,_variables,[]);
-  
+
   if (_obj isKindOf "Land_Sacks_goods_F") then {
     _variables pushBack ["food", _obj getVariable ["food", 20]];
   };
-  
+
   if (_obj isKindOf "Land_BarrelWater_F") then {
     _variables pushBack ["water", _obj getVariable ["water", 20]];
   };
-  
+
   def(_ownerUID);
   _ownerUID = _obj getVariable "ownerUID";
   if (isSTRING(_ownerUID)) then {
@@ -432,17 +428,17 @@ o_fillVariables = {
   if (isSTRING(_ownerN)) then {
     _variables pushBack ["ownerN", _ownerN];
   };
-  
+
   if ([_obj] call sh_isBox) then {
     _variables pushBack ["cmoney", _obj getVariable ["cmoney", 0]];
   };
-  
+
   if ([_obj] call sh_isWarchest) then {
     _variables pushBack ["a3w_warchest", true];
     _variables pushBack ["R3F_LOG_disabled", true];
     _variables pushBack ["side", str (_obj getVariable ["side", sideUnknown])];
   };
-  
+
   if ([_obj] call sh_isBeacon) then {
     _variables pushBack ["a3w_spawnBeacon", true];
     _variables pushBack ["R3F_LOG_disabled", true];
@@ -476,7 +472,7 @@ o_fillVariables = {
         _mineVisibility pushBack str(_x);
       }
     } forEach [EAST,WEST,INDEPENDENT];
-    
+
     _variables pushBack ["mineVisibility", _mineVisibility];
   };
 
@@ -595,13 +591,13 @@ o_addSaveObject = {
 
   init(_variables,[]);
   [_obj,_variables] call o_fillVariables;
- 
- 
+
+
   init(_weapons,[]);
   init(_magazines,[]);
   init(_items,[]);
   init(_backpacks,[]);
-  
+
   if ([_obj] call o_hasInventory) then {
     // Save weapons & ammo
     _weapons = (getWeaponCargo _obj) call cargoToPairs;
@@ -623,12 +619,12 @@ o_addSaveObject = {
   init(_ammoCargo,getAmmoCargo _obj);
   init(_fuelCargo,getFuelCargo _obj);
   init(_repairCargo,getRepairCargo _obj);
-  
+
   // Fix for -1.#IND
   if (isNil "_ammoCargo" || {!finite _ammoCargo}) then { _ammoCargo = 0 };
   if (isNil "_fuelCargo" || {!finite _fuelCargo}) then { _fuelCargo = 0 };
   if (isNil "_repairCargo" || {!finite _repairCargo}) then { _repairCargo = 0 };
-  
+
   def(_objName);
   _objName = _obj getVariable "object_key";
 
@@ -664,23 +660,23 @@ o_addSaveObject = {
 
 o_saveInfo = {
   ARGVX3(0,_scope,"");
-  
+
   init(_fundsWest,0);
   init(_fundsEast,0);
-  
+
   init(_request,[_scope]);
-  
+
   if (cfg_warchestMoneySaving_on) then {
     _fundsWest = ["pvar_warchest_funds_west", 0] call getPublicVar;
     _fundsEast = ["pvar_warchest_funds_east", 0] call getPublicVar;
   };
-  
+
   init(_objName, "Info");
   _request pushBack [ _objName + "." + "WarchestMoneyBLUFOR", _fundsWest];
   _request pushBack [ _objName + "." + "WarchestMoneyOPFOR", _fundsEast];
-  
-  _request call stats_set;  
-};  
+
+  _request call stats_set;
+};
 
 
 o_saveAllObjects = {
@@ -703,7 +699,7 @@ o_saveAllObjects = {
     if (!isNil{[_request, _x] call o_addSaveObject}) then {
       _count = _count + 1;
     };
-    
+
     //save objects in bulks
     if ((_count % _bulk_size) == 0 && {count(_request) > 1}) then {
       init(_save_start, diag_tickTime);
@@ -714,7 +710,7 @@ o_saveAllObjects = {
       _last_save = _save_end;
     };
   } forEach (_all_objects);
-  
+
   if (count(_request) > 1) then {
     init(_save_start, diag_tickTime);
     _request call stats_set;
@@ -861,7 +857,7 @@ o_loadInfoPair = {
     pvar_warchest_funds_west = _value;
     publicVariable "pvar_warchest_funds_west";
   };
-  
+
   if (cfg_warchestMoneySaving_on && _name == "WarchestMoneyOPFOR" && {isSCALAR(_value)}) exitWith {
     pvar_warchest_funds_east = _value;
     publicVariable "pvar_warchest_funds_east";
@@ -870,34 +866,34 @@ o_loadInfoPair = {
 
 o_loadInfo = {
   ARGVX3(0,_scope,"");
-  
+
   def(_info);
   _info = [_scope, "Info"] call stats_get;
-  
+
   def(_info_pairs);
   _info_pairs = [OR(_info,nil)] call stats_hash_pairs;
-  
+
   diag_log "_info_pairs";
   diag_log str(_info_pairs);
-  
+
   def(_name);
   def(_value);
   {
     _name = _x select 0;
     _value = _x select 1;
     [_name,OR(_value,nil)] call o_loadInfoPair;
- 
+
   } forEach _info_pairs;
 };
 
 o_loadObjects = {
   ARGVX3(0,_scope,"");
-  
+
   def(_objects);
   _objects = [_scope] call stats_get;
 
   init(_oIds,[]);
-  
+
   //nothing to load
   if (!isARRAY(_objects)) exitWith {
     diag_log format["WARNING: No objects loaded from the database"];
@@ -926,7 +922,7 @@ o_loadObjects = {
 
       _object_data = call (_x select 1);
       _class = [_object_data, "Class"] call sh_getValueFromPairs;
-      
+
       //diag_log format ["_class: %1 || _type: %2", _class, _type];
       if ((isNil "_class") || {not(_class isKindOf _type)}) exitWith {};
 
@@ -941,7 +937,7 @@ o_loadObjects = {
   } forEach o_loadingOrderArray;
 
   ["tracked_objects_list"] call sh_hc_forward; //forward to headless client (if connected)
-  
+
   diag_log format["A3Wasteland - Total database objects: %1 ", _total_objects];
   diag_log format["A3Wasteland - Real restored objects: %1 ", _restored_objects];
 
