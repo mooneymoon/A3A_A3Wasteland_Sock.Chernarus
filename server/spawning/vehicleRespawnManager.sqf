@@ -23,12 +23,13 @@ while {true} do
 			_startTime = diag_tickTime;
 			_veh = [_x, "Vehicle", objNull] call fn_getFromPairs;
 
-			// Check if vehicle is not being towed, moved, or has owner 
-			if (isNull (_veh getVariable ["R3F_LOG_est_transporte_par", objNull]) && isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull]) || isNil {_veh getVariable "ownerUID"}) then
+			// Check if vehicle is not being towed or moved
+			if (isNull (_veh getVariable ["R3F_LOG_est_transporte_par", objNull]) &&
+				isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull])) then
 			{
 				_settings = _x;
 
-				private ["_vehClass", "_startPos", "_lastSeenAlive", "_respawnPos", "_respawnTimer", "_minDistance", "_desertedTimer", "_proxyTimer", "_proxyDistance", "_desertedTimeout", "_brokenTimeout"];
+				private ["_vehSave", "_vehClass", "_startPos", "_lastSeenAlive", "_respawnPos", "_respawnTimer", "_minDistance", "_desertedTimer", "_proxyTimer", "_proxyDistance", "_desertedTimeout", "_brokenTimeout"];
 				{
 					_key = _x select 0;
 					_value = _x select 1;
@@ -56,6 +57,7 @@ while {true} do
 
 				_alive = alive _veh;
 				_canMove = canMove _veh;
+				_vehSave = _veh getvariable ["ownerN", objNull];
 
 				// Is the vehicle still alive?
 				if (_alive) then
@@ -208,7 +210,11 @@ while {true} do
 					};
 
 					sleep 0.1;
-					deleteVehicle _veh;
+
+					if(isNull _vehSave) then {
+					{
+						deleteVehicle _veh;
+					};
 
 					if (_vehClass isKindOf "Ship_F") then
 					{
