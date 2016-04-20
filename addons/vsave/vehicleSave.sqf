@@ -45,6 +45,8 @@ if (_success) then {
 	_vehicle setVariable ["A3W_purchasedVehicle", true, true];
 	_vehicle setVariable ["A3W_missionVehicle", false, false];
 	_vehicle setVariable ["ownerUID", getPlayerUID player, true];
+	_vehicle setVariable ["vehicle_first_user", getPlayerUID player, true];
+	_vehicle setVariable ["vehicle_abandoned_by", getPlayerUID player, true];
 	_vehicle setVariable ["ownerN", name player, true];
 	_vehicle setVariable ["baseSaving_spawningTime", nil, true];
 	_vehicle setVariable ["baseSaving_hoursAlive", nil, true];

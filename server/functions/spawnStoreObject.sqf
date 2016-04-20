@@ -169,9 +169,11 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				//_object setVariable ["A3W_purchasedVehicle", true, true];
 
 				if ({_object isKindOf _x} count ["UAV_02_base_F", "UGV_01_base_F"] > 0) then {
-					_object setVariable ["A3W_purchasedVehicle", true];
-					_object setVariable ["A3W_missionVehicle", false];
+					_object setVariable ["A3W_purchasedVehicle", true, true];
+					_object setVariable ["A3W_missionVehicle", false, false];
 					_object setVariable ["ownerUID", getPlayerUID _player, true];
+					_object setVariable ["vehicle_first_user", getPlayerUID _player, true];
+					_object setVariable ["vehicle_abandoned_by", getPlayerUID _player, true];					
 					_object setVariable ["ownerN", name _player, true];
 					_object setVariable ["baseSaving_spawningTime", nil, true];
 					_object setVariable ["baseSaving_hoursAlive", nil, true];
@@ -182,9 +184,11 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					[[netId _object, 2], "A3W_fnc_setLockState", _object] call A3W_fnc_MP; // Lock
 					_object setVariable ["objectLocked", true, true];
 					_object setVariable ["R3F_LOG_disabled", true, true];
-					_object setVariable ["A3W_purchasedVehicle", true];
-					_object setVariable ["A3W_missionVehicle", false];
+					_object setVariable ["A3W_purchasedVehicle", true, true];
+					_object setVariable ["A3W_missionVehicle", false, false];
 					_object setVariable ["ownerUID", getPlayerUID _player, true];
+					_object setVariable ["vehicle_first_user", getPlayerUID _player, true];
+					_object setVariable ["vehicle_abandoned_by", getPlayerUID _player, true];					
 					_object setVariable ["ownerN", name _player, true];
 					_object setVariable ["baseSaving_spawningTime", nil, true];
 					_object setVariable ["baseSaving_hoursAlive", nil, true];
