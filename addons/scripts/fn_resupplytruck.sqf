@@ -423,7 +423,7 @@ _resupplyThread = [_vehicle, _is_uav, _is_static] spawn {
     [[_vehicle,1],"A3W_fnc_setVehicleAmmoDef",_vehicle,false] call BIS_fnc_MP; // Full ammo reset just to be sure
   };
   
-  if ({_vehicle isKindOf _x} count ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F", "O_Heli_Light_02_unarmed_F", "C_Heli_Light_01_civil_F"] > 0) then {
+  if ({_vehicle isKindOf _x} count ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F", "C_Heli_Light_01_civil_F"] > 0) then {
     // Add flares to those poor helis
     [[_vehicle, [_mag, _turretPath]], "A3W_fnc_addMagazineTurretLheli", _vehicle, false] call BIS_fnc_MP;
   };  

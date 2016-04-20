@@ -98,7 +98,7 @@ switch (true) do
 	{
 		_vehicle animate ["HideServices", 0];
 	};
-	case ({_class isKindOf _x} count ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F", "O_Heli_Light_02_unarmed_F", "C_Heli_Light_01_civil_F"] > 0):
+	case ({_class isKindOf _x} count ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F", "C_Heli_Light_01_civil_F"] > 0):
 	{
 		// Add flares to those poor helis
 		_vehicle addWeaponTurret ["CMFlareLauncher", [-1]];
