@@ -15,7 +15,8 @@ if (!hasInterface) exitWith {};
 #define UNIT_POS(UNIT) (UNIT modelToWorldVisual [0, 0, 1.25]) // Torso height
 #define UAV_UNIT_POS(UNIT) (((vehicle UNIT) modelToWorldVisual [0, 0, 0]) vectorAdd [0, 0, 0.5])
 
-if (isNil "showPlayerNames") then { showPlayerNames = false };
+if (isNil "showPlayerNames") then { showPlayerNames = true };
+if (isNil "brightPlayerIcons") then { brightPlayerIcons = true };
 
 hudPlayerIcon_uiScale = (0.55 / (getResolution select 5)) * ICON_sizeScale; // 0.55 = Interface size "Small"
 drawPlayerIcons_array = [];
@@ -74,7 +75,7 @@ drawPlayerIcons_thread = [] spawn
 						_isUavUnit = (_simulation == "UAVPilot");
 						if (_isUavUnit && {_unit != (crew vehicle _unit) select 0}) exitWith {}; // only one AI per UAV
 
-						_alpha = (ICON_limitDistance - _dist) / (ICON_limitDistance - ICON_fadeDistance);
+						_alpha = if (brightPlayerIcons) then {(ICON_limitDistance - _dist) / (ICON_limitDistance - ICON_fadeDistance)} else {.2};
 						_color = [1,1,1,_alpha];
 						_icon = _teamIcon;
 						_size = 0;
