@@ -57,7 +57,7 @@ while {true} do
 
 				_alive = alive _veh;
 				_canMove = canMove _veh;
-				_vehSave = _veh getvariable ["ownerN", objNull];
+				_vehSave = _veh getvariable ["ownerUID", ""];
 
 				// Is the vehicle still alive?
 				if (_alive) then
@@ -211,7 +211,7 @@ while {true} do
 
 					sleep 0.1;
 
-					if(isNull _vehSave) then {
+					if (_vehSave == "") then
 					{
 						deleteVehicle _veh;
 					};
